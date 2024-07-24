@@ -13,31 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ReadMe.md",
+                "file": "Session-01/Cluster-Resources.md",
                 "mode": "source",
                 "source": true
               }
             }
-          }
-        ]
-      },
-      {
-        "id": "f99f45d37de589da",
-        "type": "tabs",
-        "children": [
+          },
           {
-            "id": "10fc579a829ab751",
+            "id": "b88ad68cf9a13320",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Session-01/index.md",
                 "mode": "source",
-                "source": true
+                "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -103,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ReadMe.md",
+                "file": "Session-01/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ReadMe.md",
+                "file": "Session-01/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ReadMe.md"
+                "file": "Session-01/index.md"
               }
             }
           }
@@ -164,10 +159,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d9e31357221ba554",
+  "active": "b88ad68cf9a13320",
   "lastOpenFiles": [
-    "Welcome.md",
+    "Session-02/Traffic-Lights.md",
+    "assets/Session-02-20240724163629.png",
+    "Session-02/Non-Blocking-Flasher.md",
+    "assets",
+    "Session-01/Electricity-and-Power-Basics.md",
+    "Session-01/Cluster-Resources.md",
     "Session-01/index.md",
+    "assets/Session-02-20240724162543.png",
+    "ReadMe.md",
+    "Session-02/Exercises.md",
+    "Welcome.md",
     "create a link.md",
     "Session-20",
     "Session-19",
@@ -177,7 +181,6 @@
     "Session-15",
     "Session-14",
     "Session-13",
-    "Session-12",
-    "Session-11"
+    "Session-12"
   ]
 }

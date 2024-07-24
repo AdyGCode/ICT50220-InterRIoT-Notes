@@ -6,6 +6,8 @@
 - Creating Accounts: JetBrains, TinkerCAD, Adafruit
 - Required Software & Hardware
 
+Each semester's TinkerCAD classroom code will be different. Make sure you use the code from the current semester. This will be contained in the LMS shell's Learning Materials section.
+
 # Terminology and Examples
 
 - IoT

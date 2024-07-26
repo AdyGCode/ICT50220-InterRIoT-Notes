@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Session-01/Cluster-Resources.md",
+                "file": "Session-01/S01-Cluster-Resources.md",
                 "mode": "source",
                 "source": true
               }
@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Session-01/index.md",
+                "file": "Session-02/S02-LED-Flasher-and-Pushbutton.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Session-01/index.md",
+                "file": "Session-02/S02-LED-Flasher-and-Pushbutton.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Session-01/index.md",
+                "file": "Session-02/S02-LED-Flasher-and-Pushbutton.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Session-01/index.md"
+                "file": "Session-02/S02-LED-Flasher-and-Pushbutton.md"
               }
             }
           }
@@ -161,17 +161,22 @@
   },
   "active": "b88ad68cf9a13320",
   "lastOpenFiles": [
-    "Session-02/Traffic-Lights.md",
-    "assets/Session-02-20240724163629.png",
-    "Session-02/Non-Blocking-Flasher.md",
-    "assets",
-    "Session-01/Electricity-and-Power-Basics.md",
-    "Session-01/Cluster-Resources.md",
-    "Session-01/index.md",
-    "assets/Session-02-20240724162543.png",
+    "Session-02/S02-LED-Flasher.md",
+    "Session-02/S02-LED-Flasher-and-Pushbutton.md",
+    "Session-02/S02-Non-Blocking-Flasher.md",
+    "Session-01/S01-Circuit-Diagram-Symbols.md",
+    "Session-02/S02-Exercises.md",
+    "Session-02/S02-Traffic-Lights.md",
+    "Session-01/S01-Electricity-and-Power-Basics.md",
+    "Session-01/S01-Electronics-and-Components.md",
+    "Session-01/S01-Cluster-Resources.md",
+    "Session-01/S01-Introduction.md",
+    "Session-01/ReadMe.md",
     "ReadMe.md",
-    "Session-02/Exercises.md",
     "Welcome.md",
+    "assets/Session-02-20240724163629.png",
+    "assets",
+    "assets/Session-02-20240724162543.png",
     "create a link.md",
     "Session-20",
     "Session-19",

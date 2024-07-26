@@ -2,7 +2,7 @@
 
 # Contents
 
-- [Session 01](Session-01/index.md)
+- [Session 01](S01-Introduction.md)
 - [Session 02](Session-02/index.md)
 - [Session 03](Session-03/index.md)
 - [Session 04](Session-04/index.md)

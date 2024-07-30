@@ -95,15 +95,23 @@ When combined with Ohm's Law, we are able to work out Power even if one of the V
 > V Missing: P = I² × R
 
 
+### Easy Reference Diagram
+
+![The Voltage, Resistance, Current and Power Interrelationship](/assets/VIRP@1x.png)
+
 ## Resistors in Series and Parallel
 
 ### Resistors in Series
+
+![](CleanShot%202024-07-29%20at%2019.54.37@2x.png)
 
 If you have 2 resistors in series, you simply add their resistances together.
 
 Total R = R1 + R2 + ...
 
 ### Resistors in Parallel
+
+![](CleanShot%202024-07-29%20at%2019.53.36@2x.png)
 
 This is slightly harder to calculate as...
 
@@ -116,13 +124,38 @@ Total Resistance = (R1 × R2) ÷ (R1 + R2)
 
 ## Voltage Divider
 
-A Voltage divider is a method of providing a smaller voltage to another part of a circuit. It does this by using the fact that as you pass through a resistor the voltage is dropped by a set amount.
+A Voltage divider is a method of reducing a higher voltage into a smaller voltage for use in another part of a circuit. It does this by using the fact that as you pass a voltage through a resistor the voltage is dropped by a set amount.
 
-A Voltage divider ciurcuit looks like this:
 
+A Voltage divider circuit looks like this:
+
+![](CleanShot%202024-07-29%20at%2019.49.04@2x.png)
+
+
+
+To calculate the Voltage Output we use:
+
+Vout = Vin × R2 ÷ (R1 + R2)
 
 ## Current Divider
 
+A current divider takes a higher current value and divides it up across multiple paths of a circuit as defined by the resistances of those paths.
 
+![](CleanShot%202024-07-29%20at%2019.59.52@2x.png)
 
+The current across the two resistors (R7 and R8) in this diagram, is shown as I1 and I2.
+
+Before we can go anywhere you need to know the total Resistance across the parallel resistor circuit.
+
+(R1 × R2) ÷ (R1 + R2)
+
+Ix = It x Rt / Rx
+
+I1 = (Iin × R7) ÷ (R7 + R8)
+I2 = (Iin × R8) ÷ (R7 + R8)
+
+So if **Iin** is 1A, **R7** is 10,000Ω and **R8** is 250Ω...
+
+I1 = 1 × 10000 ÷ (10000 + 250) = 0.976A = 976mA
+I2 = 1 × 250 ÷ (10000 + 250) = 0.024A = 24mA
 

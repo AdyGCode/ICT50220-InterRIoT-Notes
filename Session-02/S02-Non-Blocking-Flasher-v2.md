@@ -1,4 +1,6 @@
-# Non-Blocking Flasher
+# Non-Blocking Flasher V2
+
+This flasher blinks a red LED and then blinks the blue LED when the pushbutton is pressed and held.
 
 ## Components
 | Name         | Quantity | Component      |

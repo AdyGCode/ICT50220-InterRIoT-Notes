@@ -4,22 +4,107 @@
     "type": "split",
     "children": [
       {
-        "id": "e8a79aaf479496ef",
+        "id": "bceb45895dad24e7",
         "type": "tabs",
         "children": [
           {
-            "id": "b88ad68cf9a13320",
+            "id": "ddf7b51784a7c283",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Session-03/S03-ArduinoIDE.md",
+                "file": "Session-04/ReadMe.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3ba3b2c68cccb7de",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Session-04/ReadMe.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ce5fabf2c0f94cda",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Session-04/ReadMe.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "58b27c2e48c1f678",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Session-04/ReadMe.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fed29f0ca6121b5c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Session-04/ReadMe.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3907e46a6c161c92",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Session-04/ReadMe.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6a923794ce17f521",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Session-04/ReadMe.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ad2715c79897cda6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Session-04/S04-Power-Capacity-and-Consumption.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -85,7 +170,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Session-03/S03-ArduinoIDE.md",
+                "file": "Session-04/S04-Power-Capacity-and-Consumption.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +187,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Session-03/S03-ArduinoIDE.md",
+                "file": "Session-04/S04-Power-Capacity-and-Consumption.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +210,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Session-03/S03-ArduinoIDE.md"
+                "file": "Session-04/S04-Power-Capacity-and-Consumption.md"
               }
             }
           }
@@ -146,53 +231,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b88ad68cf9a13320",
+  "active": "ad2715c79897cda6",
   "lastOpenFiles": [
-    "assets/Freenove_Super_Starter_Kit_for_ESP32-main.zip",
+    "Session-04/S04-Saving-Power-and-Sleep-Modes.md",
+    "Session-04/S04-Power-Capacity-and-Consumption.md",
+    "Session-04/S04-Wi-Fi-and-ESP32.md",
+    "Session-04/ReadMe.md",
+    "Session-04/S04-ESP32-and-Bluetooth.md",
+    "Session-04/S04-ESP32-Deep-Sleep.md",
+    "Session-04/S04-ESP32-MQTT.md",
+    "Session-04/S04-Exercises-and-Journals.md",
+    "Session-03/S03-Exercises-and-Journal.md",
+    "Session-03/S03-ArduinoIDE.md",
+    "Session-03/ReadMe.md",
+    "Session-02/S02-LED-Flasher.md",
+    "Session-02/S02-Exercises-and-Journal.md",
+    "Session-01/S01-Introduction.md",
+    "Session-01/S01-Electronics-and-Components.md",
+    "Session-01/S01-Electricity-and-Power-Basics.md",
+    "Session-01/ReadMe.md",
+    "ReadMe.md",
+    "assets/Session-02-20240724163629.png",
+    "Session-02/S02-Traffic-Lights.md",
+    "assets/session-01-led-and-switch.png",
+    "assets/VIRP@1x.png",
     "assets/Pasted image 20240731165401.png",
     "assets/Pasted image 20240731164540.png",
     "assets/Pasted image 20240731164520.png",
     "assets/Pasted image 20240731164454.png",
-    "Session-03/ReadMe.md",
-    "Session-03/S03-ArduinoIDE.md",
-    "Session-02/S02-Traffic-Lights.md",
-    "Examples",
-    "Examples/ESP32-Hello-World/ESP32-Hello-World.ino",
-    "Examples/ESP32-Hello-World",
-    "Session-03/S03-Exercises-and-Journal.md",
-    "ReadMe.md",
-    "ReadMe.md~",
-    "assets/VIRP@1x.png",
     "assets/CleanShot 2024-07-29 at 20.35.18@2x.png",
     "assets/CleanShot 2024-07-29 at 19.59.52@2x.png",
     "assets/CleanShot 2024-07-29 at 19.54.37@2x.png",
-    "assets/CleanShot 2024-07-29 at 19.53.36@2x.png",
-    "assets/CleanShot 2024-07-29 at 19.49.04@2x.png",
+    "Session-01/MCU-Controlled-LED.md",
+    "Session-01/Hardware.md",
+    "InterRIoT-Circuits/Flasher-1/fp-info-cache",
+    "InterRIoT-Circuits/Flasher-1/Flasher-1.kicad_sch",
+    "InterRIoT-Circuits/Flasher-1/Flasher-1.kicad_pro",
+    "InterRIoT-Circuits/Flasher-1/Flasher-1.kicad_prl",
+    "InterRIoT-Circuits/Flasher-1/Flasher-1.kicad_pcb",
+    "InterRIoT-Circuits/Basics/InterRIoT-Circuits.kicad_sch",
+    "InterRIoT-Circuits/Basics/InterRIoT-Circuits.kicad_pro",
+    "InterRIoT-Circuits/Basics/InterRIoT-Circuits.kicad_prl",
+    "InterRIoT-Circuits/Basics/InterRIoT-Circuits.kicad_pcb",
+    "InterRIoT-Circuits/Flasher-1",
     "Session-02/S02-Non-Blocking-Flasher-v3.md",
     "Session-02/S02-Non-Blocking-Flasher-v2.md",
     "Session-02/S02-Non-Blocking-Flasher-v1.md",
-    "Session-02/S02-LED-Flasher.md",
-    "Session-02/S02-LED-Flasher-and-Pushbutton.md",
-    "Session-02/S02-Exercises-and-Journal.md",
-    "Session-02/ReadMe.md",
-    "Session-01/S01-Introduction.md",
-    "Session-01/S01-Electronics-and-Components.md",
-    "Session-01/S01-Electricity-and-Power-Basics.md",
     "Session-01/S01-Cluster-Resources.md",
-    "Session-01/S01-Circuit-Diagram-Symbols.md",
-    "Session-01/ReadMe.md",
-    "InterRIoT-Circuits/Flasher-1/fp-info-cache",
-    "InterRIoT-Circuits/Flasher-1/Flasher-1.kicad_pro",
-    "InterRIoT-Circuits/Flasher-1/Flasher-1.kicad_sch",
-    "InterRIoT-Circuits/Flasher-1/Flasher-1.kicad_prl",
-    "InterRIoT-Circuits/Flasher-1/Flasher-1.kicad_pcb",
-    "InterRIoT-Circuits/Basics/InterRIoT-Circuits.kicad_pro",
-    "Welcome.md",
-    "Session-01/Hardware.md",
-    "Session-01/index.md",
-    "Session-02/Traffic-Lights.md",
-    "Session-02/Non-Blocking-Flasher.md",
-    "Session-01/Electricity-and-Power-Basics.md",
-    "Session-01/Cluster-Resources.md"
+    "Session-02/ReadMe.md"
   ]
 }

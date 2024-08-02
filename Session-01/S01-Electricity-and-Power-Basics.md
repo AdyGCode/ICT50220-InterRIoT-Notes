@@ -21,6 +21,13 @@ A signal may be in two forms:
 
 ### Analog Signal
 
+> Analog signals are continuous-time **signals that can take on** any value within a specified range. 
+> 
+> These signals are often **used to represent physical phenomena**, such as sound, temperature, and pressure. 
+> 
+> Unlike digital signals, which have distinct states that can be either 0 or 1, analog signals can be any value between two extreme values.
+
+cepiio. (2024, May 8). _Understanding Analog Signals: A Comprehensive Guide – Exploring the World of Electronic Instruments_. Cepio. https://www.cepi.io/understanding-analog-signals-a-comprehensive-guide/
 
 ### Digital Signal
 
@@ -31,6 +38,10 @@ Has two discrete values:
 	- Low is represented by a small or zero voltage
 
 If you have a circuit that is using a 1.5V battery then the high level signal would be very close to 1.5V, whereas the low level signal would be zero of very close to zero.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WxJKXGugfh8?si=nB-sMXwQuVlX3zej" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+https://youtu.be/WxJKXGugfh8?si=XNywhoOlKPtwaMez
 
 ### Ground
 
@@ -51,6 +62,10 @@ A signal is said to be floating if it has no fixed reference voltage to work fro
 
 If you have a floating signal then the circuit will 'randomly' select the value of the voltage.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wxjerCHCEMg?si=6vpA5FGeiLjf1pu9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+https://youtu.be/wxjerCHCEMg?si=Rz9J2xOheNo3ih2o
+
 ## Ohm's Law
 
 Ohm’s law is the fundamental equation used in electrical engineer and is the relationship between voltage, resistance and current.
@@ -66,6 +81,7 @@ Voltage = Current * Resistance
  This simple equation is easily re-arranged depending on what variables you have and which variable you need to solve for...
 
 > I = V ÷ R
+> 
 > R = V ÷ I
 
 
@@ -137,6 +153,11 @@ To calculate the Voltage Output we use:
 
 Vout = Vin × R2 ÷ (R1 + R2)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EQtwsWJuUPs?si=2cL69JKv1r8KMlvK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+https://youtu.be/EQtwsWJuUPs?si=2cL69JKv1r8KMlvK
+
+
 ## Current Divider
 
 A current divider takes a higher current value and divides it up across multiple paths of a circuit as defined by the resistances of those paths.
@@ -158,4 +179,10 @@ So if **Iin** is 1A, **R7** is 10,000Ω and **R8** is 250Ω...
 
 I1 = 1 × 10000 ÷ (10000 + 250) = 0.976A = 976mA
 I2 = 1 × 250 ÷ (10000 + 250) = 0.024A = 24mA
+
+# Current Limiting Resistors
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/81zNcctopBI?si=6flKcrZwtgv0Puqj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+https://youtu.be/81zNcctopBI?si=6flKcrZwtgv0Puqj
 

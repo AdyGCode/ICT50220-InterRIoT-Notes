@@ -909,3 +909,4 @@ cython_debug/
 
 !.obsidian
 !.idea
+/libraries/

@@ -1,5 +1,4 @@
 /**
- * ESP32 WiFi & MQTT (Pub-Sub)
  * 
  * Project: Wifi_Connect_MQTT_PubSub
  *

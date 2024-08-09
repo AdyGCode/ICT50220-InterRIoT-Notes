@@ -4,107 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "bceb45895dad24e7",
+        "id": "e4de5f5099a2d394",
         "type": "tabs",
         "children": [
           {
-            "id": "ddf7b51784a7c283",
+            "id": "43f593877441b908",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Session-04/ReadMe.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3ba3b2c68cccb7de",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Session-04/ReadMe.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ce5fabf2c0f94cda",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Session-04/ReadMe.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "58b27c2e48c1f678",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Session-04/ReadMe.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "fed29f0ca6121b5c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Session-04/ReadMe.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3907e46a6c161c92",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Session-04/ReadMe.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6a923794ce17f521",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Session-04/ReadMe.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ad2715c79897cda6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Session-04/S04-Power-Capacity-and-Consumption.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 7
+        ]
       }
     ],
     "direction": "vertical"
@@ -170,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Session-04/S04-Power-Capacity-and-Consumption.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -187,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Session-04/S04-Power-Capacity-and-Consumption.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -209,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Session-04/S04-Power-Capacity-and-Consumption.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -231,12 +138,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ad2715c79897cda6",
+  "active": "43f593877441b908",
   "lastOpenFiles": [
-    "Session-04/S04-Saving-Power-and-Sleep-Modes.md",
-    "Session-04/S04-Power-Capacity-and-Consumption.md",
-    "Session-04/S04-Wi-Fi-and-ESP32.md",
     "Session-04/ReadMe.md",
+    "Session-02/S02-Exercises-and-Journal.md",
+    "Session-04/S04-Power-Capacity-and-Consumption.md",
+    "Session-04/S04-Saving-Power-and-Sleep-Modes.md",
+    "Session-04/S04-Wi-Fi-and-ESP32.md",
     "Session-04/S04-ESP32-and-Bluetooth.md",
     "Session-04/S04-ESP32-Deep-Sleep.md",
     "Session-04/S04-ESP32-MQTT.md",
@@ -245,7 +153,6 @@
     "Session-03/S03-ArduinoIDE.md",
     "Session-03/ReadMe.md",
     "Session-02/S02-LED-Flasher.md",
-    "Session-02/S02-Exercises-and-Journal.md",
     "Session-01/S01-Introduction.md",
     "Session-01/S01-Electronics-and-Components.md",
     "Session-01/S01-Electricity-and-Power-Basics.md",

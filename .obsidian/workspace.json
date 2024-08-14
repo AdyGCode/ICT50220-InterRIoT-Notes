@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Session-05/S05-Exercises-and-Journal.md",
+                "file": "Session-05/S05-ESP32-Sleep.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Session-05/S05-Exercises-and-Journal.md",
+                "file": "Session-05/S05-ESP32-Sleep.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Session-05/S05-Exercises-and-Journal.md",
+                "file": "Session-05/S05-ESP32-Sleep.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Session-05/S05-Exercises-and-Journal.md"
+                "file": "Session-05/S05-ESP32-Sleep.md"
               }
             }
           }
@@ -162,18 +162,18 @@
   },
   "active": "ad2715c79897cda6",
   "lastOpenFiles": [
+    "Session-05/S05-Exercises-and-Journal.md",
+    "Session-05/ReadMe.md",
     "Session-05/esp32-sleep-timer/esp32-sleep-timer.ino",
     "Session-05/esp32-sleep-timer/esp32-sleep.ino",
     "Session-05/esp32-sleep-timer",
     "Session-05/S05-Saving-Power-and-Sleep-Modes.md",
     "Session-03/S03-Exercises-and-Journal.md",
-    "Session-05/S05-Exercises-and-Journal.md",
     "Session-04/ReadMe.md",
     "Session-04/S04-Exercises-and-Journals.md",
     "Session-03/ReadMe.md",
     "Session-02/S02-Exercises-and-Journal.md",
     "Session-05/S05-Power-Capacity-and-Consumption.md",
-    "Session-05/ReadMe.md",
     "Session-05/esp32-sleep-external/esp32-sleep-external.ino",
     "Session-05/esp32-sleep-external",
     "Session-05/esp32-sleep-touch/esp32-sleep-touch.ino",
@@ -183,7 +183,7 @@
     "Session-04/S04-Wi-Fi-and-ESP32.md",
     "Session-04/S04-ESP32-MQTT.md",
     "Session-04/S04-ESP32-and-Bluetooth.md",
-    "Session-05/S05-ESP32-Deep-Sleep.md",
+    "Session-05/S05-ESP32-Sleep.md",
     "Session-03/S03-ArduinoIDE.md",
     "Session-02/S02-LED-Flasher.md",
     "Session-01/S01-Introduction.md",
@@ -205,7 +205,6 @@
     "Session-01/MCU-Controlled-LED.md",
     "Session-01/Hardware.md",
     "InterRIoT-Circuits/Flasher-1/fp-info-cache",
-    "InterRIoT-Circuits/Flasher-1/Flasher-1.kicad_sch",
     "Session-02/S02-Non-Blocking-Flasher-v3.md",
     "Session-02/S02-Non-Blocking-Flasher-v2.md"
   ]

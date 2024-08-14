@@ -71,24 +71,6 @@
       "modifiedDate": 1723613726212,
       "sizeInBytes": 1178
     },
-    "Session-05/S05-ESP32-Deep-Sleep.md": {
-      "isCountable": true,
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 4,
-      "wordCountTowardGoal": 0,
-      "wordGoal": null,
-      "pageCount": 0.013333333333333334,
-      "characterCount": 43,
-      "nonWhitespaceCharacterCount": 31,
-      "readingTimeInMinutes": 0.01509433962264151,
-      "linkCount": 1,
-      "embedCount": 0,
-      "aliases": null,
-      "createdDate": 1723009333790,
-      "modifiedDate": 1723613716054,
-      "sizeInBytes": 43
-    },
     "Session-05/S05-Power-Capacity-and-Consumption.md": {
       "isCountable": true,
       "isDirectory": false,
@@ -115,15 +97,15 @@
       "wordCountTowardGoal": 0,
       "wordGoal": null,
       "pageCount": 0.1,
-      "characterCount": 437,
-      "nonWhitespaceCharacterCount": 395,
+      "characterCount": 432,
+      "nonWhitespaceCharacterCount": 390,
       "readingTimeInMinutes": 0.11320754716981132,
       "linkCount": 8,
       "embedCount": 0,
       "aliases": null,
       "createdDate": 1723620287041,
-      "modifiedDate": 1723620358215,
-      "sizeInBytes": 437
+      "modifiedDate": 1723625885259,
+      "sizeInBytes": 432
     },
     "Session-05/esp32-sleep-external/esp32-sleep-external.ino": {
       "isCountable": false,
@@ -4156,6 +4138,24 @@
       "createdDate": 1723615232909,
       "modifiedDate": 1723617617592,
       "sizeInBytes": 1535
+    },
+    "Session-05/S05-ESP32-Sleep.md": {
+      "isCountable": true,
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 20,
+      "wordCountTowardGoal": 0,
+      "wordGoal": null,
+      "pageCount": 0.06666666666666667,
+      "characterCount": 153,
+      "nonWhitespaceCharacterCount": 117,
+      "readingTimeInMinutes": 0.07547169811320754,
+      "linkCount": 1,
+      "embedCount": 0,
+      "aliases": null,
+      "createdDate": 1723009333790,
+      "modifiedDate": 1723625929062,
+      "sizeInBytes": 153
     }
   }
 }

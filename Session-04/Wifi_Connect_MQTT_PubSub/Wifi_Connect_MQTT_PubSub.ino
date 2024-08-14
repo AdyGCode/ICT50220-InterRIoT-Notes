@@ -24,7 +24,7 @@
 
 const char* ssid = "WIFI_SSID";
 const char* password = "WIFI_PASSWORD";
-int counter =0;
+int counter = 0;
 
 WiFiClient client;
 Adafruit_MQTT_Client mqtt(&client, IO_SERVER, IO_SERVERPORT, IO_USERNAME, IO_KEY);

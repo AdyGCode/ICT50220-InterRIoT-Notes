@@ -11,7 +11,7 @@
 RTC_DATA_ATTR int bootCount = 0;
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   delay(1000);
 
   ++bootCount;

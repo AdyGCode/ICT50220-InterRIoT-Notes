@@ -6,7 +6,7 @@
  */
 
 #if CONFIG_IDF_TARGET_ESP32
-#define THRESHOLD 40
+#define THRESHOLD 10
 #else
 #define THRESHOLD 5000
 #endif
@@ -26,7 +26,7 @@ void setup() {
   print_wakeup_touchpad();
 
 #if CONFIG_IDF_TARGET_ESP32
-  touchSleepWakeUpEnable(T3, THRESHOLD);
+  //touchSleepWakeUpEnable(T3, THRESHOLD);
   touchSleepWakeUpEnable(T7, THRESHOLD);
 #else
   touchSleepWakeUpEnable(T3, THRESHOLD);
@@ -90,7 +90,7 @@ void print_wakeup_touchpad() {
   }
 #else
   if (touchPin < TOUCH_PAD_MAX) {
-    Serial.printf("Tocuh detected on GPIO %d\n", touchPin);
+    Serial.printf("Touch detected on GPIO %d\n", touchPin);
   } else {
     Serial.println("Wakeup not by touchpad");
   }

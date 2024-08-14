@@ -85,3 +85,11 @@ Remember that jumper cables have colour to aid identification.
 - BLACK for GROUND
 Other colours are used to aid tracing of the circuits as needed.
 
+### Sleepy MQTT
+
+In this problem we are aiming to have an IoT Device wake from sleep every 5 minutes and send a value (the boot count) to an Adafruit feed.
+
+Each wake up will increment the boot count.
+
+This combines parts of Session 4 and Session 5.
+

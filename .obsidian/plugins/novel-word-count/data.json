@@ -161,24 +161,6 @@
       "modifiedDate": 1723620111243,
       "sizeInBytes": 2548
     },
-    "Session-05/esp32-sleep/esp32-sleep.ino": {
-      "isCountable": false,
-      "isDirectory": false,
-      "noteCount": 0,
-      "wordCount": 0,
-      "wordCountTowardGoal": 0,
-      "wordGoal": 0,
-      "pageCount": 0,
-      "characterCount": 0,
-      "nonWhitespaceCharacterCount": 0,
-      "readingTimeInMinutes": 0,
-      "linkCount": 0,
-      "embedCount": 0,
-      "aliases": [],
-      "createdDate": 1723615232909,
-      "modifiedDate": 1723617617592,
-      "sizeInBytes": 1535
-    },
     "Session-04/Wifi_Connect_MQTT/Wifi_Connect_MQTT.ino": {
       "isCountable": false,
       "isDirectory": false,
@@ -4156,6 +4138,24 @@
       "createdDate": 1722402738145,
       "modifiedDate": 1722402738145,
       "sizeInBytes": 112344
+    },
+    "Session-05/esp32-sleep-timer/esp32-sleep-timer.ino": {
+      "isCountable": false,
+      "isDirectory": false,
+      "noteCount": 0,
+      "wordCount": 0,
+      "wordCountTowardGoal": 0,
+      "wordGoal": 0,
+      "pageCount": 0,
+      "characterCount": 0,
+      "nonWhitespaceCharacterCount": 0,
+      "readingTimeInMinutes": 0,
+      "linkCount": 0,
+      "embedCount": 0,
+      "aliases": [],
+      "createdDate": 1723615232909,
+      "modifiedDate": 1723617617592,
+      "sizeInBytes": 1535
     }
   }
 }

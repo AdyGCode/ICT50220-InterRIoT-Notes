@@ -22,7 +22,7 @@ This non-blocking flasher allows for the on and off times to be different.
 #define PERIOD_OFF		2000
 
 unsigned long previousTime = 0;
-int interval = onTime;
+int interval = PERIOD_ON;
 boolean ledState = true;
 
 void setup()

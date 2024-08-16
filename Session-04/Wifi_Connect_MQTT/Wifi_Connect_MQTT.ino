@@ -22,8 +22,8 @@
 #define RETRY_ADJUSTMENT 250
 #define MAX_ATTEMPTS 5
 
-const char* ssid = "NMT-IoT";
-const char* password = "Do Not Share M3!";
+const char* ssid = "WIFI_SSID";
+const char* password = "WIFI_PASSWORD";
 
 WiFiClient client;
 Adafruit_MQTT_Client mqtt(&client, IO_SERVER, IO_SERVERPORT, IO_USERNAME, IO_KEY);

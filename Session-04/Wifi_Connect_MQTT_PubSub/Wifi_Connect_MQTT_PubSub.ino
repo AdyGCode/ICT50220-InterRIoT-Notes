@@ -1,5 +1,4 @@
 /**
- * ESP32 WiFi & MQTT
  * 
  * Project: Wifi_Connect_MQTT_PubSub
  *
@@ -17,16 +16,19 @@
 #define IO_KEY "ADAFRUIT_KEY"
 #define IO_SERVER "ADAFRUIT_SERVER_URI"
 #define IO_SERVERPORT ADAFRUIT_IO_PORT_NUMBER
+#define IO_FEED "ADAFRUIT_TOPIC_NAME"
 
-#define RETRY_PERIOD 1000
-#define RETRY_ADJUSTMENT 250
+#define RETRY_PERIOD 500
+#define RETRY_ADJUSTMENT 125
 #define MAX_ATTEMPTS 5
 
-const char* ssid = "NMT-IoT";
-const char* password = "Do Not Share M3!";
+const char* ssid = "WIFI_SSID";
+const char* password = "WIFI_PASSWORD";
+int counter = 0;
 
 WiFiClient client;
 Adafruit_MQTT_Client mqtt(&client, IO_SERVER, IO_SERVERPORT, IO_USERNAME, IO_KEY);
+Adafruit_MQTT_Publish feed = Adafruit_MQTT_Publish(&mqtt, IO_USERNAME "/feeds/" IO_FEED);
 
 void setup() {
   Serial.begin(9600);
@@ -49,7 +51,17 @@ void setup() {
 }
 
 void loop() {
+  int error;
+  Serial.print(counter);
   // put your main code here, to run repeatedly:
+  if (!(error = feed.publish((uint32_t)counter))){
+    Serial.println(" Pub: Failed");
+  } else {
+    Serial.println(" Pub: Success");
+  }
+  delay(RETRY_PERIOD * counter);
+  counter++;
+  counter %= 100;
 }
 
 bool wiFiConnect() {

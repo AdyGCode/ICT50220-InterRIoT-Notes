@@ -76,30 +76,42 @@ void setup() {
   lcd.setCursor(0, 1);
   if (connected) {
     lcd.print("Connected       ");
+    // Set Timezone
+    ntp.timeZone(8,0);
+    // Set DST (false = no DST)
+
+    ntp.isDST(false);
     // Configure the Daylight Savings Start and End
     //ntp.ruleDST("WAST", Last, Sun, Mar, 1, 540); // last sunday in march 01:00
     //ntp.ruleSTD("WAT", Last, Sun, Oct, 1, 480); // last sunday in october 01:00, timezone +60min (+1 GMT)
-    // No DST?
-    ntp.timeZone(8,0);
-    ntp.isDST(false);
+
     ntp.begin();
     ntp.update();
 
   } else {
-    lcd.print("Connect Fail    ");
+    lcd.print("Connect Fail  :(");
   }
+
   WiFi.disconnect(true);
   WiFi.mode(WIFI_OFF);
 }
 
 void loop() {
-  currentTime = millis();
-
-  if ((currentTime - previousTime) >= UPDATE_PERIOD) {
-    printLocalTime();
-    previousTime = currentTime;
+  if (connected){
+    currentTime = millis();
+    if ((currentTime - previousTime) >= UPDATE_PERIOD) {
+      printLocalTime();
+      previousTime = currentTime;
+    }
   }
 }
+
+
+void printLocalTime() {
+  lcd.setCursor(0, 1);
+  lcd.print(ntp.formattedTime("%d %b, %a %T"));
+}
+
 
 bool i2CAddrTest(uint8_t addr) {
   Wire.beginTransmission(addr);
@@ -131,19 +143,3 @@ bool wiFiConnect() {
 }
 
 
-void printLocalTime() {
-  lcd.setCursor(0, 1);
-  // struct tm timeinfo;
-
-  // if (!getLocalTime(&timeinfo)) {
-  //   lcd.print("Get Time Fail");
-  //   return;
-  // }
-
-  // uint hour = timeinfo.tm_hour;
-  // uint min = timeinfo.tm_min;
-  // uint sec = timeinfo.tm_sec;
-  // sprintf(buff, "%2d:%2d:%2d ", hour, min, sec);
-  lcd.print(ntp.formattedTime("%A %T"));
-
-}

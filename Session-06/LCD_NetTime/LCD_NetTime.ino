@@ -1,20 +1,31 @@
 /**
- * LCD Display example
+ * LCD Display Net Time Demo
  *
  * Uses I2C to control the LCD.
  * Based on Freenove example.
  * 
- * Libraries:
- * - LiquidCrystal_I2C
+ * Libraries: Arduino IDE shortcut - CTRL+SHIFT+I
+ * - LiquidCrystal_I2C [Frank de Brabander]
  * - Wire
  * - TimeLib
  * - WiFi
+ * - NTP [Stefan Staub https://github.com/sstaub/NTP]
+ *
+ * Wiring:
+ * - LCD PIN  JUMPER COLOUR   ESP PIN
+ * - 1        Brown           GND
+ * - 2        Red             5V
+ * - 3        Orange          13
+ * - 4        Yellow          14
+ *
  */
 
 #include <LiquidCrystal_I2C.h>
 #include <Wire.h>
-#include "time.h"
+#include <time.h>
 #include <WiFi.h>
+#include "WiFiUdp.h"
+#include "NTP.h"
 
 #define RETRY_PERIOD 1000
 #define RETRY_ADJUSTMENT 1000
@@ -34,6 +45,8 @@
 #define UPDATE_PERIOD 1000
 
 LiquidCrystal_I2C lcd(LCD_I2C, LCD_WIDTH, LCD_HEIGHT);
+WiFiUDP wifiUdp; // Create UDP WiFi connection
+NTP ntp(wifiUdp); // Hook the NTP into the UDP connection
 
 unsigned long previousTime = 0;
 unsigned long currentTime = 0;
@@ -42,16 +55,14 @@ int interval = UPDATE_PERIOD;
 
 char buff[16];
 
-const char* ssid     = "REPLACE_WITH_YOUR_SSID";
-const char* password = "REPLACE_WITH_YOUR_PASSWORD";
-
-const char* ntpServer = "pool.ntp.org";
-const long gmtOffset_sec = 0;
-const int daylightOffset_sec = 3600;
+//const char* ssid     = "REPLACE_WITH_YOUR_SSID";
+//const char* password = "REPLACE_WITH_YOUR_PASSWORD";
+const char* ssid     = "NMT-IoT";
+const char* password = "Do Not Share M3!";
 
 void setup() {
 
-  Wire.begin(SDA, SCL);  // attach the IIC pin
+  Wire.begin(SDA, SCL);  // attach the I2C pin
   if (!i2CAddrTest(0x27)) {
     lcd = LiquidCrystal_I2C(0x3F, 16, 2);
   }
@@ -65,7 +76,14 @@ void setup() {
   lcd.setCursor(0, 1);
   if (connected) {
     lcd.print("Connected       ");
-    configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
+    // Configure the Daylight Savings Start and End
+    //ntp.ruleDST("WAST", Last, Sun, Mar, 1, 540); // last sunday in march 01:00
+    //ntp.ruleSTD("WAT", Last, Sun, Oct, 1, 480); // last sunday in october 01:00, timezone +60min (+1 GMT)
+    // No DST?
+    ntp.timeZone(8,0);
+    ntp.isDST(false);
+    ntp.begin();
+    ntp.update();
 
   } else {
     lcd.print("Connect Fail    ");
@@ -115,17 +133,17 @@ bool wiFiConnect() {
 
 void printLocalTime() {
   lcd.setCursor(0, 1);
-  struct tm timeinfo;
+  // struct tm timeinfo;
 
-  if (!getLocalTime(&timeinfo)) {
-    lcd.print("Get Time Fail");
-    return;
-  }
+  // if (!getLocalTime(&timeinfo)) {
+  //   lcd.print("Get Time Fail");
+  //   return;
+  // }
 
-  uint hour = timeinfo.tm_hour;
-  uint min = timeinfo.tm_min;
-  uint sec = timeinfo.tm_sec;
-  sprintf(buff, "%2d:%2d:%2d ", hour, min, sec);
-  lcd.print(buff);
+  // uint hour = timeinfo.tm_hour;
+  // uint min = timeinfo.tm_min;
+  // uint sec = timeinfo.tm_sec;
+  // sprintf(buff, "%2d:%2d:%2d ", hour, min, sec);
+  lcd.print(ntp.formattedTime("%A %T"));
 
 }

@@ -12,6 +12,8 @@ You will need the Wi-Fi and UDP Wi-Fi libraries that are library from the ESP32 
 
 The last library for this is Stefan Staub's Network Time Protocol library.
 
+- https://github.com/sstaub/NTP
+
 Use the Arduino IDE Library manager to locate the NTP library by Stefan Staub, and install this.
 
 # Code

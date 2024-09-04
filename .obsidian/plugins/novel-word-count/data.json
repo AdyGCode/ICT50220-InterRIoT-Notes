@@ -177,8 +177,8 @@
       "embedCount": 0,
       "aliases": [],
       "createdDate": 1724219977546,
-      "modifiedDate": 1725435423882,
-      "sizeInBytes": 3171
+      "modifiedDate": 1725440803860,
+      "sizeInBytes": 3175
     },
     "Session-06/ReadMe.md": {
       "isCountable": true,
@@ -4787,6 +4787,60 @@
       "createdDate": 1725437561257,
       "modifiedDate": 1725437662796,
       "sizeInBytes": 111
+    },
+    "Session-08/WiFi-Connect-Flash-LED/WiFi-Connect-Flash-LED.ino": {
+      "isCountable": false,
+      "isDirectory": false,
+      "noteCount": 0,
+      "wordCount": 0,
+      "wordCountTowardGoal": 0,
+      "wordGoal": 0,
+      "pageCount": 0,
+      "characterCount": 0,
+      "nonWhitespaceCharacterCount": 0,
+      "readingTimeInMinutes": 0,
+      "linkCount": 0,
+      "embedCount": 0,
+      "aliases": [],
+      "createdDate": 1725438841459,
+      "modifiedDate": 1725438999570,
+      "sizeInBytes": 1423
+    },
+    "Session-09/ESP32-Multitasking/ESP32-Multitasking.ino": {
+      "isCountable": false,
+      "isDirectory": false,
+      "noteCount": 0,
+      "wordCount": 0,
+      "wordCountTowardGoal": 0,
+      "wordGoal": 0,
+      "pageCount": 0,
+      "characterCount": 0,
+      "nonWhitespaceCharacterCount": 0,
+      "readingTimeInMinutes": 0,
+      "linkCount": 0,
+      "embedCount": 0,
+      "aliases": [],
+      "createdDate": 1725439099542,
+      "modifiedDate": 1725439252386,
+      "sizeInBytes": 1046
+    },
+    "Session-09/ESP32-Traffic-Light-and-Sensor/ESP32-Traffic-Light-and-Sensor.ino": {
+      "isCountable": false,
+      "isDirectory": false,
+      "noteCount": 0,
+      "wordCount": 0,
+      "wordCountTowardGoal": 0,
+      "wordGoal": 0,
+      "pageCount": 0,
+      "characterCount": 0,
+      "nonWhitespaceCharacterCount": 0,
+      "readingTimeInMinutes": 0,
+      "linkCount": 0,
+      "embedCount": 0,
+      "aliases": [],
+      "createdDate": 1725440050306,
+      "modifiedDate": 1725441620514,
+      "sizeInBytes": 1689
     }
   }
 }

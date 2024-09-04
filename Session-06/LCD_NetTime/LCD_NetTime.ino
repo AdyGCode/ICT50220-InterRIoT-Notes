@@ -20,11 +20,13 @@
  *
  */
 
-#include <LiquidCrystal_I2C.h>
-#include <Wire.h>
-#include <time.h>
 #include <WiFi.h>
 #include "WiFiUdp.h"
+
+#include <LiquidCrystal_I2C.h>
+
+#include <Wire.h>
+#include <time.h>
 #include "NTP.h"
 
 #define RETRY_PERIOD 1000

@@ -1,87 +1,157 @@
-# Operating the 16x2 LCD
+# Getting Accurate Time
 
+This code demonstrates how to get an accurate time from a Network Time Protocol Server, and send the data to the Serial port for monitoring.
 
+This code uses just the ESP32, and no electronics.
 
-Code:
+# Libraries
+
+To begin you will need to add some Libraries:
+
+You will need the Wi-Fi and UDP Wi-Fi libraries that are library from the ESP32 standard libraries. The Wi-Fi UDP library provides the communication via UDP rather than TCP.
+
+The last library for this is Stefan Staub's Network Time Protocol library.
+
+Use the Arduino IDE Library manager to locate the NTP library by Stefan Staub, and install this.
+
+# Code
+
+Outline of the code's function etc.
+
 ```c
 /**
+ * NTP Time Update
+ * 
+ * Requires connection to the Internet
+ *
+ * Details on how Wi-Fi connection is accomplished
+ * are available in previous tutorials
+ *
+ * Filename:  wifi-ntp-update.ino
+ * Author:    Adrian Gould <adrian.gould@nmtafe.wa.edu.au>
+ * Version:   1.0
+ */
+```
 
- * LCD Display example
- *
- * Uses I2C to control the LCD.
- * Based on Freenove example.
- *
- * Libraries:
- * - LiquidCrystal_I2C
- * - Wire
+Define the required libraries...
 
-1 gnd Brown-
-2 vdd Red-
-3 sda Orange-
-4 scl Yellow-
- */
+```c
+/* 
+ * Libraries
+ */ 
+#include <WiFi.h>
+#include "WiFiUdp.h"
+#include "NTP.h"
+```
 
-#include <LiquidCrystal_I2C.h>
-#include <Wire.h>
+Define any C macros, constants and variables, plus initialise the UDP connection to NTP servers.
 
-#define SDA 13  //Define SDA pins
-#define SCL 14  //Define SCL pins
+```c
+/* 
+ * Macros
+ */ 
+#define RETRY_PERIOD 1000  
 
-/*
- * I2C Chip: PCF8574T   0x27
- *           PCF8574AT  0x3F
- */
-#define LCD_I2C 0x27
-#define LCD_WIDTH 16
-#define LCD_HEIGHT 2
+/* 
+ * Constants
+ */ 
+const char* ssid = "NMT-IoT";
+const char* password = "Do Not Share M3!";
 
- 
-#define UPDATE_PERIOD 100
-  
-LiquidCrystal_I2C lcd(LCD_I2C, LCD_WIDTH, LCD_HEIGHT);
-unsigned long previousTime = 0;
-unsigned long currentTime = 0;
-int interval = UPDATE_PERIOD;
-char buff[16];
-  
- 
+/* 
+ * Variables
+ */ 
+WiFiUDP wifiUdp;
+NTP ntp(wifiUdp);
+```
+
+Time to set up the hardware, and to set the rules for daylight saving.
+
+Then start the NTP communication.
+
+```
+/* 
+ * Setup and Initialise the hardware
+ */ 
 void setup() {
-  
-  Wire.begin(SDA, SCL);  // attach the IIC pin
-  if (!i2CAddrTest(0x27)) {
-    lcd = LiquidCrystal_I2C(0x3F, 16, 2);
-  }
-  
-  lcd.init();                 // LCD driver initialization
-  
-  lcd.backlight();            // Open the backlight
-  
-  lcd.setCursor(0, 0);        // Move the cursor to row 0, column 0
-  
-  lcd.print("LCD I2C Demo");  // The print content is displayed on the LCD
+  Serial.begin(115200);
+  wiFiConnect();
+
+  /* If you need to define daylight saving start
+   * and end points then we use the following...
+   *  ...
+   * For Daylight Savings to Start on
+   *     The last Sunday in March
+   *     At 2:00AM
+   *     For Central European Summer Time
+   *     +120min (+1 GMT + 1h summertime offset)
+   * and End on:
+   *     The last Sunday in October 
+   *     At 3:00AM
+   *     For Central European Time
+   *     +60min (+1 GMT)
+   */
+  ntp.ruleDST("CEST", Last, Sun, Mar, 2, 120); 
+  ntp.ruleSTD("CET", Last, Sun, Oct, 3, 60);
+
+  ntp.begin();
+
+  Serial.println("start NTP");
 }
-  
+```
+
+The work loop simply gets the current time from the NTP server and then prints the data and time to the serial monitor.
+
+```c
+/* 
+ * The work loop
+ */ 
 void loop() {
-  currentTime = millis();
-  
-  if ((currentTime - previousTime) >= UPDATE_PERIOD) {
-    // Display outpout on line 2 of the LCD 
-    // starting at column 1
-    lcd.setCursor(0, 1);
-    sprintf(buff, "Timer: %6.1f", ((float)currentTime) / 1000.0);
-    lcd.printf(buff);
-  
-    previousTime = currentTime;
-  }
-  
+  ntp.update();
+
+  // Output current date & time to the serial monitor
+  Serial.println(ntp.formattedTime("%d. %B %Y"));
+  Serial.println(ntp.formattedTime("%A %T"));
+
+  // (Blocking) wait for 1 second
+  delay(1000);
 }
-  
-bool i2CAddrTest(uint8_t addr) {
-  Wire.beginTransmission(addr);
-  if (Wire.endTransmission() == 0) {
-    return true;
-  }
-  return false;
+```
+
+The Wi-Fi Connect function is a cut down version of the one we have created before, as it does not have a maximum number of tries, and does not 'back-off' when it fails to connect.
+
+```c
+/* 
+ * Wi-Fi Connection Function
+ */ 
+void wiFiConnect() {
+  // Configure WiFi connection
+  WiFi.mode(WIFI_STA);
+  WiFi.begin(ssid, password);
+
+  Serial.println("Connecting to WiFi...");
+
+  // Loop until connected, delaying by
+  // RETRY_PERIOD between attempts
+  while (WiFi.status() != WL_CONNECTED){
+    Serial.print(".");
+    delay(RETRY_PERIOD);
+  }
+```
+
+The connection details is optional, but always nice to see when starting this form of project...
+
+```c
+  // Output connection details
+  Serial.println();
+  Serial.print("Local IP:        ");
+  Serial.println(WiFi.localIP());
+  Serial.print("Gateway IP:      ");
+  Serial.println(WiFi.gatewayIP());
+  Serial.print("Signal Strength: ");
+  Serial.println(WiFi.RSSI());
+  Serial.print("Hostname:        ");
+  Serial.println(WiFi.getHostname());
 }
 ```
 

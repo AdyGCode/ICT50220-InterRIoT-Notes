@@ -1,9 +1,20 @@
+# Combining NTP and LCD
+
+The next step is to use NTP and the LCD together...
+
+# Code
+
+We will not explain the code in detail as we already have seen the useful parts and had them explained in
+- [S06-LCD-16x2](S06-LCD-16x2.md), and
+- [S06-NTP-Time-Update](S06-NTP-Time-Update.md)
+
+```c
 /**
  * LCD Display Net Time Demo
  *
  * Uses I2C to control the LCD.
  * Based on Freenove example.
- * 
+ *
  * Libraries: Arduino IDE shortcut - CTRL+SHIFT+I
  * - LiquidCrystal_I2C [Frank de Brabander]
  * - Wire
@@ -18,7 +29,7 @@
  * - 3        Orange          13
  * - 4        Yellow          14
  *
- */
+ */  
 
 #include <LiquidCrystal_I2C.h>
 #include <Wire.h>
@@ -38,6 +49,8 @@
  * I2C Chip: PCF8574T   0x27
  *           PCF8574AT  0x3F
  */
+#define PCF8574T   0x27
+#define PCF8574AT  0x3F 
 #define LCD_I2C 0x27
 #define LCD_WIDTH 16
 #define LCD_HEIGHT 2
@@ -45,24 +58,23 @@
 #define UPDATE_PERIOD 1000
 
 LiquidCrystal_I2C lcd(LCD_I2C, LCD_WIDTH, LCD_HEIGHT);
-WiFiUDP wifiUdp; // Create UDP WiFi connection
-NTP ntp(wifiUdp); // Hook the NTP into the UDP connection
 
+/* Create the UDP Wi-Fi connection and hook 
+ * the NTP requests into UDP.
+ */
+WiFiUDP wifiUdp; 
+NTP ntp(wifiUdp);
+  
 unsigned long previousTime = 0;
 unsigned long currentTime = 0;
-
 int interval = UPDATE_PERIOD;
-
 char buff[16];
-
-//const char* ssid     = "REPLACE_WITH_YOUR_SSID";
-//const char* password = "REPLACE_WITH_YOUR_PASSWORD";
-const char* ssid     = "NMT-IoT";
-const char* password = "Do Not Share M3!";
 bool connected;
 
-void setup() {
+const char* ssid     = "NMT-IoT";
+const char* password = "Do Not Share M3!";
 
+void setup() {
   Wire.begin(SDA, SCL);  // attach the I2C pin
   if (!i2CAddrTest(0x27)) {
     lcd = LiquidCrystal_I2C(0x3F, 16, 2);
@@ -74,17 +86,16 @@ void setup() {
   lcd.print("Wi-Fi Time");
 
   connected = wiFiConnect();
+
   lcd.setCursor(0, 1);
+
   if (connected) {
     lcd.print("Connected       ");
-    // Set Timezone
-    ntp.timeZone(8,0);
-    // Set DST (false = no DST)
 
+	// Perth, Australia is 8 hours ahead of GMT
+	// and does NOT have DST.
+    ntp.timeZone(8,0);
     ntp.isDST(false);
-    // Configure the Daylight Savings Start and End
-    //ntp.ruleDST("WAST", Last, Sun, Mar, 1, 540); // last sunday in march 01:00
-    //ntp.ruleSTD("WAT", Last, Sun, Oct, 1, 480); // last sunday in october 01:00, timezone +60min (+1 GMT)
 
     ntp.begin();
     ntp.update();
@@ -98,15 +109,16 @@ void setup() {
 }
 
 void loop() {
+
   if (connected){
     currentTime = millis();
+
     if ((currentTime - previousTime) >= UPDATE_PERIOD) {
       printLocalTime();
       previousTime = currentTime;
     }
   }
 }
-
 
 void printLocalTime() {
   lcd.setCursor(0, 1);
@@ -122,6 +134,7 @@ bool i2CAddrTest(uint8_t addr) {
   return false;
 }
 
+
 bool wiFiConnect() {
   int attempts = 0;
 
@@ -131,16 +144,20 @@ bool wiFiConnect() {
   lcd.setCursor(0, 1);
   lcd.print("Connecting       ");
   delay(RETRY_PERIOD);
+
   while (WiFi.status() != WL_CONNECTED && attempts < MAX_ATTEMPTS) {
 
     delay(RETRY_PERIOD + RETRY_ADJUSTMENT * attempts);
+
     lcd.setCursor(12, 1);
     lcd.print(attempts+1);
-    attempts++;
 
+    attempts++;
   }
 
   return attempts < MAX_ATTEMPTS;
 }
+```
 
 
+[Back to Session 06...](ReadMe.md)

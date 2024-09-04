@@ -46,7 +46,7 @@ Each session has a `ReadMe.md` file that acts as a location that contains the se
 
 ## Useful Links
 
-- [Adrian Gould's Diigo account (**https://diigo.com/profile/Ady_Gould**)](https://diigo.com/profile/Ady_Gould) is a good starter for useful resources.
+- [Adrian Gould's Diigo account (**https://diigo.com/profile/Ady_Gould**)](https://diigo.com/profile/Ady_Gould) is a good starter for useful resources.
 - [Adrian Gould's MyBib for Intermediate RIoT (**https://www.mybib.com/b/Agle79**)](https://www.mybib.com/b/Agle79)
 - 
 - ...

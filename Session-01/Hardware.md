@@ -17,7 +17,7 @@ We have found that many students want to explore outside of class, but unfortuna
 - Onboard Camera
 - Wi-Fi
 - Programmable using Python and C
-- Detailed Tutorial (401 pages) with 61 Projects
+- Detailed Tutorial (401 pages) with 61 Projects
 
 [**FreeNove Super Starter Kit for ESP32-WROVER (Included) [LINK to Amazon**]](https://www.amazon.com.au/Freenove-ESP32-WROVER-Contained-Compatible-Bluetooth/dp/B09BC5B4H6)  *(Recommended option)*
 

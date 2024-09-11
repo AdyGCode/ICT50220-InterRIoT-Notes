@@ -10,5 +10,6 @@
   "obsidian-linter",
   "automatic-table-of-contents",
   "better-word-count",
-  "wikilinks-to-mdlinks-obsidian"
+  "wikilinks-to-mdlinks-obsidian",
+  "templater-obsidian"
 ]

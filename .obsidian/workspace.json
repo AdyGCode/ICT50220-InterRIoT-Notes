@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "f4fd91cfc46b286e",
+        "id": "ee005a075c2ae534",
         "type": "tabs",
         "children": [
           {
-            "id": "c854ddad1d622dbd",
+            "id": "3a2e40d68bd46bc0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Session-02/ReadMe.md",
+                "file": "Session-10/S10-.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 230.50260543823242
   },
   "right": {
     "id": "8dd8390eae31acff",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Session-02/ReadMe.md",
+                "file": "Session-10/S10-.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Session-02/ReadMe.md",
+                "file": "Session-10/S10-.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Session-02/ReadMe.md"
+                "file": "Session-10/S10-.md"
               }
             }
           }
@@ -144,16 +144,29 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "c854ddad1d622dbd",
+  "active": "3a2e40d68bd46bc0",
   "lastOpenFiles": [
-    "Session-01/S01-Cluster-Resources.md~",
-    "themes",
-    "templates/sessions.md",
+    "Session-09/demo.h",
+    "Session-09/demo.txt",
+    "Session-09/New Text Document.txt",
+    "Session-09/demo-extra-files/secret.h",
+    "Session-09/demo-extra-files/New Text Document.txt",
+    "Session-09/demo-extra-files/demo-extra-files.ino",
+    "Session-09/demo-extra-files",
+    "Session-09/extra-file-demo/another.h",
+    "Session-09/extra-file-demo/New Text Document.txt",
+    "Session-09/extra-file-demo/secrets.h",
+    "Session-09/extra-file-demo/extra-file-demo.ino",
+    "Session-10/S10-.md",
+    "Session-09/S09-Exercises-and-Journal.md",
+    "Session-09/Untitled.md",
     "templates/slides.md",
-    "templates",
+    "templates/sessions.md",
+    "Session-02/ReadMe.md",
     "Session-02/S02-Traffic-Lights.md",
     "Session-01/S01-Introduction.md",
     "Session-01/S01-Electricity-and-Power-Basics.md",
@@ -165,13 +178,6 @@
     "Session-10/ReadMe.md",
     "Session-10/S10-Exercises-and-Journal.md",
     "Session-09/ReadMe.md",
-    "Session-09/S09-Exercises-and-Journal.md",
-    "Session-10/ESP32-Traffic-Light-and-Sensor/ESP32-Traffic-Light-and-Sensor.ino",
-    "Session-10/ESP32-Traffic-Light-and-Sensor",
-    "Session-10/ESP32-Multitasking/ESP32-Multitasking.ino",
-    "Session-10/ESP32-Multitasking",
-    "Session-08/WiFi-Connect-Flash-LED/WiFi-Connect-Flash-LED.ino",
-    "Session-08/WiFi-Connect-Flash-LED",
     "Session-08/S08-Exercises-and-Journal.md",
     "Session-08/ReadMe.md",
     "Session-10/S04-ESP32-and-Bluetooth.md",
@@ -179,12 +185,7 @@
     "Session-06/S06-LCD-16x2.md",
     "Session-06/S06-NTP-Time-Update.md",
     "Session-06/S06-NTP-Time-To-LCD.md",
-    "Session-01/S01-Circuit-Diagram-Symbols.md~",
     "Session-04/S04-Exercises-and-Journals.md",
-    "Session-04/S04-ESP32-MQTT.md",
-    "Session-04/S04-Wi-Fi-and-ESP32.md",
-    "Session-03/S03-Exercises-and-Journal.md",
-    "libraries/NTP/examples/WIFI_NTP/WIFI_NTP.ino",
     "assets/Pasted image 20240731164540.png",
     "assets/Session-02-20240724163629.png",
     "assets/session-01-led-and-switch.png",

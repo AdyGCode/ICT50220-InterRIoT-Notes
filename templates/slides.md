@@ -17,7 +17,7 @@ date modified: 10 July 2024
 
 # Session Title
 
-## Software as a Service - Back-End Development
+## Intermediate RIoT
 
 ### Session XX
 

@@ -22,12 +22,12 @@ date created: 03 July 2024
 date modified: 10 July 2024
 ---
 
+# Session 10
+
+## Content
+
+- Work on portfolio tasks
+- Submit portfolio tasks
 
 
-
-
-
-
-
-
-[Back to Session 04...](ReadMe.md)
+[Back to home...](../ReadMe.md)

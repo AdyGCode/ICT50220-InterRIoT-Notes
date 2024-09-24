@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 230.50260543823242
+    "width": 300
   },
   "right": {
     "id": "8dd8390eae31acff",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Session-10/S10-.md",
+                "file": "Session-05/S05-ESP32-Sleep.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Session-10/S10-.md",
+                "file": "Session-05/S05-ESP32-Sleep.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -169,32 +169,25 @@
     "Session-02/ReadMe.md",
     "Session-02/S02-Traffic-Lights.md",
     "Session-01/S01-Introduction.md",
+    "Session-01/S01-Electronics-and-Components.md",
     "Session-01/S01-Electricity-and-Power-Basics.md",
-    "Session-01/S01-Cluster-Resources.md",
-    "Session-01/S01-Circuit-Diagram-Symbols.md",
     "Session-01/ReadMe.md",
-    "Session-01/MCU-Controlled-LED.md",
-    "Session-01/Hardware.md",
-    "Session-10/ReadMe.md",
-    "Session-10/S10-Exercises-and-Journal.md",
-    "Session-09/ReadMe.md",
-    "Session-08/S08-Exercises-and-Journal.md",
-    "Session-08/ReadMe.md",
-    "Session-10/S04-ESP32-and-Bluetooth.md",
-    "Session-02/S02-Exercises-and-Journal.md",
-    "Session-06/S06-LCD-16x2.md",
-    "Session-06/S06-NTP-Time-Update.md",
-    "Session-06/S06-NTP-Time-To-LCD.md",
-    "Session-04/S04-Exercises-and-Journals.md",
-    "assets/Pasted image 20240731164540.png",
+    "ReadMe.md",
     "assets/Session-02-20240724163629.png",
+    "Session-02/S02-Traffic-Lights.md",
     "assets/session-01-led-and-switch.png",
     "assets/VIRP@1x.png",
     "assets/Pasted image 20240731165401.png",
+    "assets/Pasted image 20240731164540.png",
     "assets/Pasted image 20240731164520.png",
     "assets/Pasted image 20240731164454.png",
     "assets/CleanShot 2024-07-29 at 20.35.18@2x.png",
     "assets/CleanShot 2024-07-29 at 19.59.52@2x.png",
-    "assets/CleanShot 2024-07-29 at 19.54.37@2x.png"
+    "assets/CleanShot 2024-07-29 at 19.54.37@2x.png",
+    "Session-01/MCU-Controlled-LED.md",
+    "Session-01/Hardware.md",
+    "InterRIoT-Circuits/Flasher-1/fp-info-cache",
+    "Session-02/S02-Non-Blocking-Flasher-v3.md",
+    "Session-02/S02-Non-Blocking-Flasher-v2.md"
   ]
 }

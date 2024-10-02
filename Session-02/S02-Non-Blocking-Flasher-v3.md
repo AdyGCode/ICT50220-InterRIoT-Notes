@@ -36,7 +36,7 @@ This non-blocking flasher allows for the on and off times to be different.
 
 ## Circuit
 
-![](CleanShot%202024-07-29%20at%2020.35.18@2x.png)
+![](../assets/CleanShot%202024-07-29%20at%2020.35.18@2x.png)
 
 ## Code
 

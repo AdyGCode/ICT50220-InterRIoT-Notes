@@ -117,7 +117,7 @@ fastapi dev app.py
 
 You should be able to visit [`http://127.0.0.1:8000`](http://127.0.0.1:8000) to see the base application.
 
-![](CleanShot%202024-09-27%20at%2017.05.06@2x.png)
+![](../assets/CleanShot%202024-09-27%20at%2017.05.06@2x.png)
 
 ## Change XXX to Your Initials
 
@@ -157,7 +157,7 @@ Update the `header.html` to use your logo choice... below is an example with the
 ```html
 <h1 class="self-center text-xl font-semibold whitespace-nowrap flex flex-row-reverse content-center">
     <span class="pl-2">FastAPI</span>
-    <img src="{{ url_for('img', path='FastAPI-Standard.png') }}" class="max-w-6 max-h-6"/>
+    <img src="{{ url_for('img', path='FastAPI-Standard.png') }}" class="max-w-6 max-h-6" alt="FastAPI Logo"/>
 </h1>
 ```
 
@@ -358,7 +358,7 @@ Feel free to create an account and use the TAFE email as a backup...
 
 We will wait for you...
 
-![](CleanShot%202024-09-27%20at%2014.59.24.png)
+![](../assets/CleanShot%202024-09-27%20at%2014.59.24.png)
 
 Ok now that is completed...
 
@@ -366,30 +366,30 @@ Whilst logged into your Google Account, click this link to open the Google Cloud
 
 Once you have logged in you should be presented with a Google Cloud console.
 
-![](CleanShot%202024-09-27%20at%2015.04.22.png)
+![](../assets/CleanShot%202024-09-27%20at%2015.04.22.png)
 
 Click on Select a project
 
-![](CleanShot%202024-09-27%20at%2015.02.56.png)
+![](../assets/CleanShot%202024-09-27%20at%2015.02.56.png)
 
 
 Then on the dialog box click the New Project link
 
-![](CleanShot%202024-09-27%20at%2015.03.15.png)
+![](../assets/CleanShot%202024-09-27%20at%2015.03.15.png)
 
 The dialog will now as for you to complete teh detailed for the project.
 
-![](CleanShot%202024-09-27%20at%2015.06.53.png)
+![](../assets/CleanShot%202024-09-27%20at%2015.06.53.png)
 
 We will name ours `ICT50220-InterRIoT-24S2`
 
 > **Note:** The 24S2 will be 25S1, 25S2, 26S1, etc as each year and semester changes
 
-![](CleanShot%202024-09-27%20at%2015.09.15.png)
+![](../assets/CleanShot%202024-09-27%20at%2015.09.15.png)
 
 We are not going to create an organisation for this example, so we are now able to continue and click create.
 
-![](CleanShot%202024-09-27%20at%2015.10.24.png)
+![](../assets/CleanShot%202024-09-27%20at%2015.10.24.png)
 
 Once created you may select your project, and you'll be welcomed by the project dashboard.
 
@@ -397,27 +397,27 @@ Once created you may select your project, and you'll be welcomed by the project 
 
 Scroll down until you find the Getting Started and the API "Explore and enable APIs".
 
-![](CleanShot%202024-09-27%20at%2015.20.21.png)
+![](../assets/CleanShot%202024-09-27%20at%2015.20.21.png)
 
 Click this to go to the APIs screen, and click the Credentials menu option.
 
-![](CleanShot%202024-09-27%20at%2015.21.46.png)
+![](../assets/CleanShot%202024-09-27%20at%2015.21.46.png)
 
 Now click on the Create Credentials link to open up a list of options...
 
-![](CleanShot%202024-09-27%20at%2015.22.40.png)
+![](../assets/CleanShot%202024-09-27%20at%2015.22.40.png)
 
 Select the OAuth Client ID option from the drop down...
 
-![](CleanShot%202024-09-27%20at%2015.23.59.png)
+![](../assets/CleanShot%202024-09-27%20at%2015.23.59.png)
 
 It then tells you about creating the consent screen for your applicaiton...
 
-![](CleanShot%202024-09-27%20at%2015.25.30.png)
+![](../assets/CleanShot%202024-09-27%20at%2015.25.30.png)
 
 To the right a button is waiting for you to click...
 
-![](CleanShot%202024-09-27%20at%2015.26.14.png)
+![](../assets/CleanShot%202024-09-27%20at%2015.26.14.png)
 
 Now we get to set the application settings.
 
@@ -425,11 +425,11 @@ Remember we will be working with our local system, not on a remote, so we will u
 
 For the purposes of our work, we will use the External option... note that we could have set up an organisation and added other people to the organisation.
 
-![](CleanShot%202024-09-27%20at%2015.28.54.png)
+![](../assets/CleanShot%202024-09-27%20at%2015.28.54.png)
 
 So it's time to fill out the details for the Application...
 
-![](CleanShot%202024-09-27%20at%2015.30.10.png)
+![](../assets/CleanShot%202024-09-27%20at%2015.30.10.png)
 
 The App Name should be 
 
@@ -437,11 +437,11 @@ The App Name should be
 The User Support Email should be your TAFE Email Address, or the Gmail account address.
 
 
-![](CleanShot%202024-09-27%20at%2016.50.57.png)
+![](../assets/CleanShot%202024-09-27%20at%2016.50.57.png)
 
-The logo - we have created several variants FastAPI logos to use for this example... lots to choose from here... [S11-FastAPI-Logo-Options](Session-11/S11-FastAPI-Logo-Options.md).
+The logo - we have created several variants FastAPI logos to use for this example... lots to choose from here... [S11-FastAPI-Logo-Options](../Session-11/S11-FastAPI-Logo-Options.md).
 
-![](CleanShot%202024-09-27%20at%2017.15.51.png)
+![](../assets/CleanShot%202024-09-27%20at%2017.15.51.png)
 
 In the App Domain section we need to add the details as shown:
 
@@ -454,11 +454,11 @@ In the App Domain section we need to add the details as shown:
 
 Once you have added this, and the developer's email (your email) then we are ready to click save.
 
-![](CleanShot%202024-09-27%20at%2018.10.55.png)
+![](../assets/CleanShot%202024-09-27%20at%2018.10.55.png)
 
 Add your email address, plus the lecturer's Gmail Account email.
 
-![](CleanShot%202024-09-27%20at%2018.21.57.png)
+![](../assets/CleanShot%202024-09-27%20at%2018.21.57.png)
 
 
 

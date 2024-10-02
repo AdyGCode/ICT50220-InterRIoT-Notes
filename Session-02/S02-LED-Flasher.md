@@ -36,7 +36,7 @@ date modified: 10 July 2024
 
 The circuit on an Arduino Uno R3 is shown below.
 
-![](CleanShot%202024-07-29%20at%2020.35.18@2x.png)
+![](../assets/CleanShot%202024-07-29%20at%2020.35.18@2x.png)
 
 ## Code
 
@@ -60,4 +60,3 @@ void loop()
 ```
 
 This code is said to be blocking as the `delay` function stops the code from continuing until the time `PERIOD` (in milliseconds) has expired.
-

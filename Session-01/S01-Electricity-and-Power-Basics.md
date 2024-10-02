@@ -143,7 +143,7 @@ When combined with Ohm's Law, we are able to work out Power even if one of the V
 
 ### Resistors in Series
 
-![](CleanShot%202024-07-29%20at%2019.54.37@2x.png)
+![](../assets/CleanShot%202024-07-29%20at%2019.54.37@2x.png)
 
 If you have 2 resistors in series, you simply add their resistances together.
 
@@ -151,7 +151,7 @@ Total R = R1 + R2 + ...
 
 ### Resistors in Parallel
 
-![](CleanShot%202024-07-29%20at%2019.53.36@2x.png)
+![](../assets/CleanShot%202024-07-29%20at%2019.53.36@2x.png)
 
 This is slightly harder to calculate as...
 
@@ -169,7 +169,7 @@ A Voltage divider is a method of reducing a higher voltage into a smaller voltag
 
 A Voltage divider circuit looks like this:
 
-![](CleanShot%202024-07-29%20at%2019.49.04@2x.png)
+![](../assets/CleanShot%202024-07-29%20at%2019.49.04@2x.png)
 
 
 
@@ -186,7 +186,7 @@ https://youtu.be/EQtwsWJuUPs?si=2cL69JKv1r8KMlvK
 
 A current divider takes a higher current value and divides it up across multiple paths of a circuit as defined by the resistances of those paths.
 
-![](CleanShot%202024-07-29%20at%2019.59.52@2x.png)
+![](../assets/CleanShot%202024-07-29%20at%2019.59.52@2x.png)
 
 The current across the two resistors (R7 and R8) in this diagram, is shown as I1 and I2.
 
@@ -209,4 +209,3 @@ I2 = 1 × 250 ÷ (10000 + 250) = 0.024A = 24mA
 <iframe width="560" height="315" src="https://www.youtube.com/embed/81zNcctopBI?si=6flKcrZwtgv0Puqj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 https://youtu.be/81zNcctopBI?si=6flKcrZwtgv0Puqj
-

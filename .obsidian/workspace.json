@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Session-10/S04-ESP32-and-Bluetooth.md",
+                "file": "Session-10/S10-FastAPI-Jinja2.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Session-10/S04-ESP32-and-Bluetooth.md",
+                "file": "Session-10/S10-FastAPI-Jinja2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Session-10/S04-ESP32-and-Bluetooth.md",
+                "file": "Session-10/S10-FastAPI-Jinja2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Session-10/S04-ESP32-and-Bluetooth.md"
+                "file": "Session-10/S10-FastAPI-Jinja2.md"
               }
             }
           }
@@ -150,18 +150,19 @@
   },
   "active": "3a2e40d68bd46bc0",
   "lastOpenFiles": [
+    "assets/brave_wkoOLwtcfO.png",
+    "Session-06/LCD_NetTime/secrets.h",
+    "Session-11/NightLight-LED/secrets.h",
+    "Session-11/NightLight-LED/New Text Document.txt",
+    "Session-10/S04-ESP32-and-Bluetooth.md",
     "Session-02/ESP32-Hello-World/ESP32-Hello-World.ino",
     "Session-02/ESP32-Hello-World",
-    "Session-10/S10-.md",
+    "Session-10/S10-FastAPI-Jinja2.md",
     "Session-09/demo.h",
     "Session-09/demo.txt",
     "Session-09/New Text Document.txt",
     "Session-09/demo-extra-files/secret.h",
     "Session-09/demo-extra-files/New Text Document.txt",
-    "Session-09/demo-extra-files/demo-extra-files.ino",
-    "Session-09/demo-extra-files",
-    "Session-09/extra-file-demo/another.h",
-    "Session-09/extra-file-demo/New Text Document.txt",
     "Session-09/S09-Exercises-and-Journal.md",
     "Session-09/Untitled.md",
     "templates/slides.md",
@@ -180,7 +181,6 @@
     "Session-09/ReadMe.md",
     "Session-08/S08-Exercises-and-Journal.md",
     "Session-08/ReadMe.md",
-    "Session-10/S04-ESP32-and-Bluetooth.md",
     "Session-02/S02-Exercises-and-Journal.md",
     "Session-06/S06-LCD-16x2.md",
     "Session-06/S06-NTP-Time-Update.md",

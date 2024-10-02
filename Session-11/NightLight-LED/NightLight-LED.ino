@@ -18,7 +18,7 @@ int oldADC = 0;
 
 void loop() {
   int adcVal = analogRead(PIN_ANALOG_IN); //read adc
-  int pwmVal = 4095-map(constrain(adcVal, LIGHT_MIN, LIGHT_MAX), LIGHT_MIN, LIGHT_MAX, 0, 4095);  // adcVal re-map to pwmVal
+  int pwmVal = 2048-map(constrain(adcVal, LIGHT_MIN, LIGHT_MAX), LIGHT_MIN, LIGHT_MAX, 0, 4095);  // adcVal re-map to pwmVal
   ledcWrite(PIN_LED, pwmVal);    // set the pulse width.
   delay(10);
 

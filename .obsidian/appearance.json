@@ -1,7 +1,9 @@
 {
-  "accentColor": "",
+  "accentColor": "#e222dc",
   "interfaceFontFamily": "Atkinson Hyperlegible",
-  "textFontFamily": "Atkinson Hyperlegible",
+  "textFontFamily": "Verdana,Atkinson Hyperlegible",
   "monospaceFontFamily": "FiraCode Nerd Font",
-  "baseFontSize": 20
+  "baseFontSize": 20,
+  "cssTheme": "Atom",
+  "theme": "moonstone"
 }

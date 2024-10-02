@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Session-10/S10-.md",
+                "file": "Possible-Removal/S10-FastAPI-Jinja2.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 379.5
   },
   "right": {
     "id": "8dd8390eae31acff",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Session-05/S05-ESP32-Sleep.md",
+                "file": "Possible-Removal/S10-FastAPI-Jinja2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Session-05/S05-ESP32-Sleep.md",
+                "file": "Possible-Removal/S10-FastAPI-Jinja2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Session-10/S10-.md"
+                "file": "Possible-Removal/S10-FastAPI-Jinja2.md"
               }
             }
           }
@@ -138,6 +138,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "workspaces:Manage workspace layouts": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -148,8 +149,27 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "3a2e40d68bd46bc0",
+  "active": "58d9e77d75b35547",
   "lastOpenFiles": [
+    "Session-12/S12-FastAPI-Security-2.md",
+    "Session-12/S11-FastAPI-Security-2.md",
+    "Possible-Removal",
+    "Session-10/S10-FastAPI-and_HTML.md",
+    "Session-11/S11-FastAPI-Security-2.md",
+    "assets/CleanShot 2024-09-27 at 18.21.57.png",
+    "assets/CleanShot 2024-09-27 at 15.11.06.png",
+    "assets/CleanShot 2024-09-27 at 18.10.55.png",
+    "assets/CleanShot 2024-09-27 at 17.17.26.png",
+    "assets/CleanShot 2024-09-27 at 17.15.51.png",
+    "assets/CleanShot 2024-09-27 at 17.05.06@2x.png",
+    "Session-11/S11-FastAPI-Security-1.md",
+    "Session-11/S11-FastAPI-Logo-Options.md",
+    "assets/FastAPI-PurpleOchre-1.png",
+    "assets/FastAPI-LimeOchre-1.png",
+    "assets/FastAPI-BlueOchre-1.png",
+    "assets/FastAPI-BlueOchre-1-1.png",
+    "S11-FastAPI-Logo-Options.md",
+    "Session-11/S11-FastAPI-Security-0.md",
     "Session-09/demo.h",
     "Session-09/demo.txt",
     "Session-09/New Text Document.txt",
@@ -159,8 +179,6 @@
     "Session-09/demo-extra-files",
     "Session-09/extra-file-demo/another.h",
     "Session-09/extra-file-demo/New Text Document.txt",
-    "Session-09/extra-file-demo/secrets.h",
-    "Session-09/extra-file-demo/extra-file-demo.ino",
     "Session-10/S10-.md",
     "Session-09/S09-Exercises-and-Journal.md",
     "Session-09/Untitled.md",
@@ -173,20 +191,9 @@
     "Session-01/S01-Electricity-and-Power-Basics.md",
     "Session-01/ReadMe.md",
     "ReadMe.md",
-    "assets/Session-02-20240724163629.png",
     "Session-02/S02-Traffic-Lights.md",
-    "assets/session-01-led-and-switch.png",
-    "assets/VIRP@1x.png",
-    "assets/Pasted image 20240731165401.png",
-    "assets/Pasted image 20240731164540.png",
-    "assets/Pasted image 20240731164520.png",
-    "assets/Pasted image 20240731164454.png",
-    "assets/CleanShot 2024-07-29 at 20.35.18@2x.png",
-    "assets/CleanShot 2024-07-29 at 19.59.52@2x.png",
-    "assets/CleanShot 2024-07-29 at 19.54.37@2x.png",
     "Session-01/MCU-Controlled-LED.md",
     "Session-01/Hardware.md",
-    "InterRIoT-Circuits/Flasher-1/fp-info-cache",
     "Session-02/S02-Non-Blocking-Flasher-v3.md",
     "Session-02/S02-Non-Blocking-Flasher-v2.md"
   ]

@@ -22,6 +22,10 @@ date created: 03 July 2024
 date modified: 10 July 2024
 ---
 
+
+# DO NOT USE
+
+
 # Python, FastAPI and Templating
 
 ## Intermediate RIoT
@@ -67,9 +71,11 @@ Ensure you are in your Source/Repos folder.
 Create project folder, and change into it:
 
 ```shell
-mkdir xxx-fastapi-intro
-cd xxx-fastapi-intro
+mkdir xxx-fastapi-templating
+cd xxx-fastapi-templating
 ```
+
+> **Remember:** `xxx` is replaced by your initials!
 
 Create python virtual environment, and activate it:
 
@@ -108,11 +114,13 @@ new file:   templates/.gitignore
 
 # PyCharm, Plugins and The Project
 
-Open PyCharm professional and then use the Menu->File->Open to open the `xxx-fastapi-templating` folder as a new project.
+Open PyCharm professional and then use the Menu->File->Open to open the `xxx-fastapi-templating` folder as a new
+project.
 
 ## Adding Plugins
 
-Once the project is open, Use <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>S</kbd> to open the settings (<kbd>CMD</kbd>+<kbd>,</kbd> on MacOS).
+Once the project is open, Use <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>S</kbd> to open the settings (<kbd>
+CMD</kbd>+<kbd>,</kbd> on MacOS).
 
 Locate the Plugins section on the left side of the dialog.
 
@@ -134,10 +142,12 @@ You will need to restart you PyCharm Professional IDE.
 Now we need to update the `.gitignore` file.
 
 Use the following steps:
+
 - click on the `.gitignore` file in the root folder.
 - Menu -> File -> New -> `.ignore` -> `.gitignore`
 
 Add the following templates:
+
 - Backup
 - JetBrains+all
 - JetBrains+iml
@@ -197,10 +207,11 @@ Create a `requirements.txt` file using:
 pip freeze > requirements.txt
 ```
 
-
-# Set Up Tailwind CSS
+# Set Up Tailwind CSS & FontAwesome
 
 Seeing as we already have encountered TailwindCSS we may as well also include it in this project.
+
+We will also add Font Awesome, a brilliant web icon collection providing 32000 icons of which over 2500 are free to use.
 
 ```shell
 npm install tailwindcss
@@ -212,7 +223,8 @@ Initialise the TailwindCSS configuration file:
 ./node_modules/.bin/tailwindcss init
 ```
 
-If you want to make this easier for the future you could add an alias to the command. See https://help.screencraft.net.au/hc/2680392001/66/add-bash-command-line-aliases-for-git for more details.
+If you want to make this easier for the future you could add an alias to the command.
+See https://help.screencraft.net.au/hc/2680392001/66/add-bash-command-line-aliases-for-git for more details.
 
 Open the `tailwind.config.js` file (it will be in the root of the project) and update it so it contains:
 
@@ -231,9 +243,10 @@ Open the `tailwind.config.js` file (it will be in the root of the project) and u
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
-        "./src/**/*.{html,js}",
-        "./**/*.{html,js,php}"
-    ],
+        "static/**/*.{js,html,py}",
+        "templates/**/*.{js,html,py}",
+        "app.py",
+        ],
     theme: {
         extend: {},
     },
@@ -249,9 +262,30 @@ Open the `src/source.css` file and add:
 @tailwind utilities;
 ```
 
+### FontAwesomne
+
+Now we need to download FontAwesome.
+
+We have provided a minimal installation with all the web fonts and the required CSS files for the free version of FontAwesome 6.0.0.
+
+If you want to grab the latest then head to the [FontAwesome.com](https://FontAwesome.com) website and download the web version from there.
+
+Download our minimal installation file from here: 
+
+- [FontAwesome-6-Minimal.7z](../assets/FontAwesome-6-Minimal.7z)
+or
+- [FontAwesome-6-Minimal.zip](../assets/FontAwesome-6-Minimal.zip)
+
+Extract the contents and copy the `webfonts` and the `css` folders into the `static` folder in your project.
+
+We will add these to our base template later...
+
+### Watching the files...
+
 Open a new Bash CLI.
 
-Presuming you are in the Source/Repos folder we now change into the project folder, and start the Tailwind build & watch:
+Presuming you are in the Source/Repos folder we now change into the project folder, and start the Tailwind build &
+watch:
 
 ```bash
 tailwind -i src/source.css -o static/css/site.css --watch

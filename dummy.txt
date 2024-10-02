@@ -1,0 +1,38 @@
+Round 1, Sat 06 Apr 2024, 16:00, HBF Arena, Turf, Played, Kalamunda, 1 , 5, Loss
+Round 2, Sat 13 Apr 2024, 12:30, University of WA Superturfs, Turf 2, Played, Westside Wolves 3, 3 , 3, Draw
+Round 3, Sat 20 Apr 2024, 12:00, Perth Hockey Stadium, Turf 1, Played, WASPS 3, 2 , 0, Loss
+Round 4, Fri 26 Apr 2024, 20:30, Perth Hockey Stadium, Turf 2, Played, NC Raiders 2, 4 , 1, Loss
+Round 5, Sun 05 May 2024, 13:30, The Sporting Globe Stadium, Turf, Played, Peel Rebels, 4 , 4, Draw
+Round 6, Sun 12 May 2024, 13:00, Hale Hockey Club, Turf, Played, Hale 4, 0 , 9, Win
+Round 7, Sat 18 May 2024, 13:00, Lakelands Hockey & Sporting Facility, Bateau Turf, Played, Fremantle Cockburn 3, 1 , 5, Win
+Round 8, Sat 25 May 2024, 16:00, HBF Arena, Turf, Played, UWA 3, 0 , 4, Loss
+Round 9, Sun 09 Jun 2024, 14:30, HBF Arena, Turf, Played, Whitford 3, 2 , 6, Loss
+Round 10, Sat 15 Jun 2024, 16:00, HBF Arena, Turf, Played, Westside Wolves 3, 4 , 1, Win
+Round 11, Sun 23 Jun 2024, 16:00, HBF Arena, Turf, Played, WASPS 3, 1 , 1, Draw
+Round 12, Sat 29 Jun 2024, 12:30, Guildford Grammar School, Turf, Played, Kalamunda, 3 , 3, Draw
+Round 13, Sat 13 Jul 2024, 14:30, Troy Pickard Hockey Centre, Turf, Played, Whitford 3, 2 , 2, Draw
+Round 14, Sat 20 Jul 2024, 17:30, HBF Arena, Turf, Played, NC Raiders 2, 2 , 4, Loss
+Round 15, Sat 27 Jul 2024, 16:00, HBF Arena, Turf, Played, Hale 4, 6 , 1, Win
+Round 16, Sat 03 Aug 2024, 14:30, HBF Arena, Turf, Played, Peel Rebels, 9 , 0, Win
+Round 17, Sat 10 Aug 2024, 14:30, University of WA Superturfs, Turf 1, Playing, UWA 3
+Round 18, Sat 17 Aug 2024, 16:00, HBF Arena, Turf, Playing, Fremantle Cockburn 3
+
+
+Round 1, Sat 06 Apr 2024, 17:30, HBF Arena, Turf, Played, Lions 2, 2 , 1, Win
+Round 2, Sun 14 Apr 2024, 15:30, University of WA Superturfs, Turf 2, Played, Mods,OGM 4, 0 , 2, Win
+Round 3, Sat 20 Apr 2024, 13:00, University of WA Superturfs, Turf 1, Played, Uni Associates, 5 , 2, Loss
+Round 4, Sat 27 Apr 2024, 18:30, Perth Hockey Stadium, Turf 2, Played, Curtin University 3, 0 , 0, Draw
+Round 5, Sat 04 May 2024, 13:00, HBF Arena, Turf, Played, Newman Knights 2, 1 , 3, Loss
+Round 6, Sat 11 May 2024, 15:30, Perth Hockey Stadium, Turf 1, Played, WASPS 4, 3 , 4, Win
+Round 7, Sat 18 May 2024, 13:00, High Velocity Ducting Stadium, Turf, Played, Southern River, 8 , 2, Loss
+Round 8, Sat 25 May 2024, 17:30, HBF Arena, Turf, Played, UWA 4, 0 , 5, Loss
+Round 9, Sun 09 Jun 2024, 16:00, HBF Arena, Turf, Played, Melville 4, 0 , 2, Loss
+Round 10, Sat 15 Jun 2024, 17:30, HBF Arena, Turf, Played, Mods,OGM 4, 1 , 0, Win
+Round 11, Sun 23 Jun 2024, 17:30, HBF Arena, Turf, Played, Uni Associates, 2 , 2, Draw
+Round 12, Sat 29 Jun 2024, 18:30, Lemnos Field, Turf, Played, Lions 2, 3 , 5, Win
+Round 13, Sat 13 Jul 2024, 14:30, Melville Toyota Stadium, Turf, Played, Melville 4, 4 , 0, Loss
+Round 14, Sat 20 Jul 2024, 19:00, HBF Arena, Turf, Played, Curtin University 3, 1 , 4, Loss
+Round 15, Sat 27 Jul 2024, 17:30, HBF Arena, Turf, Played, WASPS 4, 1 , 1, Draw
+Round 16, Sat 03 Aug 2024, 13:00, Hale Hockey Club, Turf, Played, Newman Knights 2, 0 , 1, Win
+Round 17, Sat 10 Aug 2024, 13:00, University of WA Superturfs, Turf 1, Playing, UWA 4
+Round 18, Sat 17 Aug 2024, 17:30, HBF Arena, Turf, Playing, Southern River

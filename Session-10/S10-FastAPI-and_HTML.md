@@ -46,7 +46,7 @@ includeLinks: true
 
 - Python 3.10+ (with Pip)
 - PyCharm Professional 2024.2+ or other editor
-- NodeJS 18+ (with NPM)
+- Node.js 18+ (with NPM)
 - Internet Access
 - GitHub (or equivalent) account
 
@@ -232,7 +232,7 @@ We will also add Font Awesome, a brilliant web icon collection providing `32,000
 npm install tailwindcss
 ```
 
-Initialise the TailwindCSS configuration file:
+Initialize the TailwindCSS configuration file:
 
 ```
 ./node_modules/.bin/tailwindcss init
@@ -459,7 +459,7 @@ The path is relative to the application's location.
 The Jinja2 templating engine will generate the full relative path name based on the `LOCATION_ALIAS` to
 the file `FILE_PATH_AND_NAME` that is contained on the `LOCATION_ALIAS`.
 
-Ok, so we had better update the `app.py` to start off with.
+OK, so we had better update the `app.py` to start off with.
 
 ## Update `app.py` to add the static locations...
 
@@ -1049,7 +1049,7 @@ These alerts will be for:
 
 You could probably come up with more types of alert if you wanted, such as Emergency, Not Found, PICNIC, and so on.
 
-Ok, let's add the following at the end of the `app.py` file:
+OK, let's add the following at the end of the `app.py` file:
 
 ```python
 @app.get("/alerts", response_class=HTMLResponse)

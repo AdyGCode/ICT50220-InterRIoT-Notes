@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "ee005a075c2ae534",
+        "id": "5de6ec8b6301555d",
         "type": "tabs",
         "children": [
           {
-            "id": "3a2e40d68bd46bc0",
+            "id": "1f4fb7e1c5c11ab2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Possible-Removal/S10-FastAPI-Jinja2.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]

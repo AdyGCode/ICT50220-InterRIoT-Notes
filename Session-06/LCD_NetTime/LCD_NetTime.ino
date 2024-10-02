@@ -29,9 +29,9 @@
 #include <time.h>
 #include "NTP.h"
 
-#define RETRY_PERIOD 1000
-#define RETRY_ADJUSTMENT 1000
-#define MAX_ATTEMPTS 5
+#include "secrets.h"
+
+
 
 #define SDA 13  //Define SDA pins
 #define SCL 14  //Define SCL pins

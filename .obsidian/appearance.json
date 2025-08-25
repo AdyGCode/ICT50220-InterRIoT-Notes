@@ -1,0 +1,9 @@
+{
+  "accentColor": "#e222dc",
+  "interfaceFontFamily": "Atkinson Hyperlegible",
+  "textFontFamily": "Verdana,Atkinson Hyperlegible",
+  "monospaceFontFamily": "FiraCode Nerd Font",
+  "baseFontSize": 20,
+  "cssTheme": "Encore",
+  "theme": "obsidian"
+}

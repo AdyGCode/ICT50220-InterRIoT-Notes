@@ -1,0 +1,10 @@
+{
+  "showLineNumber": true,
+  "alwaysUpdateLinks": true,
+  "useMarkdownLinks": true,
+  "attachmentFolderPath": "assets",
+  "showUnsupportedFiles": true,
+  "newFileLocation": "current",
+  "trashOption": "local",
+  "newLinkFormat": "relative"
+}

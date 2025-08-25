@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Session-04/S04-Wi-Fi-and-ESP32.md",
+                "file": "Session-02/S02-LED-Toggle-and-Pushbutton-v2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "S04-Wi-Fi-and-ESP32"
+              "title": "S02-LED-Toggle-and-Pushbutton-v2"
             }
           }
         ]
@@ -179,17 +179,23 @@
   },
   "active": "81efd14dfe16050f",
   "lastOpenFiles": [
+    "Session-02/S02-LED-Toggle-and-Pushbutton.md",
+    "Session-02/S02-LED-Toggle-and-Pushbutton-v2.md",
+    "Session-02/S02-LED-Flasher-and-Pushbutton.md",
+    "Session-02/S02-LED-Flasher.md",
+    "Session-02/flashing-led-with-push-button-1.png",
+    "Session-01/Hardware.md",
+    "Session-04/S04-Wi-Fi-and-Bluetooth.md",
+    "Session-04/S04-Notes-and-Review-Exercises.md",
+    "Session-04/S04-Wi-Fi-and-ESP32.md",
     "assets/ESP32-S3-C_Tutorial_super_starter_kit.pdf",
     "assets/C_Tutorial.pdf",
     "assets/ESP32-WROVER-C_Tutorial_super_starter_kit.pdf",
     "assets/C_Tutorial_super_starter_kit.pdf",
-    "Session-04/S04-Notes-and-Review-Exercises.md",
     "assets/arduino-ide_2.3.6_Windows_64bit.exe",
     "assets/MQTTX.7z",
     "assets/MQTTX-Setup-1.12.0-x64.exe",
-    "Session-04/S04-Wi-Fi-and-Bluetooth.md",
     "assets/mosquitto-2.0.22-install-windows-x64.exe",
-    "Session-04/S04-Wi-Fi-and-ESP32.md",
     "Session-04/S04-ESP32-MQTT.md",
     "Session-04/S04-MQTT-Setting-Up-Mosquitto-and-MQTTX.md",
     "Session-04/ReadMe.md",
@@ -198,7 +204,6 @@
     "Session-03/ReadMe.md",
     "assets/Freenove_Super_Starter_Kit_for_ESP32_S3.zip",
     "assets/Freenove_Super_Starter_Kit_for_ESP32-main.zip",
-    "assets/CH34x_Install_Windows_v3_4.zip",
     "assets/Pasted image 20250811165357.png",
     "assets/Pasted image 20250811165324.png",
     "assets/Pasted image 20250811165210.png",
@@ -206,7 +211,6 @@
     "assets/Pasted image 20250811164801.png",
     "assets/Pasted image 20250811163832.png",
     "assets/Pasted image 20250811163516.png",
-    "assets/Pasted image 20250811163456.png",
     "Session-05/ReadMe.md",
     "Session-05/S05-Saving-Power-and-Sleep-Modes.md",
     "Session-05/S05-Power-Capacity-and-Consumption.md",
@@ -220,10 +224,6 @@
     "Session-03/S03-ArduinoIDE.md",
     "Session-02/S02-Non-Blocking-Flasher-v4.md",
     "Session-02/S02-Non-Blocking-Flasher-v3.md",
-    "Session-02/S02-Non-Blocking-Flasher-v2.md",
-    "Session-02/S02-Non-Blocking-Flasher-v1.md",
-    "Session-02/S02-LED-Flasher-and-Pushbutton.md",
-    "Session-02/S02-LED-Flasher.md",
-    "Session-02/S02-Laboratory-Tools.md"
+    "Session-02/S02-Non-Blocking-Flasher-v2.md"
   ]
 }

@@ -113,7 +113,8 @@ Insert the screenshot into your Markdown document along with any summary details
 ### Exercise 2: Toggled Flasher
 
 
-Create a circuit that has two LEDs (You choose the colours), and two 330 Ohm resistors. It also has a pushbutton switch and a resistor configured to 'pull down' the switch input to LOW by default.
+Create a circuit that has two LEDs (You choose the colours), and two 330 Ohm resistors. 
+It also has a pushbutton switch and a resistor configured to 'pull down' the switch input to LOW by default.
 
 Wire up the circuit, and write the code, using an Arduino and a small breadboard so that:
 

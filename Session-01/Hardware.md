@@ -62,9 +62,19 @@ You may download this tutorial and the supporting software for the various kits 
 ##### Basic Starter Kit
 [https://github.com/Freenove/Freenove_Basic_Starter_Kit_for_ESP32/archive/refs/heads/main.zip](https://github.com/Freenove/Freenove_Basic_Starter_Kit_for_ESP32/archive/refs/heads/main.zip)
 
+
+
 ##### Super Starter Kit
 [https://github.com/Freenove/Freenove_Super_Starter_Kit_for_ESP32/archive/refs/heads/main.zip](https://github.com/Freenove/Freenove_Super_Starter_Kit_for_ESP32/archive/refs/heads/main.zip)
+
+https://docs.freenove.com/projects/fnk0046/en/latest/
 
 ##### Ultimate Starter Kit
 [https://github.com/Freenove/Freenove_Ultimate_Starter_Kit_for_ESP32/archive/refs/heads/master.zip](https://github.com/Freenove/Freenove_Ultimate_Starter_Kit_for_ESP32/archive/refs/heads/master.zip)
 
+https://docs.freenove.com/projects/fnk0047/en/latest/
+
+
+
+#### Other references
+[Tutorial — freenove-docs v1.0.0 documentation](https://docs.freenove.com/en/latest/about-freenove/tutorial.html#)

@@ -76,15 +76,14 @@ void loop()
 	    delay(PERIOD);
 	} else {
 		digitalWrite(RED_LED_1, LOW); 
-      	ledState = !ledState;
-	    delay(PERIOD);
     }
     digitalWrite(RED_LED_1, ledState);
 }
 
 ```
 
-When the push button is pressed the LED is turned on for `PERIOD` milliseconds, and if it is not pressed the LED is turned off for `PERIOD` seconds.
+When the push button is pressed the LED is turned on for `PERIOD` milliseconds, 
+and if it is not pressed the LED is turned off.
 
 **Question:** What could be a problem with this circuit and code?
 

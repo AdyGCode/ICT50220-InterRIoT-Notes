@@ -24,7 +24,7 @@ date modified: 10 July 2024
 
 # Batteries and their Capacity
 
-Batteries come in all sorts of shapes and sizes. They can be just a few mm across to measuring metres across, depending on the type adn application.
+Batteries come in all sorts of shapes and sizes. They can be just a few mm across to measuring metres across, depending on the type and application.
 
 For most IoT systems we use low power batteries such as 1.V AA alkaline cells, 3.3V button cells, 12V lead-acid cells, and of course, our Nickle-Cadmium and Lithium-Ion/Polymer rechargeable cells.
 

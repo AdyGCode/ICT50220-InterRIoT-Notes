@@ -1,276 +1,250 @@
 # Policy Based Access Control Tutorial with Python, Casbin, and FastAPI
 
-Created by Claude.AI
+Created using Copilot
 
-https://claude.site/artifacts/d84d01c1-6217-4776-a8b0-f48e9c7ef2e0
+Let’s break down **RBAC**, **PBAC**, and **ABAC** in a way that’s easy to understand, even if you're just starting out
+with access control concepts. Then I’ll show you a simple Python example to help make it clearer.
 
+---
 
-## Prerequisites
+## 🛡️ What Are RBAC, PBAC, and ABAC?
 
-- Python 3.10
-- Casbin 1.36
-- FastAPI 0.114
+Imagine you’re in a school, and there are different rooms: a **library**, a **science lab**, and a **teachers’ lounge**.
+Not everyone can go everywhere — access depends on **who you are**, **what you’re doing**, or **what you’re allowed to
+do**.
 
-## Step 1: Set up the project
+![rbac-pbac-abac-comparison.png](../assets/rbac-pbac-abac-comparison.png)
 
-First, create a new directory for your project and set up a virtual environment:
+### 1. **RBAC – Role-Based Access Control**
 
-```bash
-mkdir pbac_tutorial
-cd pbac_tutorial
-python -m venv venv
-source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-```
+**Think of roles like job titles.**
 
-Install the required packages:
+- If you're a **student**, you can enter the **library**.
+- If you're a **teacher**, you can enter the **teachers’ lounge**.
+- If you're a **lab assistant**, you can enter the **science lab**.
 
-```bash
-pip install casbin==1.36 fastapi==0.114 uvicorn
-```
+🔑 **Access is based on your role.**
 
-## Step 2: Create the Casbin model and policy files
+#### ✅ Pros:
 
-Create a file named `model.conf` with the following content:
+- Easy to manage.
+- Good for organizations with clear roles.
 
-```
-[request_definition]
-r = sub, obj, act
+#### ❌ Cons:
 
-[policy_definition]
-p = sub, obj, act
+- Not flexible — if someone needs temporary access, you have to change their role.
+- Doesn’t consider context (like time of day or task).
 
-[role_definition]
-g = _, _
+---
 
-[policy_effect]
-e = some(where (p.eft == allow))
+### 2. **PBAC – Policy-Based Access Control**
 
-[matchers]
-m = g(r.sub, p.sub) && keyMatch(r.obj, p.obj) && (r.act == p.act || p.act == "*")
-```
+**Think of policies like rules written by the school.**
 
-Create a file named `policy.csv` with the policies you provided:
+- A policy might say: *“Only students with a science project can enter the lab.”*
+- Or: *“Teachers can access the lounge during school hours.”*
 
-```
-p, anonymous, /, GET
-p, anonymous, /docs, GET
-p, anonymous, /openapi.json, GET
+🔑 **Access is based on rules (policies) that consider roles, actions, and sometimes context.**
 
-p, alice, /dataset1/*, GET
-p, alice, /dataset1/create, POST
-p, alice, /dataset1/update/*, PUT
+#### ✅ Pros:
 
-p, bob, /dataset2/resource1, *
-p, bob, /dataset2/resource2, GET
-p, bob, /dataset2/folder1/*, POST
+- More flexible than RBAC.
+- Easier to manage complex access needs.
 
-p, dataset1_admin, /dataset1/*, *
+#### ❌ Cons:
 
-p, *, /login, *
+- Can get complicated with too many policies.
+- Requires a good system to manage and evaluate policies.
 
-g, cathy, dataset1_admin
+---
 
-```
+### 3. **ABAC – Attribute-Based Access Control**
 
-## Step 3: Create the main application
+**Think of attributes like personal details or conditions.**
 
-Create a file named `main.py` with the following content:
+- Attributes could be: your **age**, **grade**, **project type**, **time of day**, etc.
+- A rule might say: *“Anyone with a valid ID and a science project can enter the lab between 9am–5pm.”*
 
-```python
-# RBAC Demo using Casbin and FastAPI
+🔑 **Access is based on multiple attributes — not just roles.**
 
-# Imports -------------------------------------------------
-import casbin
-from fastapi import FastAPI, Depends, HTTPException
-from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
-from fastapi.responses import JSONResponse
-from starlette.requests import Request
+#### ✅ Pros:
 
-```
+- Super flexible.
+- Great for dynamic environments.
 
-This imports the requirements for the application.
+#### ❌ Cons:
+
+- Complex to set up and maintain.
+- Harder to audit who has access and why.
+
+---
+
+## 🐍 Python Code Example
+
+Let’s simulate a simple access control system using all three methods.
 
 ```python
-# Create & configure app ----------------------------------
-app = FastAPI()
-enforcer = casbin.Enforcer("model.conf", "policy.csv")
-security = HTTPBearer()
+# Sample user data
+user = {
+    "name": "Alice",
+    "role": "student",
+    "attributes": {
+        "has_project": True,
+        "project_type": "science",
+        "time": "14:00"
+    }
+}
 
+
+# RBAC: Role-Based Access Control
+def rbac_access(user, resource):
+    role_permissions = {
+        "student": ["library"],
+        "teacher": ["teachers_lounge"],
+        "lab_assistant": ["science_lab"]
+    }
+    return resource in role_permissions.get(user["role"], [])
+
+
+# PBAC: Policy-Based Access Control
+def pbac_access(user, resource):
+    policies = {
+        "science_lab": lambda u: u["role"] == "student" and u["attributes"]["has_project"],
+        "teachers_lounge": lambda u: u["role"] == "teacher",
+    }
+    policy = policies.get(resource)
+    return policy(user) if policy else False
+
+
+# ABAC: Attribute-Based Access Control
+def abac_access(user, resource):
+    if resource == "science_lab":
+        return (
+                user["attributes"]["project_type"] == "science" and
+                "09:00" <= user["attributes"]["time"] <= "17:00"
+        )
+    return False
+
+
+# Test access
+resource = "science_lab"
+print("RBAC Access:", rbac_access(user, resource))  # False
+print("PBAC Access:", pbac_access(user, resource))  # True
+print("ABAC Access:", abac_access(user, resource))  # True
 ```
+
+---
+
+Let’s look at how **RBAC**, **PBAC**, and **ABAC** could be used in a **real app or website**, like a school management
+system, an online learning platform, or even a company intranet.
+
+---
+
+## 🎓 Example: School Management Web App
+
+Imagine a web app used by students, teachers, and administrators. It has features like:
+
+- Viewing grades
+- Uploading assignments
+- Managing student records
+- Accessing private staff documents
+
+Here’s how each access control model could be applied:
+
+---
+
+### 🔐 RBAC in a Real App
+
+**Use Case**: Assign access based on user roles.
+
+- **Student** role: Can view their own grades and submit assignments.
+- **Teacher** role: Can view and grade student submissions.
+- **Admin** role: Can manage users and access all data.
+
+**Implementation**:
+
+- When a user logs in, their role is checked.
+- The app shows or hides features based on that role.
+
+**Pros**: Simple to implement with role checks.
+**Cons**: Not flexible for temporary or conditional access.
+
+---
+
+### 📜 PBAC in a Real App
+
+**Use Case**: Define policies like:
+
+- “Teachers can only edit grades during the grading period.”
+- “Students can only submit assignments before the deadline.”
+
+**Implementation**:
+
+- Policies are written as rules in code or a policy engine.
+- The app checks these rules before allowing actions.
+
+**Pros**: More control over when and how access is granted.
+**Cons**: Requires a policy engine or custom logic.
+
+---
+
+### 🧬 ABAC in a Real App
+
+**Use Case**: Use attributes like:
+
+- User’s grade level
+- Assignment type
+- Time of day
+- Device used
+
+**Example Rule**: “Students in Year 12 can access exam prep materials between 8am–6pm from school devices.”
+
+**Implementation**:
+
+- Attributes are collected (user info, time, device).
+- Access is granted if all conditions match.
+
+**Pros**: Very flexible and dynamic.
+**Cons**: Complex to manage and audit.
+
+---
+
+## 🧪 Sample Python Logic for a Web App
+
+Here’s how you might use these models in a Flask-like web app:
 
 ```python
-# Functions -----------------------------------------------
-def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(security)):
-    # VERY SIMPLIFIED! Do not use in production.
-    # You should validate the token and return the user
-    # in a real application. In this example we will use the
-    # token as the username
-    return credentials.credentials
+def can_access(user, resource, action):
+    # RBAC
+    if user.role == "admin":
+        return True
 
+    # PBAC
+    if resource == "grades" and action == "edit":
+        return user.role == "teacher" and is_grading_period()
+
+    # ABAC
+    if resource == "exam_prep":
+        return (
+                user.attributes["grade_level"] == 12 and
+                "08:00" <= current_time() <= "18:00" and
+                user.attributes["device"] == "school_device"
+        )
+
+    return False
 ```
 
-### Middleware
+---
 
-```python
-# Middleware ----------------------------------------------
-@app.middleware("http")
-async def enforce_policy(request: Request, call_next):
-    if request.url.path == "/login":
-        return await call_next(request)
+## 🧠 Summary
 
-    try:
-        credentials = await security(request)
-        user = credentials.credentials
-    except HTTPException as e:
-        user = "anonymous"
+| Model    | Based On   | Flexibility | Complexity | Example                               | Real App Use                                  | Best For          | Tools                |
+|----------|------------|-------------|------------|---------------------------------------|-----------------------------------------------|-------------------|----------------------|
+| **RBAC** | Roles      | Low         | Simple     | Student can access library            | Role-based menus and permissions              | Simple apps       | Role tables          |
+| **PBAC** | Policies   | Medium      | Moderate   | Students with projects can access lab | Time-based or task-based access               | Medium complexity | Policy engines       |
+| **ABAC** | Attributes | High        | Complex    | Access based on project type and time | Context-aware access (device, time, location) | Advanced apps     | Attribute evaluators |
 
-    policy = enforcer.enforce(user, request.url.path, request.method)
-    if policy in (None, False):
-        return JSONResponse(status_code=403, content={"message": "Forbidden"})
-    else:
-        return await call_next(request)
-
-```
-
-### Main Application Code / Endpoints
-
-Start with the "root" or "home" endpoint.
-
-This is accessed using http://FQDN/ where FQDN is localhost:8000 when we are testing/developing.
-
-```python
-# Endpoints -----------------------------------------------
-@app.get("/")
-async def root():
-    return {"message": "Welcome to PBAC Tutorial!"}
+---
 
 
-```
 
-Next we add the login endpoint. At the moment this only responds with JSOn to say that this accesses the login endpoint.
-```python
-
-@app.get("/login")
-async def login():
-    return {"message": "This is the login page"}
-
-```
-
-Now we will add the first of the dataset1 endpoints: GET
-
-```python
-
-@app.get("/dataset1/{resource}")
-async def dataset1(resource: str, user: str = Depends(get_current_user)):
-    """
-    Provides access to a single dataset1 resource identified by {resource}
-    """
-    return {"message": f"{user} is accessing dataset1 resource: {resource}"}
-
-```
-
-Next is POST for `dataset1/{resource}`:
-
-```python
-@app.post("/dataset1/{resource}")
-async def dataset1_post(resource: str, user: str = Depends(get_current_user)):
-    return {"message": f"{user} is posting to dataset1 resource: {resource}"}
-
-```
-
-To demonstrate other HTTP Request verbs, we show a PUT request here, but you can easily creat PATCH and DELETE requests.
-
-```python
-@app.put("/dataset1/{resource}")
-async def dataset1_put(resource: str, user: str = Depends(get_current_user)):
-    return {"message": f"{user} is putting to dataset1 resource: {resource}"}
-```
-
-Next is a set of endpoints for dataset 2.
-
-```python
-@app.get("/dataset2/{resource}")
-async def dataset2_get(resource: str, user: str = Depends(get_current_user)):
-    return {"message": f"{user} is accessing dataset2 resource: {resource}"}
-
-@app.post("/dataset2/{resource}")
-async def dataset2_post(resource: str, user: str = Depends(get_current_user)):
-    return {"message": f"{user} is posting to dataset2 resource: {resource}"}
-```
-
-Finally, a catch-all if the app is run via Python.
-
-
-```python
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
-```
-
-## Step 4: Run the application
-
-Run the application using the following command:
-
-```bash
-fastapi dev main.py --host=localhost --port=8000 --reload
-```
-
-The server will start running on `http://localhost:8000`.
-
-## Step 5: Test the application
-
-You can use tools like `curl` or Postman to test the application. Here are some example requests:
-
-1. Access the root path (allowed for anonymous users):
-   ```
-   curl http://localhost:8000/
-   ```
-
-2. Access the login page (allowed for all users):
-   ```
-   curl http://localhost:8000/login
-   ```
-
-3. Access dataset1 as Alice (allowed):
-   ```
-   curl -H "Authorization: Bearer alice" http://localhost:8000/dataset1/resource1
-   ```
-
-4. Try to POST to dataset1/create as Alice (allowed):
-   ```
-   curl -X POST -H "Authorization: Bearer alice" http://localhost:8000/dataset1/create
-   ```
-
-5. Try to POST to dataset1/create as Alice (forbidden, as no corresponding endpoint):
-   ```
-   curl -X POST -H "Authorization: Bearer alice" http://localhost:8000/dataset1/resource1
-   ```
-
-6. Try to access dataset2 as Alice (forbidden):
-   ```
-   curl -H "Authorization: Bearer alice" http://localhost:8000/dataset2/resource1
-   ```
-
-7. Access dataset2 as Bob (allowed):
-   ```
-   curl -H "Authorization: Bearer bob" http://localhost:8000/dataset2/resource1
-   ```
-
-8. Access dataset1 as Cathy (allowed due to role inheritance):
-   ```
-   curl -H "Authorization: Bearer cathy" http://localhost:8000/dataset1/resource1
-   ```
-
-## Conclusion
-
-This tutorial demonstrates how to implement Policy Based Access Control using Python, Casbin, and FastAPI. The application enforces the specified policies, allowing or denying access based on the user's role and the requested resource.
-
-To further enhance this application, you could:
-
-1. Implement proper user authentication
-2. Add more endpoints and resources
-3. Create an interface for managing policies dynamically
-4. Implement logging for access attempts and policy changes
-
-Remember to always follow security best practices when implementing access control in production environments.

@@ -147,7 +147,6 @@ In the Marketplace tab, locate and install the following plugins:
 - Rainbow Brackets
 - .env
 - Key Promoter X
-- CSV Editor
 - Conventional Commit
 - Pydantic [Not available? 2025/03]
 - Python Security
@@ -258,9 +257,8 @@ version from there.
 
 **OR** you may download our minimal installation file from here:
 
-- [FontAwesome-6-Minimal.7z](../assets/FontAwesome-6-Minimal.7z)
-  or
-- [FontAwesome-6-Minimal.zip](../assets/FontAwesome-6-Minimal.zip)
+- [FontAwesome-6-Minimal.7z](../assets/FontAwesome-6-Minimal.7z) or [FontAwesome-6-Minimal.zip](../assets/FontAwesome-6-Minimal.zip)
+- [FontAwesome-7-Minimal.7z](../assets/FontAwesome-7-Minimal.7z) or [FontAwesome-7-Minimal.zip](../assets/FontAwesome-7-Minimal.zip)
 
 Extract the contents and copy the `webfonts` and the `css` folders into the `static` folder in your project.
 

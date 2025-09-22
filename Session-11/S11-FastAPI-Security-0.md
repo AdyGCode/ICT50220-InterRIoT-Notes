@@ -52,16 +52,24 @@ m = g(r.sub, p.sub) && keyMatch(r.obj, p.obj) && (r.act == p.act || p.act == "*"
 Create a file named `policy.csv` with the policies you provided:
 
 ```
+p, anonymous, /, GET
+p, anonymous, /docs, GET
+p, anonymous, /openapi.json, GET
+
 p, alice, /dataset1/*, GET
-p, alice, /dataset1/resource1, POST
+p, alice, /dataset1/create, POST
+p, alice, /dataset1/update/*, PUT
+
 p, bob, /dataset2/resource1, *
 p, bob, /dataset2/resource2, GET
 p, bob, /dataset2/folder1/*, POST
+
 p, dataset1_admin, /dataset1/*, *
+
 p, *, /login, *
-p, anonymous, /, GET
 
 g, cathy, dataset1_admin
+
 ```
 
 ## Step 3: Create the main application
@@ -69,60 +77,126 @@ g, cathy, dataset1_admin
 Create a file named `main.py` with the following content:
 
 ```python
+# RBAC Demo using Casbin and FastAPI
+
+# Imports -------------------------------------------------
 import casbin
 from fastapi import FastAPI, Depends, HTTPException
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
+from fastapi.responses import JSONResponse
 from starlette.requests import Request
 
+```
+
+This imports the requirements for the application.
+
+```python
+# Create & configure app ----------------------------------
 app = FastAPI()
 enforcer = casbin.Enforcer("model.conf", "policy.csv")
 security = HTTPBearer()
 
+```
+
+```python
+# Functions -----------------------------------------------
 def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(security)):
-    # In a real application, you would validate the token and return the user
-    # For this example, we'll just use the token as the username
+    # VERY SIMPLIFIED! Do not use in production.
+    # You should validate the token and return the user
+    # in a real application. In this example we will use the
+    # token as the username
     return credentials.credentials
 
+```
+
+### Middleware
+
+```python
+# Middleware ----------------------------------------------
 @app.middleware("http")
 async def enforce_policy(request: Request, call_next):
-    # Skip authorization for login endpoint
     if request.url.path == "/login":
         return await call_next(request)
 
     try:
         credentials = await security(request)
         user = credentials.credentials
-    except HTTPException:
+    except HTTPException as e:
         user = "anonymous"
 
-    if enforcer.enforce(user, request.url.path, request.method):
-        return await call_next(request)
+    policy = enforcer.enforce(user, request.url.path, request.method)
+    if policy in (None, False):
+        return JSONResponse(status_code=403, content={"message": "Forbidden"})
     else:
-        raise HTTPException(status_code=403, detail="Forbidden")
+        return await call_next(request)
 
+```
+
+### Main Application Code / Endpoints
+
+Start with the "root" or "home" endpoint.
+
+This is accessed using http://FQDN/ where FQDN is localhost:8000 when we are testing/developing.
+
+```python
+# Endpoints -----------------------------------------------
 @app.get("/")
 async def root():
-    return {"message": "Welcome to the PBAC tutorial!"}
+    return {"message": "Welcome to PBAC Tutorial!"}
+
+
+```
+
+Next we add the login endpoint. At the moment this only responds with JSOn to say that this accesses the login endpoint.
+```python
 
 @app.get("/login")
 async def login():
     return {"message": "This is the login page"}
 
+```
+
+Now we will add the first of the dataset1 endpoints: GET
+
+```python
+
 @app.get("/dataset1/{resource}")
 async def dataset1(resource: str, user: str = Depends(get_current_user)):
-    return {"message": f"Accessing dataset1 resource: {resource}"}
+    """
+    Provides access to a single dataset1 resource identified by {resource}
+    """
+    return {"message": f"{user} is accessing dataset1 resource: {resource}"}
 
+```
+
+
+```python
 @app.post("/dataset1/{resource}")
 async def dataset1_post(resource: str, user: str = Depends(get_current_user)):
-    return {"message": f"Posting to dataset1 resource: {resource}"}
+    return {"message": f"{user} is posting to dataset1 resource: {resource}"}
 
+```
+
+```python
+@app.put("/dataset1/{resource}")
+async def dataset1_put(resource: str, user: str = Depends(get_current_user)):
+    return {"message": f"{user} is putting to dataset1 resource: {resource}"}
+```
+
+```python
 @app.get("/dataset2/{resource}")
-async def dataset2(resource: str, user: str = Depends(get_current_user)):
-    return {"message": f"Accessing dataset2 resource: {resource}"}
+async def dataset2_get(resource: str, user: str = Depends(get_current_user)):
+    return {"message": f"{user} is accessing dataset2 resource: {resource}"}
 
+```
+
+```python
 @app.post("/dataset2/{resource}")
 async def dataset2_post(resource: str, user: str = Depends(get_current_user)):
-    return {"message": f"Posting to dataset2 resource: {resource}"}
+    return {"message": f"{user} is posting to dataset2 resource: {resource}"}
+```
+
+```python
 
 if __name__ == "__main__":
     import uvicorn
@@ -158,7 +232,7 @@ You can use tools like `curl` or Postman to test the application. Here are some 
    curl -H "Authorization: Bearer alice" http://localhost:8000/dataset1/resource1
    ```
 
-4. Try to POST to dataset1/resource1 as Alice (allowed):
+4. Try to POST to dataset1/create as Alice (allowed):
    ```
    curl -X POST -H "Authorization: Bearer alice" http://localhost:8000/dataset1/resource1
    ```

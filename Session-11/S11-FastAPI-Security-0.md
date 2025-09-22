@@ -169,6 +169,7 @@ async def dataset1(resource: str, user: str = Depends(get_current_user)):
 
 ```
 
+Next is POST for `dataset1/{resource}`:
 
 ```python
 @app.post("/dataset1/{resource}")
@@ -177,24 +178,28 @@ async def dataset1_post(resource: str, user: str = Depends(get_current_user)):
 
 ```
 
+To demonstrate other HTTP Request verbs, we show a PUT request here, but you can easily creat PATCH and DELETE requests.
+
 ```python
 @app.put("/dataset1/{resource}")
 async def dataset1_put(resource: str, user: str = Depends(get_current_user)):
     return {"message": f"{user} is putting to dataset1 resource: {resource}"}
 ```
 
+Next is a set of endpoints for dataset 2.
+
 ```python
 @app.get("/dataset2/{resource}")
 async def dataset2_get(resource: str, user: str = Depends(get_current_user)):
     return {"message": f"{user} is accessing dataset2 resource: {resource}"}
 
-```
-
-```python
 @app.post("/dataset2/{resource}")
 async def dataset2_post(resource: str, user: str = Depends(get_current_user)):
     return {"message": f"{user} is posting to dataset2 resource: {resource}"}
 ```
+
+Finally, a catch-all if the app is run via Python.
+
 
 ```python
 
@@ -208,7 +213,7 @@ if __name__ == "__main__":
 Run the application using the following command:
 
 ```bash
-python main.py
+fastapi dev main.py --host=localhost --port=8000 --reload
 ```
 
 The server will start running on `http://localhost:8000`.
@@ -234,20 +239,25 @@ You can use tools like `curl` or Postman to test the application. Here are some 
 
 4. Try to POST to dataset1/create as Alice (allowed):
    ```
+   curl -X POST -H "Authorization: Bearer alice" http://localhost:8000/dataset1/create
+   ```
+
+5. Try to POST to dataset1/create as Alice (forbidden, as no corresponding endpoint):
+   ```
    curl -X POST -H "Authorization: Bearer alice" http://localhost:8000/dataset1/resource1
    ```
 
-5. Try to access dataset2 as Alice (forbidden):
+6. Try to access dataset2 as Alice (forbidden):
    ```
    curl -H "Authorization: Bearer alice" http://localhost:8000/dataset2/resource1
    ```
 
-6. Access dataset2 as Bob (allowed):
+7. Access dataset2 as Bob (allowed):
    ```
    curl -H "Authorization: Bearer bob" http://localhost:8000/dataset2/resource1
    ```
 
-7. Access dataset1 as Cathy (allowed due to role inheritance):
+8. Access dataset1 as Cathy (allowed due to role inheritance):
    ```
    curl -H "Authorization: Bearer cathy" http://localhost:8000/dataset1/resource1
    ```

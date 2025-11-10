@@ -114,7 +114,7 @@ Follow the Tutorials listed below from the FreeNove Super Starter Kit (The tutor
 
 ### NPN Transistor
 
-![img.png](../assets/npn.png)
+![img.webp](../assets/npn.webp)
 
 - https://youtu.be/w8-pq5bYbQM?si=HN9uI54GAZUWCVNr
 - https://components101.com/transistors/s8050-transistor-pinout-equivalent-datasheet
@@ -126,7 +126,7 @@ Follow the Tutorials listed below from the FreeNove Super Starter Kit (The tutor
 ### PNP Transistor
 
 
-![img.png](../assets/pnp.png)
+![img.webp](../assets/pnp.webp)
 
 - https://components101.com/transistors/s8850-pinout-equivalent-datasheet
 

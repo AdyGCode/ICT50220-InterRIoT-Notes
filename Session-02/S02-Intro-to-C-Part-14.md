@@ -46,13 +46,13 @@ They have three connection points, one on each end, and a moveable third connect
   
 Depending on where the moveable middle connection point is placed, the voltage in the middle can range from 0V to 5V and any values in between.  
   
-![](../assets/resistorWiper.png)  
+![](../assets/resistorWiper.webp)  
   
 ## Wiring  
   
 Connect your potentiometer as follows...  
   
-![](../assets/potentiometerWiring.png)  
+![](../assets/potentiometerWiring.webp)  
   
 Depending on the type of your potentiometer, your wiring may look a little different.  
 

@@ -113,7 +113,7 @@ Make sure you go over these articles / video resources.
 
 > Created using Microsoft Co-Pilot
 
-![RBAC-Flow.png](../assets/RBAC-Flow.png)
+![RBAC-Flow.webp](../assets/RBAC-Flow.webp)
 
 Role-Based Access Control (RBAC) is a method of regulating access to computer systems or resources based on the roles of individual users within an organization. Instead of assigning permissions directly to users, RBAC assigns permissions to roles, and users are assigned to roles based on their responsibilities.
 

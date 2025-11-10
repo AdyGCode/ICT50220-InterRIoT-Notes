@@ -51,7 +51,7 @@ USB port, it requires a bit of wiring.
 
 Here is an example of two Arduinos connected together via serial...  
   
-![](../assets/arduinoToArduino.png)  
+![](../assets/arduinoToArduino.webp)  
   
 - The **TX** (transmit pin, aka pin 0) on one Arduino needs to be connected to the
   **RX** (receive pin, aka pin 1) on the other Arduino and vice versa.  

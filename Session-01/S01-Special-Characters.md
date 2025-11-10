@@ -75,13 +75,13 @@ Below we outline how to obtain them in the three main operating systems.
 Press <kbd>WIN</kbd>+<kbd>.</kbd> to show the 'character selector'.
 
 Clicking on the "symbols"
-![Picture: showing the symbols item in the character selector](../assets/s01-characters-symbols.png) will take
+![Picture: showing the symbols item in the character selector](../assets/s01-characters-symbols.webp) will take
 you to the character section.
 
 Here you will find Language symbols for characters such as the Greek letter omega (<kbd>Ω</kbd>) and Mathematical
 symbols for the likes of the times and divide.
 
-![Picture: showing supplemental characters in MS Windows](../assets/s01-characters-supplemental.png)
+![Picture: showing supplemental characters in MS Windows](../assets/s01-characters-supplemental.webp)
 
 ### MacOS
 

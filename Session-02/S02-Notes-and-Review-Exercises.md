@@ -74,7 +74,7 @@ We give an example below:
 
 This displays as:
 
-![](../Pasted%20image%2020250725161528.png)
+![](../Pasted%20image%2020250725161528.webp)
 
 
 

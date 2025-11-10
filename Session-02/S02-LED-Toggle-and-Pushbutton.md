@@ -35,7 +35,7 @@ date modified: 10 July 2024
 
 ## Circuit
 
-![img.png](flashing-led-with-push-button-1.png)
+![img.webp](flashing-led-with-push-button-1.webp)
 
 ## Code
 

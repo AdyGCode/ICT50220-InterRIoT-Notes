@@ -38,7 +38,7 @@ This flasher blinks a red LED and then blinks the blue LED when the pushbutton i
 
 ## Circuit
 
-![LED Flasher Circuit](../assets/Session-02-20240724162543.png)
+![LED Flasher Circuit](../assets/Session-02-20240724162543.webp)
 
 ## Code
 

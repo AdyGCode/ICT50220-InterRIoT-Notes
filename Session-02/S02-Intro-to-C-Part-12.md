@@ -41,7 +41,7 @@ To do so, we rely on a technique call Pulse Width Modulation (**PWM**).
   
 PWM is really simple...  
   
-![](../assets/pwmGraph.png)  
+![](../assets/pwmGraph.webp)  
   
 ...if we can't supply half the voltage, we'll simply supply **full** voltage, but for half the time.  
 By changing the ratio between the on time and the off time, we can achieve any power level that we want.  

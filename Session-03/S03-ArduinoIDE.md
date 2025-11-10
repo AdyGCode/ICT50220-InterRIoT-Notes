@@ -24,14 +24,14 @@ date modified: 10 July 2024
 
 # Arduino IDE
 
-![](../Pasted%20image%2020240731164454.png)
+![](../Pasted%20image%2020240731164454.webp)
 
 
-![](../Pasted%20image%2020240731164520.png)
+![](../Pasted%20image%2020240731164520.webp)
 
-![](../Pasted%20image%2020240731164540.png)
+![](../Pasted%20image%2020240731164540.webp)
 
-![](../Pasted%20image%2020240731165401.png)
+![](../Pasted%20image%2020240731165401.webp)
 
 ```text
 http://arduino.esp8266.com/stable/package_esp8266com_index.json,https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json

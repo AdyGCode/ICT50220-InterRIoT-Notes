@@ -169,7 +169,7 @@ Once downloaded use 7-zip to open the archive.
 
 Inside there is a MQTTX folder.
 
-![](../assets/Pasted%20image%2020250811152615.png)
+![](../assets/Pasted%20image%2020250811152615.webp)
 
 Open a Windows File Explorer if you have not done so already, and navigate to the `C:\laragon\bin` folder.
 
@@ -181,11 +181,11 @@ To run MQTTX, locate the mqttx.exe file in the MQTTX folder and double click.
 
 This reveals the welcome screen, plus often a version information pop-up:
 
-![](../assets/Pasted%20image%2020250811154402.png)
+![](../assets/Pasted%20image%2020250811154402.webp)
 
 Close the info dialog if it is shown.
 
-![](../assets/Pasted%20image%2020250811154713.png)
+![](../assets/Pasted%20image%2020250811154713.webp)
 
 To create a New MQTT connection to our copy of Mosquitto, we do the following:
 
@@ -193,7 +193,7 @@ Click on New Connection, to show the new connection dialog.
 
 We are concerned with the top part of the dialog at this time:
 
-![](../assets/Pasted%20image%2020250811154902.png)
+![](../assets/Pasted%20image%2020250811154902.webp)
 
 Update / Add details as described below:
 
@@ -210,13 +210,13 @@ Update / Add details as described below:
 
 Example settings:
 
-![](../assets/Pasted%20image%2020250811163138.png)
+![](../assets/Pasted%20image%2020250811163138.webp)
 
 Click on Connect.
 
 This should connect to the MQTT server you identified:
 
-![](../assets/Pasted%20image%2020250811163201.png)
+![](../assets/Pasted%20image%2020250811163201.webp)
 
 ## MQTT Topics
 
@@ -232,11 +232,11 @@ You subscribe to Topics to be able to receive data, and you Publish to topics to
 
 To subscribe in MQTTX, we clikc the "New Subscription" button:
 
-![](../assets/Pasted%20image%2020250811163456.png)
+![](../assets/Pasted%20image%2020250811163456.webp)
 
 This presents:
 
-![](../assets/Pasted%20image%2020250811163516.png)
+![](../assets/Pasted%20image%2020250811163516.webp)
 
 We complete the settings using a configuration similar to the example below:
 
@@ -253,17 +253,17 @@ We complete the settings using a configuration similar to the example below:
 
 Here is an example configuration:
 
-![](../assets/Pasted%20image%2020250811163832.png)
+![](../assets/Pasted%20image%2020250811163832.webp)
 
 Clicking Confirm will subscribe to that topic:
 
-![](../assets/Pasted%20image%2020250811164801.png)
+![](../assets/Pasted%20image%2020250811164801.webp)
 
 ### Publishing to a Topic
 
 To publish data to a topic we use the bottom section of the live connection page:
 
-![](../assets/Pasted%20image%2020250811164838.png)
+![](../assets/Pasted%20image%2020250811164838.webp)
 
 To send a topic fill out the values as needed:
 
@@ -277,16 +277,16 @@ To send a topic fill out the values as needed:
 
 Once you fill out the data, you click the send button:
 
-![](../assets/Pasted%20image%2020250811165210.png)
+![](../assets/Pasted%20image%2020250811165210.webp)
 
 When you send the message payload will go to the broker (MQTT Server, aka mosquitto). The broker then will send the message to ALL clients who have subscribed to the topic.
 
 On MQTTX we see:
 
-![](../assets/Pasted%20image%2020250811165324.png)
+![](../assets/Pasted%20image%2020250811165324.webp)
 
 If you change the Plaintext to JSON, you get syntax highlighted responses:
 
-![](../assets/Pasted%20image%2020250811165357.png)
+![](../assets/Pasted%20image%2020250811165357.webp)
 
 

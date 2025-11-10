@@ -113,7 +113,7 @@ void loop() {
 
 Run the simulation and check the output by clicking on the Serial Monitor.
 
-![](../Pasted%20image%2020250725164249.png)
+![](../Pasted%20image%2020250725164249.webp)
 
 ### Key Parts of the Code
 

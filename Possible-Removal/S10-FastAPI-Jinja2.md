@@ -487,7 +487,7 @@ Add the following to create a base template file.
 
 Refresh your browser to see something like this:
 
-![](brave_wkoOLwtcfO.png)
+![](brave_wkoOLwtcfO.webp)
 
 Create a new folder:
 

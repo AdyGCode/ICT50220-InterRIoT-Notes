@@ -35,14 +35,14 @@ Lab tools include:
 - Multimeter: used to measure various electrical properties
 - and others.
 
-![](../Pasted%20image%2020250725145222.png)
+![](../Pasted%20image%2020250725145222.webp)
 https://learn.sparkfun.com/tutorials/how-to-use-an-oscilloscope/all
 
 ## Oscilloscope
 
 Watch this YouTube video from SparkFun:
 
-![](../Pasted%20image%2020250725145329.png)
+![](../Pasted%20image%2020250725145329.webp)
 Use this link to watch the video: https://youtu.be/u4zyptPLlJI
 
 ### Oscilloscope: what they measure
@@ -59,7 +59,7 @@ Use this link to watch the video: https://youtu.be/u4zyptPLlJI
 
 ## Signal Generators
 
-![](../Pasted%20image%2020250725145532.png)
+![](../Pasted%20image%2020250725145532.webp)
 https://www.tequipment.net/Rigol/DG4102/Function-Generator/
 
 A signal generator generates signals (duh) with various wave forms
@@ -78,7 +78,7 @@ A signal generator generates signals (duh) with various wave forms
 
 ## Power Supplies
 
-![](../Pasted%20image%2020250725145735.png)
+![](../Pasted%20image%2020250725145735.webp)
 
  
  A power supply provides the electrical power for other electrical and electronic devices
@@ -91,7 +91,7 @@ They are rated for certain voltages and currents:
 
 ## Spectrum Analysers
 
-![](../Pasted%20image%2020250725145803.png)
+![](../Pasted%20image%2020250725145803.webp)
 
 A spectrum analyser allows waveforms to be examined in frequency domain
 
@@ -100,7 +100,7 @@ A spectrum analyser allows waveforms to be examined in frequency domain
 
 ## Multimeters
 
-![](../Pasted%20image%2020250725145847.png)
+![](../Pasted%20image%2020250725145847.webp)
 
 - A simple but very versatile tool (digital / analog)
 - It measures:
@@ -115,6 +115,6 @@ Video: how to set up a lab
 - This video shows how to set up an electronics lab:
 - Bear with the guy, he’s a bit much. (“Trust me.”)
 
-![](../Pasted%20image%2020250725145942.png)
+![](../Pasted%20image%2020250725145942.webp)
 Use this link: : https://www.youtube.com/watch?v=R_PbjbRaO2E
 

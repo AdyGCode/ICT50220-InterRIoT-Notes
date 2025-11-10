@@ -24,7 +24,7 @@ date modified: 10 July 2024
 
 
 
-![LED and Switch controlled by Arduino](../assets/session-01-led-and-switch.png)
+![LED and Switch controlled by Arduino](../assets/session-01-led-and-switch.webp)
 
 ```cpp
 /**

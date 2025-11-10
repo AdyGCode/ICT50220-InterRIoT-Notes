@@ -735,7 +735,7 @@ Open the `templates/components/navigation.html` file and add:
 
 Once these are completed then refreshing the browser should show something similar to:
 
-![FastAPI-2024-09-24-1@2x.png](../assets/FastAPI-2024-09-24-1%402x.png)
+![FastAPI-2024-09-24-1@2x.webp](../assets/FastAPI-2024-09-24-1%402x.webp)
 
 ## About Page
 
@@ -936,7 +936,7 @@ The parts of the dictionary are:
 
 Here are trimmed examples of a Danger, Warning and Success Alert.
 
-![img.png](../assets/alerts-sample-extract.png)
+![img.webp](../assets/alerts-sample-extract.webp)
 
 The Danger alert may be generated using code similar to this in an HTML page:
 

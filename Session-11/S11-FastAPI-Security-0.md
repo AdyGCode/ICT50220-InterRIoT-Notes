@@ -13,7 +13,7 @@ Imagine you’re in a school, and there are different rooms: a **library**, a **
 Not everyone can go everywhere — access depends on **who you are**, **what you’re doing**, or **what you’re allowed to
 do**.
 
-![rbac-pbac-abac-comparison.png](../assets/rbac-pbac-abac-comparison.png)
+![rbac-pbac-abac-comparison.webp](../assets/rbac-pbac-abac-comparison.webp)
 
 ### 1. **RBAC – Role-Based Access Control**
 

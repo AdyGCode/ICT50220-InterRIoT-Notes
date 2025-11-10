@@ -48,18 +48,18 @@ To use, right mouse click and download the PNG.
 
 | Base Colour     | Logo                      | Base Colour          | Logo                           |
 |-----------------|---------------------------|----------------------|--------------------------------|
-| FastAPI Green   | ![](../assets/FastAPI-Standard.png) | FastAPI Olive        | ![](../assets/FastAPI-Olive-1.png)       |
-| FastAPI Cerise  | ![](../assets/FastAPI-Cerise-1.png) | FastAPI Red Ochre    | ![](../assets/FastAPI-RedOchre-1.png)    |
-| FastAPI Sky     | ![](../assets/FastAPI-Sky-1.png)    | FastAPI Blue Ochre   | ![](../assets/FastAPI-BlueOchre-1.png)   |
-| FastAPI Red     | ![](../assets/FastAPI-Red-1.png)    | FastAPI Ochre        | ![](../assets/FastAPI-Ochre-1.png)       |
-| FastAPI Indigo  | ![](../assets/FastAPI-Indigo-1.png) | FastAPI Purple Ochre | ![](../assets/FastAPI-PurpleOchre-1.png) |
-| FastAPI Yellow  | ![](../assets/FastAPI-Yellow-1.png) | FastAPI Lime Ochre   | ![](../assets/FastAPI-LimeOchre-1.png)   |
-| FastAPI Lime    | ![](../assets/FastAPI-Lime-1.png)   | FastAPI Green Ochre  | ![](../assets/FastAPI-GreenOchre-1.png)  |
-| FastAPI Gray 1  | ![](../assets/FastAPI-Gray-1.png)   | FastAPI Black        | ![](../assets/FastAPI-Black.png)         |
-| FastAPI Blue    | ![](../assets/FastAPI-Blue-1.png)   | FastAPI Blue Ochre   | ![](../assets/FastAPI-BlueOchre-1-1.png) |
-| FastAPI Purple1 | ![](../assets/FastAPI-Purple-1.png) | FastAPI Eggplant     | ![](../assets/FastAPI-Eggplant-1.png)    |
-| FastAPI Cyan    | ![](../assets/FastAPI-Cyan-1.png)   | FastAPI Gray 3       | ![](../assets/FastAPI-Gray-3.png)        |
-| FastAPI Orange  | ![](../assets/FastAPI-Orange-1.png) | FastAPI Gray 2       | ![](../assets/FastAPI-Gray-2.png)        |
+| FastAPI Green   | ![](../assets/FastAPI-Standard.webp) | FastAPI Olive        | ![](../assets/FastAPI-Olive-1.webp)       |
+| FastAPI Cerise  | ![](../assets/FastAPI-Cerise-1.webp) | FastAPI Red Ochre    | ![](../assets/FastAPI-RedOchre-1.webp)    |
+| FastAPI Sky     | ![](../assets/FastAPI-Sky-1.webp)    | FastAPI Blue Ochre   | ![](../assets/FastAPI-BlueOchre-1.webp)   |
+| FastAPI Red     | ![](../assets/FastAPI-Red-1.webp)    | FastAPI Ochre        | ![](../assets/FastAPI-Ochre-1.webp)       |
+| FastAPI Indigo  | ![](../assets/FastAPI-Indigo-1.webp) | FastAPI Purple Ochre | ![](../assets/FastAPI-PurpleOchre-1.webp) |
+| FastAPI Yellow  | ![](../assets/FastAPI-Yellow-1.webp) | FastAPI Lime Ochre   | ![](../assets/FastAPI-LimeOchre-1.webp)   |
+| FastAPI Lime    | ![](../assets/FastAPI-Lime-1.webp)   | FastAPI Green Ochre  | ![](../assets/FastAPI-GreenOchre-1.webp)  |
+| FastAPI Gray 1  | ![](../assets/FastAPI-Gray-1.webp)   | FastAPI Black        | ![](../assets/FastAPI-Black.webp)         |
+| FastAPI Blue    | ![](../assets/FastAPI-Blue-1.webp)   | FastAPI Blue Ochre   | ![](../assets/FastAPI-BlueOchre-1-1.webp) |
+| FastAPI Purple1 | ![](../assets/FastAPI-Purple-1.webp) | FastAPI Eggplant     | ![](../assets/FastAPI-Eggplant-1.webp)    |
+| FastAPI Cyan    | ![](../assets/FastAPI-Cyan-1.webp)   | FastAPI Gray 3       | ![](../assets/FastAPI-Gray-3.webp)        |
+| FastAPI Orange  | ![](../assets/FastAPI-Orange-1.webp) | FastAPI Gray 2       | ![](../assets/FastAPI-Gray-2.webp)        |
 
 # END
 

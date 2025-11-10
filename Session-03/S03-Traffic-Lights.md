@@ -50,7 +50,7 @@ The components listed also include a switch and LEDs for a pedestrian crossing t
 
 ## Circuit
 
-![Session-02-20240724163629.png](../assets/Session-02-20240724163629.png)
+![Session-02-20240724163629.webp](../assets/Session-02-20240724163629.webp)
 
 ## Code
 This code is functional, but it uses blocking calls.

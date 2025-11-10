@@ -27,12 +27,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Session-09/S09-Authentication-and-Authorisation-II.md",
+                "file": "Session-16/S16-OAuth-Twitter-X-SSO.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "S09-Authentication-and-Authorisation-II"
+              "title": "S16-OAuth-Twitter-X-SSO"
+            }
+          },
+          {
+            "id": "fe22303a886929fb",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.9.14"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.9.14"
             }
           }
         ],
@@ -93,7 +105,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 272.5086555480957
   },
   "right": {
     "id": "8dd8390eae31acff",
@@ -195,8 +207,28 @@
   },
   "active": "7217cc82a0713d4c",
   "lastOpenFiles": [
-    "Session-09/S09-Authentication-and-Authorisation.md",
+    "Session-16/1_XY3RHDd7a4XmK_6zkUwk4w.webp",
+    "assets/1_XY3RHDd7a4XmK_6zkUwk4w.webp",
+    "assets/1_xXMdUuSdZffb6ADymmsWeg.webp",
+    "assets/1_xd47duAYGBs-EBSE5xd57A.webp",
+    "assets/1_XcZ3F3LAOt1pEUFtMXj4gQ.webp",
+    "assets/1_wwfkUyFaZ4Bo0KLNmwKRtg.webp",
+    "assets/1_wa__NEgQBFGQ4-xvnz49Qg.webp",
+    "assets/1_SFcDWrFb1mqSc8WQ27tj5A.webp",
+    "assets/1_SBBGHIGdwgfpJNmExrUhAg.webp",
+    "assets/1_S478UN3dNKWqCjipKcehkQ.webp",
+    "assets/1_Rxy8eiguJU9jd7hNg3MgXw.webp",
+    "Session-16/S16-OAuth-Spotify-SSO.md",
+    "Session-16/S16-OAuth-Microsoft-SSO.md",
+    "Session-16/S16-OAuth-Google-SSO.md",
+    "Session-16/S16-OAuth-LinkedIn-SSO.md",
+    "Session-16/S16-OAuth-Facebook-SSO.md",
+    "Session-16/S16-OAuth-Github-SSO.md",
+    "Session-16/S16-Authentication-and-OAuth-02.md",
+    "Session-16/S16-Authentication-and-OAuth.md",
+    "Session-16/S16-OAuth-Twitter-X-SSO.md",
     "Session-09/S09-Authentication-and-Authorisation-II.md",
+    "Session-09/S09-Authentication-and-Authorisation.md",
     "Session-06/S06-NTP-Time-Update.md",
     "Session-06/S06-NTP-Time-To-LCD.md",
     "Session-05/S05-Notes-and-Review-Exercises.md",
@@ -207,7 +239,6 @@
     "Session-02/S02-LED-Toggle-and-Pushbutton-v2.md",
     "Session-02/S02-LED-Flasher-and-Pushbutton.md",
     "Session-02/S02-LED-Flasher.md",
-    "Session-02/flashing-led-with-push-button-1.png",
     "Session-01/Hardware.md",
     "Session-04/S04-Wi-Fi-and-Bluetooth.md",
     "Session-04/S04-Notes-and-Review-Exercises.md",
@@ -220,26 +251,7 @@
     "assets/MQTTX.7z",
     "assets/MQTTX-Setup-1.12.0-x64.exe",
     "assets/mosquitto-2.0.22-install-windows-x64.exe",
-    "Session-04/S04-ESP32-MQTT.md",
-    "Session-04/S04-MQTT-Setting-Up-Mosquitto-and-MQTTX.md",
-    "Session-04/ReadMe.md",
-    "assets/FastAPI-Lime-1.png",
-    "assets/FastAPI-LimeOchre-1.png",
-    "Session-03/ReadMe.md",
     "assets/Freenove_Super_Starter_Kit_for_ESP32_S3.zip",
-    "assets/Freenove_Super_Starter_Kit_for_ESP32-main.zip",
-    "assets/Pasted image 20250811165357.png",
-    "assets/Pasted image 20250811165324.png",
-    "assets/Pasted image 20250811165210.png",
-    "assets/Pasted image 20250811164838.png",
-    "assets/Pasted image 20250811164801.png",
-    "assets/Pasted image 20250811163832.png",
-    "assets/Pasted image 20250811163516.png",
-    "Session-05/ReadMe.md",
-    "Session-07/ReadMe.md",
-    "Session-01/S01-Notes-And-Review-Exercises.md",
-    "Session-03/S03-Notes-And-Review-Exercises.md",
-    "Session-03/S03-Non-Blocking-Flasher-v5.md",
-    "Session-03/S03-Traffic-Lights.md"
+    "assets/Freenove_Super_Starter_Kit_for_ESP32-main.zip"
   ]
 }

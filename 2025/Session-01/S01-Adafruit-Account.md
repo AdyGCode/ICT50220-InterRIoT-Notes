@@ -41,15 +41,15 @@ The following steps will take you through creating such an account, as well as s
 
 Open your browser and go to: https://adafruit.com
 
-![](../Pasted%20image%2020250409151433.webp)
+![](../Pasted-image-20250409151433.webp)
 
 Click on the IO menu option.
 
-![](../Pasted%20image%2020250409151407.webp)
+![](../Pasted-image-20250409151407.webp)
 
 Click on the "Get Started For Free" option on the right of the new menu bar:
 
-![](../Pasted%20image%2020250409151506.webp)
+![](../Pasted-image-20250409151506.webp)
 Fill out the form using:
 - Your given name
 - The first initial of your surname
@@ -57,7 +57,7 @@ Fill out the form using:
 - A suitable (TAFE appropriate) username
 - A password
 
-![](../Pasted%20image%2020250409151529.webp)
+![](../Pasted-image-20250409151529.webp)
 
 Click on Create Account.
 
@@ -74,21 +74,21 @@ Follow these steps:
 
 Open your browser and go to: https://adafruit.com
 
-![](../Pasted%20image%2020250409151433.webp)
+![](../Pasted-image-20250409151433.webp)
 
 Click on the IO menu option.
 
-![](../Pasted%20image%2020250409151407.webp)
+![](../Pasted-image-20250409151407.webp)
 
 Click on Sign In
 
-![](../Pasted%20image%2020250409152413.webp)
+![](../Pasted-image-20250409152413.webp)
 
 Fill out the Sign In section using the email address and password you created previously.
 
 Click Sign In.
 
-![](../Pasted%20image%2020250409151307.webp)
+![](../Pasted-image-20250409151307.webp)
 
 
 ## Adafruit Dashboard parts
@@ -96,35 +96,35 @@ Click Sign In.
 ### Overview
 The overview shows account details and other information.
 
-![](../Pasted%20image%2020250409153923.webp)
+![](../Pasted-image-20250409153923.webp)
 
 Part of the overview is a list of dashboards and feeds.
 
 ### Dashboards
 
-![](../Pasted%20image%2020250409155320.webp)
+![](../Pasted-image-20250409155320.webp)
 
 ### Feeds (aka topics)
 
-![](../Pasted%20image%2020250409155332.webp)
+![](../Pasted-image-20250409155332.webp)
 
 
 ### Adding Feeds
 
 To add a feed you need to go into the Feeds section.
 
-![](../Pasted%20image%2020250409155526.webp)
+![](../Pasted-image-20250409155526.webp)
 
 Click Feeds on the menu bar.
 
 Click "New Feed" to create a new feed.
 
-![](../Pasted%20image%2020250409155544.webp)
+![](../Pasted-image-20250409155544.webp)
 
 
 Enter the details into the modal dialog:
 
-![](../Pasted%20image%2020250409155615.webp)
+![](../Pasted-image-20250409155615.webp)
 
 > ⚠️ Important
 > 
@@ -145,7 +145,7 @@ When the feed is created, special characters are replaced by `-`.
 
 The "**key**", or topic name, that you will use with MQTT is shown once the topic/feed is created:
 
-![](../Pasted%20image%2020250409160324.webp)
+![](../Pasted-image-20250409160324.webp)
 
 #### Feed Information
 
@@ -153,15 +153,15 @@ You will need the feed information, including the key for any code you write for
 
 Click the Feed name:
 
-![](../Pasted%20image%2020250409160803.webp)
+![](../Pasted-image-20250409160803.webp)
 
 On the right you will see Feed Info:
 
-![](../Pasted%20image%2020250409160824.webp)
+![](../Pasted-image-20250409160824.webp)
 
 Clicking on the Feed Info will show the API, Web and MQTT endpoint details:
 
-![](../Pasted%20image%2020250409160911.webp)
+![](../Pasted-image-20250409160911.webp)
 
 
 ## Adafruit Key Details
@@ -170,11 +170,11 @@ As this is a secured service you will need the Adafruit "My Key" that allows the
 
 Locate the Key icon and click:
 
-![](../Pasted%20image%2020250409161212.webp)
+![](../Pasted-image-20250409161212.webp)
 
 A new dialog will show the username and active key for the account:
 
-![](../Pasted%20image%2020250409161059.webp)
+![](../Pasted-image-20250409161059.webp)
 
 
 > ⚠️ **DO NOT SHARE THESE DETAILS**
@@ -188,4 +188,3 @@ A new dialog will show the username and active key for the account:
 - Browse over the Adafruit account details
 - Check out the plan and its limitations
 	- E.g., mind the rate limit…
-

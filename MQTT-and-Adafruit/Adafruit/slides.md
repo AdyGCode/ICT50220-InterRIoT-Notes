@@ -84,7 +84,7 @@ figureUrl: public/orly-book-cover-dashboards.png
 
 # Contents
 
-<Toc minDepth="1" maxDepth="1" />
+<Toc minDepth="1" maxDepth="1" columns="2" />
 
 ---
 layout: section

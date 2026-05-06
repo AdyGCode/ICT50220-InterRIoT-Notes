@@ -512,6 +512,40 @@ level: 2
 3. Evaluate model + policy
 4. Allow or deny
 
+
+You will require:
+
+- PyCharm
+- Python 3.10+
+- Bash CLI
+- Patience
+
+We will:
+- Create project & folders
+- Create venv & activate
+- Create empty files
+- Code!
+
+mkdir fastapi-demo-casbin
+cd fastapi-demo-casbin
+
+python -m venv .venv
+source ./.venv/scripts/activate
+
+touch app.py users.csv
+touch casbin_model.conf
+touch casbin_policy.csv
+
+pip install fastapi uvicorn
+pip install pycasbin
+pip install python-multipart
+
+pip freeze > requirements.txt
+
+uvicorn app:app --reload
+
+
+
 <!-- Presenter Notes:
 Walk through request lifecycle.
 -->

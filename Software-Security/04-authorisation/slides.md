@@ -71,7 +71,7 @@ layout: two-cols
 ---
 level: 2
 layout: figure-side
-figureUrl: public/orly-book-cover-dashboards.png
+figureUrl: ./orly-book-cover-blamingtheuser.png
 ---
 
 # Contents

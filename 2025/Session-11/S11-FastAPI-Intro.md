@@ -150,6 +150,7 @@ In the Marketplace tab, locate and install the following plugins:
 - Conventional Commit
 - Pydantic [Not available? 2025/03]
 - Python Security
+- Mermaid
 
 You will need to restart you PyCharm Professional IDE.
 
@@ -236,6 +237,12 @@ We will also add Font Awesome, a brilliant web icon collection providing `32,000
 ```shell
 npm install tailwindcss @tailwindcss/cli
 ```
+or, using PNPM:
+
+```shell
+pnpm install tailwindcss @tailwindcss/cli
+```
+
 
 
 Open the `src/source.css` file and add:
@@ -325,10 +332,12 @@ source ./venv/Scripts/activate
 Run the following commands to create `.gitignore` files in new `js`, `img`, and `files` folders.
 
 ```shell
-mkdir -p static/{img,files,js} templates/{pages,components}
-touch static/{img,files,js}/.gitignore
+mkdir -p static/{img,files,js,downloads} templates/{pages,components}
+touch static/{img,files,js,downloads}/.gitignore
 touch templates/{pages,components}/.gitignore
 ```
+
+uvicorn main:app --reload --reload-include="*.html"
 
 ## Commit the work So Far
 

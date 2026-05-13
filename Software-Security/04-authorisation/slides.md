@@ -24,7 +24,11 @@ duration: 90min
 
 
 <!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
+The last comment block of each slide will be treated as slide notes. 
+
+It will be visible and editable in Presenter Mode along with the slide. 
+
+[Read more in the docs](https://sli.dev/guide/syntax.html#notes)
 -->
 
 
@@ -751,24 +755,24 @@ Without the Enforcer, Casbin does nothing. It is the “engine” of the system
 
 ---
 level: 2
-layout: two-cols
+layout: grid
 ---
 
 # Implementing Access Control - Casbin Key Components
 
 ## Casbin Policy
 
-- The policy stores the actual permission rules.
+The policy stores the actual permission rules.
 
-::left::
+::tl::
 
 ### What it defines
 
-Who can do what
-Which roles exist
-Which users belong to which roles
+- Who can do what
+- Which roles exist
+- Which users belong to which roles
 
-<br>
+::bl::
 
 ### Common formats
 
@@ -776,20 +780,21 @@ Which users belong to which roles
 - Databases (real systems)
 - In‑memory policies (testing)
 
-<br>
+::tr::
 
 ### Why the Policy Matters
 
-Policies are data, not logic. Logic lives in the model.
+- Policies are data, not logic.
+- Logic lives in the model.
 
-::right::
+::br::
 
 ### Casbin Policy Overview
 
 ```csv
-p, admin, /secure/users/add, POST
-p, admin, /secure/users/list, GET
-p, staff, /secure/users/list, GET
+p, admin, /api/users/add, POST
+p, admin, /api/users/list, GET
+p, staff, /api/users/list, GET
 g, jane, admin
 g, bill, staff
 ```
@@ -882,7 +887,7 @@ This section defines what information makes up an access request.
 | Field | Meaning                                                                          | Example            |
 |-------|----------------------------------------------------------------------------------|--------------------|
 | sub   | Subject <br><span class="text-yellow-600 text-sm">(who is requesting)    </span> | jane               |
-| obj   | Object <br><span class="text-yellow-600 text-sm">(what is being accessed)</span> | /secure/users/list |
+| obj   | Object <br><span class="text-yellow-600 text-sm">(what is being accessed)</span> | /api/users/list |
 | act   | Action <br><span class="text-yellow-600 text-sm">(what they want to do)  </span> | GET                |
 
 ---
@@ -927,8 +932,8 @@ m = (g(r.sub, p.sub) || r.sub == p.sub) ↩
 When your application calls:
 
 ```python
-enforcer.enforce("jane", 
-                 "/secure/users/list", 
+enforcer.enforce("jane",
+                 "/api/users/list",
                  "GET")
 ```
 
@@ -936,7 +941,7 @@ Casbin internally creates this request:
 
 ```
 r.sub = jane
-r.obj = /secure/users/list
+r.obj = /api/users/list
 r.act = GET
 ```
 
@@ -1038,14 +1043,14 @@ m = (g(r.sub, p.sub) || r.sub == p.sub) ↩
 #### Example policy row
 
 ```csv
-p, admin, /secure/users/list, GET
+p, admin, /api/users/list, GET
 ```
 
 <br>
 
 #### Interpreted as:
 
-- Users in the **`admin`** role <br>may **`GET /secure/users/list`**
+- Users in the **`admin`** role <br>may **`GET /api/users/list`**
 
 <br>
 
@@ -1090,8 +1095,9 @@ m = (g(r.sub, p.sub) || r.sub == p.sub) ↩
     ↪ && r.act == p.act
 ```
 
-<small class="-my-2 block text-xs">Matcher is one line (↩
-↪ symbols), spacing important</small>
+<Announcement type=info title="Matcher is one line" class="text-xs mt-4">
+The ↩ and ↪ symbols signify a continuous line. Spacing in <strong>all lines</strong> is important!
+</Announcement>
 
 ::right::
 
@@ -1099,11 +1105,20 @@ m = (g(r.sub, p.sub) || r.sub == p.sub) ↩
 
 This enables grouping (role) relationships.
 
-The `g` function maps the `user` to the `role`.
+The `g` function expects to have two parts:
+
+- user
+- role
+
+The `g` function uses policy lines:
 
 ```
-g(user, role)
-```
+g, USER_NAME, ROLE_NAME
+``` 
+
+The function (`g = _, _`) maps `USER_NAME` to the `ROLE_NAME`.
+
+You can think of `g = _, _` as `g(user, role)`.
 
 <!-- Presenter Notes:
 -->
@@ -1157,7 +1172,7 @@ g, bill, staff
 
 <br>
 
-#### Why the underscores (_, _)?
+#### Why the underscores (`_, _`)?
 
 - Casbin doesn’t enforce specific names
 - The function takes two parameters
@@ -1440,7 +1455,7 @@ Checks that:
 
 For example, that:
 
-- `/secure/users/list` must match `/secure/users/list`
+- `/api/users/list` must match `/api/users/list`
 
 <br> 
 
@@ -1491,9 +1506,7 @@ m = (g(r.sub, p.sub) || r.sub == p.sub) ↩
 
 #### Matcher Breakdown - Action Match
 
-Checks:
-
-- HTTP method must match exactly<br>(`GET`, `POST`, etc.)
+Checks that HTTP method matches exactly<br>(`GET`, `POST`, etc.)
 
 For example:
 
@@ -1566,10 +1579,15 @@ source ./.venv/scripts/activate
 #### Create Empty Files
 
 ```shell
-touch app.py users.csv
-touch casbin_model.conf
-touch casbin_policy.csv
+mkdir data
+touch app.py data/users.csv
+touch data/casbin_{model.conf,policy.csv}
 ```
+
+You will now have:
+
+- an `app.py` file
+- a `data` folder with `users.csv`, `casbin_model.conf` and `casbin_policy.csv`.
 
 ---
 level: 2
@@ -1600,46 +1618,80 @@ pip install pycasbin
 pip install python-multipart
 ```
 
+#### Freeze the project requirements for future use
+
+```shell
+pip freeze > requirements.txt
+```
+
+---
+level: 2
+layout: two-cols
+---
+
+# Implementing RBAC with PyCasbin
+
+## Starting and Stopping a `uvicorn` Application
+
+Uvicorn may be used to run both web and api projects.
+
+::right::
+
+#### Common CLI parameters/switches
+
+<div class="text-xs leading-4">
+
+| CLI component      | Purpose                                                             |
+|--------------------|---------------------------------------------------------------------|
+| `APP_PYTHON_FILE`  | The python file to use minus the `.py`                              |
+| `FASTAPI_APP_NAME` | The variable defined as a FastAPI instance in the python file       |
+| `--reload`         | Watch the Python files and restart the server when changes detected |
+| `--host`           | Sets the hostname/IP Address (`--host=localhost`)                   |
+| `--port`           | Sets the port the application will be accessed from (`--port=8008`) |
+
+</div>
+
+::left::
+
+#### Run the Application
+
+Running the application takes a parameter and a set of switches. For example:
+
+```shell
+uvicorn app:api --reload
+uvicorn app:api --reload --host=127.0.0.1 --port=99
+```
+
+Do not use ports below `1024`.
+
+<br>
+
+#### Stopping the Application
+
+If you need to stop the application use:  <kbd>CTRL</kbd>+<kbd>C</kbd>
+
+This hard quits the uvicorn application.
+
+
+
 ---
 level: 2
 ---
 
 # Implementing RBAC with PyCasbin
 
-## Setting up 3
+## Setting up a Cloned repository
 
-#### Freeze the requirements for future requirements
-
-```shell
-pip freeze > requirements.txt
-```
-
-#### Run the application
-
-```shell
-uvicorn app:app --reload
-```
-
-#### Stopping the Application
-
-If you need to stop the application use <kbd>CTRL</kbd>+<kbd>C</kbd> to
-halt the execution.
-
-<hr class="my-6 border-0 border-b-1 border-b-red-700 " />
-
-<Announcement type=important title="Clone & Run">
 To clone and execute a Python based application's use this basic method:
 
 1. Change into the folder `cd FOLDER_NAME`
 2. Create the Python virtual environment [venv] `python -m venv .venv`,
 3. Active the venv `source ./.venv/scripts/activate`,
 4. Install requirements  `pip install -r requirements.txt`.
-
-</Announcement>
-
+5. Execute the application. <br> For example: `./venv/scripts/uvicorn app:api --reload --host=localhost --port=8008`
 
 <!-- Presenter Notes:
-Walk through request lifecycle.
+
 -->
 
 
@@ -1656,7 +1708,7 @@ level: 2
 3. Evaluate model + policy
 4. Allow or deny
 
-We show a sequence diagram for our implementaion with Casbin on the next
+We show a sequence diagram for our implementation with Casbin on the next
 slide...
 
 
@@ -1742,7 +1794,7 @@ enforcer.enforce(subject, object, action)
 
 Example:
 ```python
-enforcer.enforce("jane", "/secure/users/list", "GET")
+enforcer.enforce("jane", "/api/users/list", "GET")
 ```
 
 **4. Model, Policy, and Role Resolution**
@@ -1803,14 +1855,14 @@ level: 2
 
 ## Add policy file content
 
-Open the `casbin_policy.csv`
+Open the `data/casbin_policy.csv`
 
 Add the following:
 
 ```csv {1|2|3|5|6|7}
-p, admin, /secure/users/add, POST
-p, admin, /secure/users/list, GET
-p, staff, /secure/users/list, GET
+p, admin, /api/users/add, POST
+p, admin, /api/users/list, GET
+p, staff, /api/users/list, GET
 
 g, jane, admin
 g, bill, staff
@@ -1833,7 +1885,7 @@ level: 2
 
 ## Add model file content
 
-Just as we have don with the Policy file,m we now create the Casbin Model
+Just as we have done with the Policy file,m we now create the Casbin Model
 File.
 
 Open the `casbin_model.conf` file and add:
@@ -1880,6 +1932,8 @@ jane,secret123
 bill,secret123
 ```
 
+We have **not** encrypted the user passwords for this example.
+
 <Announcement type=important class="mt-8">
 Make sure you get spacing correct, and <strong>do not</strong> use 
 <kbd>TAB</kbd> characters.
@@ -1910,22 +1964,21 @@ This will be done in the following steps:
 
 ## File Heading
 
-For completeness, we will add an informational Python docblock heading to the
+For completeness, we will add an informational Python heading comments to the
 file:
 
 ```python
-"""
-FastAPI & Casbin Demonstration
+# FastAPI & Casbin Demonstration
+# 
+# TODO: Description of the file's purpose
+#
+# Author:           YOUR NAME <EMAIL_ADDRESS>
+# Version:          1.0
 
-Author:           YOUR NAME <EMAIL_ADDRESS>
-Version:          1.0
-"""
+# ------------------------------------------------
+# Import modules
+# ------------------------------------------------
 
-"""
-------------------------------------
-Import modules
-------------------------------------
-"""
 ```
 
 ---
@@ -1940,15 +1993,13 @@ layout: two-cols
 ::left::
 
 ```python
-"""
-------------------------------------
-Import modules
-------------------------------------
-"""
+# ------------------------------------------------
+# Import modules
+# ------------------------------------------------
 
 import csv
 import casbin
-from fastapi import FastAPI, Depends, 
+from fastapi import FastAPI, Depends
 from fastapi import HTTPException, Request
 
 ```
@@ -1970,31 +2021,88 @@ Also:
 
 ---
 level: 2
-layout: two-cols
+layout: two-cols-2-1
 ---
 
 # Implementing RBAC with PyCasbin
 
-## Application Code: Application instance
-
-::right::
-
-```python
-"""
-------------------------------------
-Create application instance
-------------------------------------
-"""
-
-app = FastAPI()
-```
+## Application Code: Global Variables & Constants
 
 ::left::
 
-A simple, one-liner to create an instance of the FastAPI class, and thus a
-web-application.
+```
+# --------------------------------------------------------------------
+# Global Variables/Constants
+# --------------------------------------------------------------------
+
+DATA_FOLDER = "data"
+USERS_FILE = "users.csv"
+POLICY_FILE = "casbin_policy.csv"
+MODEL_FILE = "casbin_model.conf"
+
+POLICY_LOCATION = f"{DATA_FOLDER}/{POLICY_FILE}"
+MODEL_LOCATION = f"{DATA_FOLDER}/{MODEL_FILE}"
+USERS_LOCATION = f"{DATA_FOLDER}/{USERS_FILE}"
+```
+
+::right::
+
+### What are these?
+
+Constants:
+
+- used to indicate the filenames and then locations of the various data files used by this API/Application.
+
+---
+level: 2
+layout: two-cols-2-1
+---
+
+# Implementing RBAC with PyCasbin
+
+## Application Code: Create API (Application) instance
+
+::right::
+
+#### FastAPI Instance
+
+A simple, one-liner to create an instance of the FastAPI class.
+
+This is the application.
+
+```python
+# -----------------------------
+# Create application instance
+# -----------------------------
+
+api = FastAPI(title="API TITLE")
+```
 
 This is saved in the `app` variable.
+
+The `title` argument to the FastAPI instantiation call provides a name for the API.
+
+::left::
+
+#### Other parameters/arguments
+
+<div class="text-sm leading-2">
+
+| Parameter   | Sample Argument | Notes                                    |
+|-------------|-----------------|------------------------------------------|
+| title       | "API TITLE"     | The title for the API Docs               |
+| version     | "1.0.0"         | The version of this API                  |
+| description | "simple API"    | A short description of the API's purpose |
+| docs_url    | "/docs"         | How to access the Swagger documentation  | 
+| redoc_url   | "/redoc"        | How to access the ReDoc documentation    |
+| openapi_url | "/openapi.json" | The OpenAPI JSON collection download     |
+
+</div>
+
+For more detail on the Parameters
+see: <small> https://fastapi.tiangolo.com/reference/fastapi/#fastapi.FastAPI--example </small>
+
+
 
 ---
 level: 2
@@ -2012,12 +2120,12 @@ access which actions within the application.
 
 ::left::
 
+#### Enforcer Instantiation
+
 ```python
-"""
-------------------------------------
-Create/Activate the Casbin Enforcer
-------------------------------------
-"""
+# ------------------------------------------------
+# Create/Activate the Casbin Enforcer
+# ------------------------------------------------
 
 enforcer = casbin.Enforcer(
     "casbin_model.conf",
@@ -2028,14 +2136,18 @@ enforcer = casbin.Enforcer(
 
 ::right::
 
-<Announcement type=warning title="Re-runs" class="mt-8">
+#### When do `uvicorn`/`fastapi` reload?
 
 If any change is made to the model or policy files, then the application
 <strong>must</strong> be stopped and restarted.
 
-`uvicorn` does not restart itself to reload the content of these files.
+`uvicorn` and `fastapi` do not restart themselves on changes to model & policy files.
 
+<Announcement type=info title="Optional" class="mt-8">
+We may implement a 'watcher' to reload policies if they change.
 </Announcement>
+
+Even more important, models only update when the runners are exited fully and re-run.
 
 ---
 level: 2
@@ -2064,13 +2176,12 @@ The helpers are methods that are used to perform actions such as:
 ::right::
 
 ```python
-"""
-------------------------------------
-Helpers
-------------------------------------
-"""
+# ------------------------------------------------
+# Helpers
+# ------------------------------------------------
 
 USERS_FILE = "users.csv"
+
 
 def get_users():
     with open(USERS_FILE, newline="") as csvfile:
@@ -2110,12 +2221,12 @@ def authenticate(request: Request):
 
     if not username or not password:
         return None
-        
+
     users_list = get_users()
     for user in users_list:
         if user["username"] == username and ↩
-           ↪ user["password"] == password:
-            return username
+        ↪ user["password"] == password:
+        return username
 
     return None
 ```
@@ -2171,13 +2282,9 @@ level: 2
 ## Application Code: Define Routes/Endpoints
 
 ```python
-
-"""
-------------------------------------
-Routes
-------------------------------------
-"""
-
+# ------------------------------------------------
+# Routes
+# ------------------------------------------------
 
 @app.get('/insecure')
 def insecure():
@@ -2196,7 +2303,7 @@ level: 2
 ```python
 
 
-@app.get('/secure')
+@app.get('/api')
 def secure(request: Request):
     user = authenticate(request)
     if not user:
@@ -2216,13 +2323,13 @@ level: 2
 
 ```python
 
-@app.get('/secure/users/list')
+@app.get('/api/users/list')
 def list_users(request: Request):
     user = authenticate(request)
     if not user:
         raise HTTPException(status_code=401, detail="Incorrect username or password")
 
-    authorize(user, "/secure/users/list", "GET")
+    authorize(user, "/api/users/list", "GET")
 
     return {
         "users": [{"name": a_user["username"]} for a_user in get_users()]
@@ -2241,13 +2348,13 @@ level: 2
 
 ```python
 
-@app.post('/secure/users/add')
+@app.post('/api/users/add')
 def add_user(data: dict, request: Request):
     user = authenticate(request)
     if not user:
         raise HTTPException(status_code=401, detail="Incorrect username or password")
 
-    authorize(user, "/secure/users/add", "POST")
+    authorize(user, "/api/users/add", "POST")
 
     new_user = data.get("user")
     if not new_user or "name" not in new_user or "password" not in new_user:
@@ -2269,7 +2376,7 @@ level: 2
 
 # Implementing RBAC with PyCasbin
 
-## TODO: Execute the application
+## Execute the application
 
 At this point, if you have executed the `uvicorn` command, then stop it
 using <kbd>CTRL</kbd>+<kbd>C</kbd>.
@@ -2277,7 +2384,7 @@ using <kbd>CTRL</kbd>+<kbd>C</kbd>.
 Re-run the application in testing/development mode using:
 
 ```shell
-uvicorn app:app --reload --host=127.0.0.1 --port=3000
+uvicorn app:app --reload --host=127.0.0.1 --port=3003
 ```
 
 ---
@@ -2287,6 +2394,213 @@ level: 2
 # Implementing RBAC with PyCasbin
 
 ## TODO: Test the endpoints (CURL and Bruno/Postman)
+
+Testing endpoints may be conducted in a variety of ways.
+
+- Text-based (CLI/TUI)
+- Graphical (Desktop/Web)
+
+The table below shows a number of possible options. This is NOT exhaustive, and we do not infer a preference on
+commercial or open source products.
+
+<div class="text-sm">
+
+| CLI/TUI Options                                                                         | GUI Options                                                                                                                                                                                                          |
+|-----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| https://curl.se <br> https://httpie.io <br>  https://posting.sh <br>  https://hurl.dev/ | https://www.postman.com <br>  https://www.usebruno.com <br>  https://voiden.md <br>  https://app.scribbler.live/ <br>  https://httpie.io <br>  https://hoppscotch.io <br>  https://yaak.app <br>  https://apicat.com |
+
+</div>
+
+
+---
+level: 2
+layout: two-cols
+---
+
+# Implementing RBAC with PyCasbin
+
+## Testing
+
+We have the following information to use for tests:
+
+::left::
+
+| Username | Password  | Role   |
+|----------|-----------|--------|
+| jane     | secret123 | admin  |
+| bill     | secret123 | staff  |
+| zak      | secret123 | client |
+
+::right::
+
+| Role  | Endpoint            | Method |
+|-------|---------------------|--------|
+| admin | /api/users/list  | GET    | 
+| admin | /api/users/add   | POST   | 
+| staff | /api/users/list  | GET    | 
+| staff | /api/users/add | ❌      | 
+
+---
+level: 2
+layout: grid
+---
+
+# Implementing RBAC with PyCasbin
+
+## Test the endpoints (CURL and Bruno/Postman)
+
+#### CURL
+
+We presume that the application is running on port 3003.
+
+You access it via: `http://localhost:3003`
+
+::tl::
+#####  /insecure (public)
+✅ Success
+```shell
+curl -X GET http://localhost:3003/insecure
+```
+
+::bl:: 
+#####  /api
+✅ Success (valid user)
+```shell
+curl -X GET http://localhost:3003/api \  
+     -H "x-username: jane" \  
+     -H "x-password: secret123"
+```
+
+::tr::
+#####  /api
+❌ Failure (missing headers)
+```shell
+curl -X GET http://localhost:3003/api``
+```
+::br::
+#####  /api
+❌ Failure (invalid credentials)
+```shell
+curl -X GET http://localhost:3003/api \  
+     -H "x-username: wrong" \  
+     -H "x-password: wrong"
+```
+
+---
+level: 2
+layout: grid
+---
+
+# Implementing RBAC with PyCasbin
+
+## Test the endpoints (CURL and Bruno/Postman)
+
+#### CURL
+
+We presume that the application is running on port 3003.
+
+You access it via: `http://localhost:3003`
+
+### /api/users/list
+
+::tl::
+#### ✅ Success (admin)
+```shell
+curl -X GET http://localhost:3003/api/users/list \
+     -H "x-username: jane" \
+     -H "x-password: secret123"
+```
+
+::bl:: 
+##### ✅ Success (staff)
+```shell
+curl -X GET http://localhost:3003/api/users/list \
+     -H "x-username: bill" \
+     -H "x-password: secret123"
+```
+
+::tr::
+##### ❌ Failure (unauthenticated)
+```shell
+curl -X GET http://localhost:3003/api/users/list
+```
+
+::br::
+#####  ❌ Failure (invalid login)
+```shell
+curl -X GET http://localhost:3003/api/users/list \
+     -H "x-username: wrong" \
+     -H "x-password: wrong"
+```
+
+---
+level: 2
+layout: grid
+---
+
+# Implementing RBAC with PyCasbin
+
+## Test the endpoints (CURL and Bruno/Postman)
+
+#### CURL
+
+We presume that the application is running on port 3003.
+
+You access it via: `http://localhost:3003`
+✅ 4. /api/users/add
+✅ Success (admin only)
+```shell
+curl -X POST http://localhost:3003/api/users/add \  -H "Content-Type: application/json" \  -H "x-username: jane" \  -H "x-password: secret123" \  -d '{"username": "newuser", "password": "pass123"}'
+```
+
+---
+level: 2
+layout: grid
+---
+
+# Implementing RBAC with PyCasbin
+
+## Test the endpoints (CURL and Bruno/Postman)
+
+#### CURL
+
+We presume that the application is running on port 3003.
+
+You access it via: `http://localhost:3003`
+
+❌ Failure (staff — no permission 🚨)
+```shell
+curl -X POST http://localhost:3003/api/users/add \  -H "Content-Type: application/json" \  -H "x-username: bill" \  -H "x-password: secret123" \  -d '{"username": "newuser", "password": "pass123"}'
+```
+✅ Expected: authorization failure (Casbin)
+
+❌ Failure (unauthenticated)
+```shell
+curl -X POST http://localhost:3003/api/users/add \  -H "Content-Type: application/json" \  -d '{"username": "newuser", "password": "pass123"}'
+```
+
+❌ Failure (bad credentials)
+```shell
+curl -X POST http://localhost:3003/api/users/add \  -H "Content-Type: application/json" \  -H "x-username: wrong" \  -H "x-password: wrong" \  -d '{"username": "newuser", "password": "pass123"}'
+```
+
+
+
+---
+level: 2
+---
+
+# Implementing RBAC with PyCasbin
+
+## TODO: Test the endpoints (CURL and Bruno/Postman)
+
+#### Bruno
+
+Bruno is very similar to Postman.
+
+We are using it for illustration purposes in these notes.
+
+
 
 ---
 level: 2

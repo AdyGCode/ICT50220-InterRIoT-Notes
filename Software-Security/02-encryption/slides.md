@@ -1,7 +1,7 @@
 ---
 theme: nmt
 background: https://cover.sli.dev
-title: Software Security - Introduction
+title: Software Security - Encryption
 class: text-left
 drawings:
   persist: false
@@ -10,8 +10,9 @@ mdc: true
 duration: 90min
 ---
 
-# MQTT Basics
+# Software Security
 
+## Encryption & Decryption
 
 <div @click="$slidev.nav.next" class="mt-12 -mx-4 p-4" hover:bg="white op-10">
 <p>Press <kbd>Space</kbd> or <kbd>RIGHT</kbd> for next slide/step <fa7-solid-arrow-right /></p>
@@ -62,8 +63,6 @@ layout: two-cols
 
 ::left::
 
-
-
 ::right::
 
 
@@ -86,64 +85,18 @@ layout: section
 
 ## TODO: Add ice-breaker
 
-
 ---
 layout: section
 ---
 
-
-# Python & Cryptography 1
-
-## Intermediate RIoT
+# Software Security - Encryption & Decryption
 
 ### Cryptography
 
-Developed by Adrian Gould
 
 ---
-
-```table-of-contents
-title: # Contents
-style: nestedList
-minLevel: 0
-maxLevel: 3
-includeLinks: true
-```
-
+level: 2
 ---
-
-# Acknowledgemetns
-
-These notes and practical tutorial is based on:
-
-- ByteScrum Technologies. (2023, October 20). Encrypting and Decrypting Data with Fernet in Python. ByteScrum
-  Technologies. https://blog.bytescrum.com/encrypting-and-decrypting-data-with-fernet-in-python
-- Ali, M. A. (2023, December 5). Unlocking Cryptography: A Hands-On Guide to Encrypting and Decrypting Files Using
-  Python.
-  Medium. https://medium.com/@madeenali2003/unlocking-cryptography-a-hands-on-guide-to-encrypting-and-decrypting-files-using-python-611766e73f7a
-- Encrypt and Decrypt Data in Python. (2021).
-  Tutorialspoint.com. https://www.tutorialspoint.com/how-to-encrypt-and-decrypt-data-in-python
-- The Intect. (2024, August 6). How to Encrypt and Decrypt Data in Python | Medium.
-  Medium. https://medium.com/@info_82002/a-beginners-guide-to-encryption-and-decryption-in-python-12d81f6a9eac
-- Codementor. (2025). Simple Python Encryption: How to Encrypt a Message | Codementor.
-  Codementor.io. https://www.codementor.io/python/tutorial/python-encryption-message-in-python-via-reverse-cipher
-- Novixys Software Dev Blog. (2018, February 8). Novixys Software Dev
-  Blog. https://www.novixys.com/blog/using-aes-encryption-decryption-python-pycrypto/
-- Python Programming Tutorials. (2025).
-  Pythonprogramming.net. https://pythonprogramming.net/encryption-and-decryption-in-python-code-example-with-explanation/
-- Bekker, R. (2018, April 29). Encryption and Decryption with Simple Crypt using Python. Ruan Bekker’s
-  Blog. https://ruan.dev/blog/2018/04/29/encryption-and-decryption-with-simple-crypt-using-python
-- Vollebregt, B. (2018b). Encryption and Decryption in Python.
-  Nitratine.net. https://nitratine.net/blog/post/encryption-and-decryption-in-python/
-- What is asymmetric encryption? | Asymmetric vs. symmetric encryption. (2025).
-  Cloudflare.com. https://www.cloudflare.com/learning/ssl/what-is-asymmetric-encryption/
-
-# Resources Needed
-
-- Python 3.10+
-- PyCharm Professional 2024.2+
-
-# Setting Up
 
 # Cryptography
 
@@ -157,6 +110,12 @@ There are different forms of cryptography:
 - symmetrical
 - asymmetrical
 
+
+---
+level: 2
+---
+
+# Cryptography
 ## What is asymmetric encryption?
 
 There are two sides in an encrypted communication:
@@ -172,8 +131,15 @@ Asymmetric encryption, also known as public key encryption, uses a public key-pr
 
 - data encrypted with the public key can only be decrypted with the private key.
 
-An example of this in the real world is TLS (or SSL), the protocol that makes HTTPS possible, relies partially on
-asymmetric encryption.
+Examples:
+- TLS (or SSL), the protocol that makes HTTPS possible, relies partially on asymmetric encryption.
+
+
+---
+level: 2
+---
+
+# Cryptography
 
 ## What is symmetric encryption?
 
@@ -183,31 +149,294 @@ For symmetric encryption to work, the two or more communicating parties must kno
 
 - for it to remain secure, no third party should be able to guess or steal the key.
 
-## Demonstrating Symmetrical Encryption
 
-We will be using the fernet module in the cryptography package to encrypt and decrypt data using Python. While using the
-fernet module, a unique key is generated without which you cannot read or manipulate the encrypted data.
+---
+layout: section
+---
+
+# Code Fun: Secret Messages
+
+- An exercise in simple cryptography
+- Using groupwork and coding
+
+---
+level: 2
+layout: two-cols
+---
+
+# Code Fun: Secret Messages
+
+::left::
+
+## Setting Up
+
+You will require:
+
+- Understanding of the Caesar Cypher
+- Python
+- Python IDE (Pref PyCharm)
+- MQTT Server
+- Bash CLI
+    - Use the `bash.exe` from Laragon: `/c/laragon/bin/git/bin/bash.exe`
+
+::right::
+
+## In Class Specifics
+
+| Item              | Details & Notes                                                                  |
+|-------------------|----------------------------------------------------------------------------------|
+| MQTT Server       | `10.25.35.225:1883` <br>Raspberry Pi4-25                                         |
+| Topic             | `chat`                                                                           |
+| Message Structure | JSON, example:<br>`{'GROUP': 'GROUPNAME', 'FROM': 'NAME', 'MESSAGE': 'CONTENT'}` |
+
+---
+level: 2
+---
+
+# Code Fun: Secret Messages
+## Useful Python MQTT Resources
+
+- Cope, S. (2016, August 20). Python MQTT Client Connections- Working with Connections. |. http://www.steves-internet-guide.com/client-connections-python-mqtt/
+- Cope, S. (2016, August 23). How to Use The Paho MQTT Python Client for Beginners. |. http://www.steves-internet-guide.com/into-mqtt-python-client/
+- SimonBirkenheuer/MQTT-Chat: A small MQTT based chat application. (2025). GitHub. https://github.com/SimonBirkenheuer/MQTT-Chat/tree/master
+- EMQ. (2026, May 11). MQTT in Python with Paho Client: Beginner’s Guide 2026. Www.Emqx.Com; EMQ. https://www.emqx.com/en/blog/how-to-use-mqtt-in-python
+
+---
+level: 2
+layout: two-cols
+---
+
+# Code Fun: Secret Messages
+
+::left::
+
+## Challenge Steps (1...3)
+
+1. Create teams of 2 (or 3)
+    - Give your team a name (`GROUPNAME`)
+2. Create caesar_encrypt and caesar_decrypt functions
+    - Your messages are limited to `A`-`Z` plus four punctuation items `!?. ` (space)
+    - Total Characters 30
+    - Offsets 1 to 29 (0 and 30 will be unencrypted)
+3. Test the encrypt and decrypt functions
+    - Suggest using offset of 1 or 29 for testing
+
+::right::
+
+## Challenge Steps (4...)
+
+4. Write & test code to connect to MQTT
+5. Once connected, add & test code to:
+    - send to MQTT Topic (`chat`)
+    - receive MQTT messages from Topic (`chat`)
+6. Next ask user for a message, encrypt, & send
+7. Final step is to listen for message, decrypt automatically and display locally
+    - Suggest: Have separate Senders and Listeners 
+
+
+---
+level: 2
+layout: two-cols
+---
+
+
+# Code Fun: Secret Messages
+
+## Summary Question
+
+What type of encryption is the Caesar Cipher?
+
+::left::
+
+## Asymmetric?
+
+- Why do you think the Caesar Cipher is an asymmetric algorithm?
+- Justify your answer
+ 
+::right::
+
+## Symmetric?
+
+- Why do you think the Caesar Cipher is a symmetric algorithm?
+- Justify your answer
+
+<!-- Presenter Notes
+
+Legionnaire Cipher
+
+What is it?
+
+How to implement?
+
+-->
+
+---
+layout: section
+---
+
+# Encryption Algorithms
+
+---
+level: 2
+layout: two-cols
+---
+
+# Encryption Algorithms
+
+## Exercise Part 1
+
+Your lecturer will split you into groups of 3 or 4 people.
+
+::left::
+
+#### Class Research
+
+Identify names of algorithms
+
+- Note: We need at least one algorithm per student in the class
+  In groups select an algorithm per person
+- Lecturer may allocate some 'choices'
+
+<br>
+
+<Announcement type=important title="References">
+
+Always note your resources, and use MyBib [https://mybib.com](https://mybib.com) to create APA6 or APA7 bibliographic
+entries
+
+</Announcement>
+
+::right::
+
+#### Individual Research
+
+Research the algorithm you have selected looking for:
+
+- **When** was it created & by **Whom**
+- **What** is it (one way, two-way, hash, etc.)
+- **How** it works (summary of algorithm)
+- **When** (if it) was it broken ('hacked')
+- **Where** is it used?
+- **What** is its current status (current, theoretical, etc.)
+- **Pros** and **Cons**
+
+---
+level: 2
+layout: two-cols
+---
+
+# Encryption Algorithms
+
+## Exercise Part 2
+
+::left::
+
+### Demonstration Code
+
+- Create a small demonstration in at least one of:
+    - **C++** <span class="text-orange-500">(MCU)</span>,
+    - **Python** <span class="text-orange-500">(MCU/CPU)</span>,
+    - **PHP** <span class="text-orange-500">(CPU)</span>,
+    - **Rust** <span class="text-orange-500">(MCU)</span>,
+    - **Go** <span class="text-orange-500">(CPU)</span>,
+    - **C#** <span class="text-orange-500">(CPU)</span> or
+    - **JavaScript**/**TypeScript** <span class="text-orange-500">(CPU/MCU)</span>
+
+::right::
+
+### Note
+
+The <span class="text-orange-500">MCU</span>/<span class="text-orange-500">CPU</span> indicates the target architecture.
+
+You must investigate at least C++, PHP or Python.
+
+You may then add examples in other languages you are familiar with.
+
+---
+level: 2
+layout: two-cols
+---
+
+# Encryption Algorithms
+
+## Exercise Part 3
+
+::left::
+
+#### Combine Research
+
+Create a Markdown document with your findings.
+
+Use the headings (replace .... with the name):
+
+- What is ....
+- Creation Details
+    - Include Who & When
+- Where is .... used
+- How does .... work?
+- Status
+    - Include if hacked, currency, version, etc.
+- Pros and Cons
+
+::right::
+
+#### Create Presentation Slides
+
+Prepare slides for a presentation
+
+The presentation should be:
+
+- Use Sli.dev Markdown to create the slides
+- Between 4 and 6 slides
+- Extra slide for Bibliographic References
+- Extra slide for title slide, with your name
+
+Between slides, use `---` at the start of the line.
+
+---
+layout: section
+---
+
+# Demonstrating Symmetrical Encryption
+
+A Python example.
+
+---
+level: 2
+---
+
+# Demonstrating Symmetrical Encryption
+
+We will be using the fernet module in the cryptography package to encrypt and decrypt data using Python.
+
+While using the fernet module, a unique key is generated without which you cannot read or manipulate the encrypted data.
 
 Now that you know what we will be dealing with, let’s get started.
 
-### Create New Project
+## Create New Project
 
 Start by creating a new project using PyCharm
 
 - Hamburger Icon
-- File
-- New Project
-- Name: XXX-InterRiot-Cryptography-1 (replace XXX with your initials)
-- Add Welcome Script
-- Initialise version control
+    - File
+        - New Project
+            - Name: xxx-interriot-cryptography-1 (replace XXX with your initials)
+            - Add Welcome Script
+            - Initialise version control
 
-### CLI Time
+---
+level: 2
+---
+
+# Demonstrating Symmetrical Encryption
+
+## CLI Time
 
 - Open the Windows Terminal
 - Change into the project folder
 
 ```shell
-cd XXX-InterRiot-Cryptography-1
+cd xxx-interriot-cryptography-1
 ```
 
 - Activate the Python Virtual Environment and update pip
@@ -224,7 +453,13 @@ pip install cryptography
 pip freeze > requirements.txt
 ```
 
-### Code Time
+---
+level: 2
+---
+
+# Demonstrating Symmetrical Encryption
+
+## Code Time
 
 Open the `main.py` file and you should see:
 
@@ -247,6 +482,12 @@ if __name__ == '__main__':
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
 ```
 
+---
+level: 2
+---
+
+# Demonstrating Symmetrical Encryption
+
 Edit the code by replacing the comments up to the `def` line with:
 
 ```python
@@ -262,7 +503,17 @@ Edit the code by replacing the comments up to the `def` line with:
 
 Fill out the details as needed.
 
-### Generating Encryption Keys
+
+---
+level: 2
+layout: two-cols
+---
+
+# Demonstrating Symmetrical Encryption
+
+::left::
+
+## Generating Encryption Keys
 
 Update remaining code:
 
@@ -286,13 +537,28 @@ if __name__ == '__main__':
     main()
 ```
 
-#### Quick Code review:
+::right::
 
-- `key = Fernet.generate_key()` Generates a new "Fernet" key
-- `f = Fernet(key)` Initialises the fernet engine with the key
-- `print(key.decode())` Shows the key that isd being used
+## Quick Code review:
 
-### Execute the code
+- Generate a new "Fernet" key
+    - `key = Fernet.generate_key()`
+- Initialise the fernet engine with the key
+    - `f = Fernet(key)`
+- Show the key that is being used
+    - `print(key.decode())`
+
+---
+level: 2
+---
+
+# Demonstrating Symmetrical Encryption
+
+## Execute the code
+
+```shell
+python main.py
+```
 
 You will be given output similar to this:
 
@@ -302,7 +568,17 @@ Afm8Zu0xeB5e8isOBd_3AwqPt5WhvJrMIkrlVrWyxOw=
 
 This is the encryption key for the data.
 
-### Encrypting Data
+
+---
+level: 2
+layout: two-cols
+---
+
+# Demonstrating Symmetrical Encryption
+
+::left::
+
+## Encrypting Data
 
 To encrypt data we use the `encrypt` method from Fernet.
 
@@ -315,6 +591,8 @@ def encrypt_data(data, fernet=None):
     return encrypted
 ```
 
+::right::
+
 To use this we now update the main code:
 
 ```python
@@ -324,7 +602,9 @@ def main():
     message = "Hello World!"
     print(message)
 
-    encrypted_text = encrypt_data(message, fernet_engine)
+    encrypted_text = encrypt_data(️↩️
+                     ↪️ message,↩️
+                     ↪️ fernet_engine)
     print(encrypted_text)
 ```
 
@@ -333,10 +613,22 @@ Running this will result in output similar to this:
 ```text
 CYik3dmessEZ01kmCltvZS3I8VAHRNJ75aiF9Ea9inw=
 Hello World!
-b'gAAAAABoJD0jXYcM-VQVhkZ7o9Ri3CKvjd81VnDymwmboWjMNoe6ENkPvJdx5ifA-YgR1l51ykXmVm_Qq2XWREvGTzIdldoWJA=='
+b'gAAAAABoJD0jXYcM-VQVhkZ7o9Ri3CKvjd81Vn↩️
+↪️DymwmboWjMNo️e6ENk️PvJdx5ifA↩️
+↪️-YgR1l51ykXmVm_Qq2XWREvGTzIdldoWJA=='
 ```
 
-### Decrypting Data
+<span class="text-xs">
+Note: ↩️ and ️↪️ are used to show a single line split for readability
+</span>
+
+---
+level: 2
+---
+
+# Demonstrating Symmetrical Encryption
+
+## Decrypting Data
 
 Just like when we encrypt we will use the `decrypt` method to reverse the process.
 
@@ -358,6 +650,13 @@ print(decrypted_text.decode())
 
 The `decrypted_text.decode()` converts the byte 'string' to a standard Python String.
 
+
+---
+level: 2
+---
+
+# Demonstrating Symmetrical Encryption
+
 Executing now produces the following output:
 
 ```text
@@ -368,6 +667,12 @@ b'gAAAAABoJD0jXYcM-VQVhkZ7o9Ri3CKvjd81VnDymwmboWjMNoe6ENkPvJdx5ifA-YgR1l51ykXmVm
 b'Hello World!'
 Hello World!
 ```
+
+---
+level: 2
+---
+
+# Demonstrating Symmetrical Encryption
 
 ## Storing Keys
 
@@ -393,7 +698,16 @@ def save_key(key, filename="key.file"):
     return True
 ```
 
+---
+level: 2
+layout: two-cols
+---
+
+# Demonstrating Symmetrical Encryption
+
 Try it out and check you have a new file with the key.
+
+::left::
 
 The start of the output will be similar to this:
 
@@ -402,6 +716,8 @@ Encryption Key:
 8axs09Arzy2zsRwtiGrbzkPDoshqysvqSzKE9Tn7yoQ=
 Key saved to key.file
 ```
+
+::right::
 
 ### Reading Keys
 
@@ -418,24 +734,46 @@ def read_key(filename="key.file"):
     return key
 ```
 
-#### Exercise:
+<br>
+
+## Exercise:
 
 Use the new method to read the key, and then decode it and print to the screen.
 
-### Keys from Secret Text
 
-A common form of using keys is to create one from a password. This could then be used to encrypt and decrypt data when
-passed between two people. A classic example of this is compression applications that ask you for a password. This
-encrypts the data, and at the other end the recipient will need the password to decrypt the file before accessing the
+---
+level: 2
+---
+
+# Demonstrating Symmetrical Encryption II
+
+## Keys from Secret Text
+
+A common form of using keys is to create one from a password.
+
+This could then be used to encrypt and decrypt data when passed between two people.
+
+A classic example of this is compression applications that ask you for a password.
+
+This encrypts the data, and at the other end the recipient will need the password to decrypt the file before accessing
+the
 data.
 
 The password is often called the "salt" for the key.
 
 For us to demonstrate this we will create a new Python Script.
 
-First, rename main.py to `symmertical_encryption.py`.
+First, rename `main.py` to `symmertical_encryption.py`.
 
 Now duplicate the `symmetrical_encryption.py` file and name it: `salted_key.py`:
+
+
+
+---
+level: 2
+---
+
+# Demonstrating Symmetrical Encryption II
 
 Starting at the top, edit the code to read, making sure you update the project title, and summary of the code.
 
@@ -462,6 +800,12 @@ Here we import a number of modules/packages to use.
 - base 64 to encode data into a base64 string
 - primitives to gain access to hash types and methods
 
+---
+level: 2
+---
+
+# Demonstrating Symmetrical Encryption II
+
 Now update the main code.
 
 Quick outline of the code:
@@ -472,6 +816,12 @@ Quick outline of the code:
 - Next, we generate a key derivation function (KDF) which is a series of bytes used for cryptography
     - Read this: https://cryptography.io/en/latest/hazmat/primitives/key-derivation-functions/
 - We use this KDF to encode the password, and generate a ASCII character safe version of the password to act as the key.
+
+---
+level: 2
+---
+
+# Demonstrating Symmetrical Encryption II
 
 ```python
 def main():
@@ -499,11 +849,24 @@ def main():
 
 ```
 
-#### Exercise
+---
+level: 2
+---
+
+# Demonstrating Symmetrical Encryption II
+
+## Exercise
 
 Identify some of the methods that can be used for KDF.
 
-### Incorrect Keys
+
+---
+level: 2
+---
+
+# Demonstrating Symmetrical Encryption III
+
+## Incorrect Keys
 
 If a different key to the one used to encrypt is provided when decrypting, an `InvalidToken` will be raised.
 
@@ -526,17 +889,30 @@ except InvalidToken as e:  # Catch any InvalidToken exceptions if the correct ke
     print("Invalid Key - Unsuccessfully decrypted")
 ```
 
-### Exercise
+---
+level: 2
+---
+
+# Demonstrating Symmetrical Encryption III
+
+## Exercise
 
 Duplicate the original `symmetrical_encryption.py` file, and rename the copy to `symmetrical_invalid_keys.py`
 
 Use the above code, plus the symmetrical encryption code, to create your own example to test the exception out.
 
-> #### ⚠️ WARNING:
-> As stated in Fernet docs, beware of large files; Fernet is ideal for encrypting data that easily fits in memory. You
-> may need to think of methods to split larger files up to use this encryption method on large files.
+<Announcement type=warning title="WARNING">
 
-## Encrypting and Decrypting Files
+As stated in Fernet docs, beware of large files; Fernet is ideal for encrypting data that easily fits in memory.
+
+You may need to think of methods to split larger files up to use this encryption method on large files.
+</Announcement>
+
+---
+level: 2
+---
+
+# Encrypting and Decrypting Files
 
 We can also encrypt files using this method since files can be read as bytes.
 
@@ -547,7 +923,13 @@ The basic method is:
 - Encrypt the data
 - Write encrypted data to a new file.
 
-### Encrypting a File
+---
+level: 2
+---
+
+# Encrypting and Decrypting Files
+
+## Encrypting a File
 
 ```python
 from cryptography.fernet import Fernet
@@ -565,7 +947,13 @@ with open(output_file, 'wb') as f:
     # Note: You can delete input_file here if you want
 ```
 
-### Decrypt a File:
+---
+level: 2
+---
+
+# Encrypting and Decrypting Files
+
+## Decrypt a File:
 
 The process is very similar
 
@@ -573,6 +961,14 @@ The process is very similar
 - Read the bytes
 - Decrypt the data
 - Write decrypted data to a new file.
+
+---
+level: 2
+---
+
+# Encrypting and Decrypting Files
+
+## Decrypting Files
 
 ```python
 from cryptography.fernet import Fernet, InvalidToken
@@ -593,7 +989,13 @@ except InvalidToken as e:
     print("Invalid Key - Unsuccessfully decrypted")
 ```
 
-#### Exercise:
+---
+level: 2
+---
+
+# Encrypting and Decrypting Files
+
+## Exercise:
 
 Create a new python script file, named `encrypt_decript_text_file.py`.
 
@@ -605,13 +1007,37 @@ Create a main function where you:
 - call a new methd `encrypt_file` to encrypt the input file and write to the temporary file.
 - Call a new method `decrypt_file` to read the temporart file and write the decrypted data to the output file.
 
-Create a new method (function) called `encrypt_file` that takes TWO filenames (input filename, temporary filename) as
-parameters, and an encryption key as the third parameter.
+---
+level: 2
+---
+
+# Encrypting and Decrypting Files
+
+### Encrypt
+
+Create a new method (function) called `encrypt_file` that:
+
+- takes TWO filenames (input filename, temporary filename) as parameters,
+- and a third parameter which is the encryption key.
+
 The method then uses the sample code above to encrypt the file contents and write the new data to the new file.
 
-Create a new method (function) called `decrypt_file` that takes two filenames (output filename, temporary filename), and
-the key used to encrypt the data.
+### Decrypt
+
+Create a new method (function) called `decrypt_file` that:
+
+- takes two filenames (output filename, temporary filename),
+- and the key used to encrypt the data.
+
 The method then reads the temporary file, and decrypts the data and writes the results to the output file.
+
+---
+level: 2
+---
+
+# Encrypting and Decrypting Files
+
+## The Source File
 
 Create a plain text file called "quick-test-original.txt" and add the following text:
 
@@ -634,6 +1060,14 @@ All shortcuts have disappeared.
 Screen. Mind. Both are blank.
 ```
 
+---
+level: 2
+---
+
+# Encrypting and Decrypting Files
+
+## Execution
+
 Execute the script using the values:
 
 | Input              | Value                     |
@@ -642,19 +1076,58 @@ Execute the script using the values:
 | Temporary Filename | quick-test-encrypted.data |
 | Output Filename    | quick-text-decrypted.txt  |
 
-
 Verify that the code executed as expected.
 
 Fix any errors encountered.
 
+
 ---
-layout: end
+level: 2
+layout: two-cols
 ---
 
-# FIN!
+# Superchallenge
+## Code Fun: Secret Messages II
+
+Create a text User Interface (TUI) for your secret message application.
+
+::left::
+
+The user interface will:
+
+- allow the user to select the offset
+- allow the user to type messages in and send to the chat
+- allow messages to be received, decoded and displayed automatically
+- does **not** stop the messages being displayed when waiting for input
+
+Gain inspiration from systems such as IRC, SMS, etc.
+
+_Next slide has useful resources._
+
+::right::
+
+![Sample of an IRC Screen](./irc-screen-itorresdelpaine.png)
 
 
+---
+level: 2
+---
 
+# Superchallenge
+## Code Fun: Secret Messages II
+
+### Useful resources
+
+- Ahmed, N. (2024, November 9). 5 Best Python TUI Libraries for Building Text-Based User Interfaces. DEV
+  Community. https://dev.to/lazy_code/5-best-python-tui-libraries-for-building-text-based-user-interfaces-5fdi
+- Villiers, C. de. (2025, March 12). Python Textual: Build Beautiful UIs in the Terminal. Realpython.Com; Real
+  Python. https://realpython.com/python-textual/
+- Mehmet Öner Yalçın. (2024, November 8). Building a Responsive "Textual" Chat UI with Long-Running Processes.
+  Medium. https://oneryalcin.medium.com/building-a-responsive-textual-chat-ui-with-long-running-processes-c0c53cd36224
+- Textual - Home. (2025). Textual Documentation. https://textual.textualize.io/
+- Welcome - PyTermGUI::docs. (2026). Bczsalba.Com. https://ptg.bczsalba.com/
+- Welcome to Rich’s documentation! — Rich 14.1.0 documentation. (2026).
+  Readthedocs.Io. https://rich.readthedocs.io/en/latest/
 
 
 
@@ -662,9 +1135,31 @@ layout: end
 
 # Acknowledgements & References
 
-- TODO: Add references etc
+> Some content was generated with the assistance of Microsoft Copilot
 
-> - Some content was generated with the assistance of Microsoft Copilot
+- ByteScrum Technologies. (2023, October 20). Encrypting and Decrypting Data with Fernet in Python. ByteScrum
+  Technologies. https://blog.bytescrum.com/encrypting-and-decrypting-data-with-fernet-in-python
+- Ali, M. A. (2023, December 5). Unlocking Cryptography: A Hands-On Guide to Encrypting and Decrypting Files Using
+  Python.
+  Medium. https://medium.com/@madeenali2003/unlocking-cryptography-a-hands-on-guide-to-encrypting-and-decrypting-files-using-python-611766e73f7a
+- Encrypt and Decrypt Data in Python. (2021).
+  Tutorialspoint.com. https://www.tutorialspoint.com/how-to-encrypt-and-decrypt-data-in-python
+- The Intect. (2024, August 6). How to Encrypt and Decrypt Data in Python | Medium.
+  Medium. https://medium.com/@info_82002/a-beginners-guide-to-encryption-and-decryption-in-python-12d81f6a9eac
+- Codementor. (2025). Simple Python Encryption: How to Encrypt a Message | Codementor.
+  Codementor.io. https://www.codementor.io/python/tutorial/python-encryption-message-in-python-via-reverse-cipher
+- Novixys Software Dev Blog. (2018, February 8). Novixys Software Dev
+  Blog. https://www.novixys.com/blog/using-aes-encryption-decryption-python-pycrypto/
+- Python Programming Tutorials. (2025).
+  Pythonprogramming.net. https://pythonprogramming.net/encryption-and-decryption-in-python-code-example-with-explanation/
+- Bekker, R. (2018, April 29). Encryption and Decryption with Simple Crypt using Python. Ruan Bekker’s
+  Blog. https://ruan.dev/blog/2018/04/29/encryption-and-decryption-with-simple-crypt-using-python
+- Vollebregt, B. (2018b). Encryption and Decryption in Python.
+  Nitratine.net. https://nitratine.net/blog/post/encryption-and-decryption-in-python/
+- What is asymmetric encryption? | Asymmetric vs. symmetric encryption. (2025).
+  Cloudflare.com. https://www.cloudflare.com/learning/ssl/what-is-asymmetric-encryption/
+
+
 
 ---
 layout: end
@@ -672,9 +1167,21 @@ layout: end
 
 # Remember: 🦆
 
-### With Laravel and Pest:
+Learning is an ACTIVE Sport
 
-- your code can be clean,
-- your tests can be sharp, and...
-- according to the rubber duck:
-- your sanity can remain… mostly intact.
+Read<br>
+Understand<br>
+Write Code<br>
+Test<br>
+Fix Errors<br>
+Repeat
+
+Use your Actual Intelligence, not the Mediochre Intelligence from AI
+
+
+<!--
+List of ports for scans
+
+7,9,13,17,20,21,22,23,25,37,42,49,53,69,80,88,102,110,111,123,135,137,139,143,161,162,381-383,389,427,443,445,464,465,500,514,515,587,593,623,631,636,691,902,989,990,993,995,1024,1027,1080,1194,1234,1270,1293,1433,1434,1521,1550,1701,1707,1723,1801,1883,1900,2000,2019,2082,2083,2375-2377,3306,3389,4000,4444,4500,5060,5061,5269,5280,5281,5298,5351,5353,5355,5432,5500,5671,5672,5900,6660-6664,6665-6669,6679,6881-6999,7000,7400-7402,8000,8006,8007,8008,8086,8087,8332,8333,9000,9090,9100,9200,9800,10000,12345,15672,27017-27057,31337
+
+-->

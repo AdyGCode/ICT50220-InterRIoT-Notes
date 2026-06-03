@@ -1,7 +1,7 @@
 ---
 theme: nmt
 background: https://cover.sli.dev
-title: Authorisation & PyCasbin
+title: Software Security - Authorisation & PyCasbin
 class: text-left
 drawings:
   persist: false
@@ -10,10 +10,11 @@ mdc: true
 duration: 90min
 ---
 
-# Authorisation & PyCasbin
+# Software Security
+## Authorisation & PyCasbin
 
 <div @click="$slidev.nav.next" class="mt-12 -mx-4 p-4" hover:bg="white op-10">
-<p>Press <kbd>Space</kbd> or <kbd>RIGHT</kbd> for next slide/step <fa7-solid-arrow-right /></p>
+<p>Press <kbd>Space</kbd> or <kbd>RIGHT</kbd> for next slide/step <i-fa7-solid-arrow-right /></p>
 </div>
 
 <div class="abs-br m-6 text-xl">

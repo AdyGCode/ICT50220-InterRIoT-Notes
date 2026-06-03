@@ -26,7 +26,11 @@ duration: 90min
 
 
 <!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
+The last comment block of each slide will be treated as slide notes. 
+
+It will be visible and editable in Presenter Mode along with the slide.
+
+[Read more in the docs](https://sli.dev/guide/syntax.html#notes)
 -->
 
 
@@ -70,12 +74,13 @@ layout: two-cols
 ---
 level: 2
 layout: figure-side
-figureUrl: public/orly-book-cover-dashboards.png
+figureUrl: ./orly-book-cover-hoping-noone-hacks-you.jpg
 ---
+
 
 # Contents
 
-<Toc minDepth="1" maxDepth="1" columns="2" />
+<Toc maxDepth="1"></Toc>
 
 ---
 layout: section
@@ -93,7 +98,6 @@ layout: section
 
 ### Cryptography
 
-
 ---
 level: 2
 ---
@@ -110,12 +114,12 @@ There are different forms of cryptography:
 - symmetrical
 - asymmetrical
 
-
 ---
 level: 2
 ---
 
 # Cryptography
+
 ## What is asymmetric encryption?
 
 There are two sides in an encrypted communication:
@@ -132,8 +136,8 @@ Asymmetric encryption, also known as public key encryption, uses a public key-pr
 - data encrypted with the public key can only be decrypted with the private key.
 
 Examples:
-- TLS (or SSL), the protocol that makes HTTPS possible, relies partially on asymmetric encryption.
 
+- TLS (or SSL), the protocol that makes HTTPS possible, relies partially on asymmetric encryption.
 
 ---
 level: 2
@@ -148,7 +152,6 @@ In symmetric encryption, the same key both encrypts and decrypts data.
 For symmetric encryption to work, the two or more communicating parties must know what the key is.
 
 - for it to remain secure, no third party should be able to guess or steal the key.
-
 
 ---
 layout: section
@@ -194,12 +197,17 @@ level: 2
 ---
 
 # Code Fun: Secret Messages
+
 ## Useful Python MQTT Resources
 
-- Cope, S. (2016, August 20). Python MQTT Client Connections- Working with Connections. |. http://www.steves-internet-guide.com/client-connections-python-mqtt/
-- Cope, S. (2016, August 23). How to Use The Paho MQTT Python Client for Beginners. |. http://www.steves-internet-guide.com/into-mqtt-python-client/
-- SimonBirkenheuer/MQTT-Chat: A small MQTT based chat application. (2025). GitHub. https://github.com/SimonBirkenheuer/MQTT-Chat/tree/master
-- EMQ. (2026, May 11). MQTT in Python with Paho Client: Beginner’s Guide 2026. Www.Emqx.Com; EMQ. https://www.emqx.com/en/blog/how-to-use-mqtt-in-python
+- Cope, S. (2016, August 20). Python MQTT Client Connections- Working with
+  Connections. |. http://www.steves-internet-guide.com/client-connections-python-mqtt/
+- Cope, S. (2016, August 23). How to Use The Paho MQTT Python Client for
+  Beginners. |. http://www.steves-internet-guide.com/into-mqtt-python-client/
+- SimonBirkenheuer/MQTT-Chat: A small MQTT based chat application. (2025).
+  GitHub. https://github.com/SimonBirkenheuer/MQTT-Chat/tree/master
+- EMQ. (2026, May 11). MQTT in Python with Paho Client: Beginner’s Guide 2026. Www.Emqx.Com;
+  EMQ. https://www.emqx.com/en/blog/how-to-use-mqtt-in-python
 
 ---
 level: 2
@@ -231,14 +239,12 @@ layout: two-cols
     - receive MQTT messages from Topic (`chat`)
 6. Next ask user for a message, encrypt, & send
 7. Final step is to listen for message, decrypt automatically and display locally
-    - Suggest: Have separate Senders and Listeners 
-
+    - Suggest: Have separate Senders and Listeners
 
 ---
 level: 2
 layout: two-cols
 ---
-
 
 # Code Fun: Secret Messages
 
@@ -252,7 +258,7 @@ What type of encryption is the Caesar Cipher?
 
 - Why do you think the Caesar Cipher is an asymmetric algorithm?
 - Justify your answer
- 
+
 ::right::
 
 ## Symmetric?
@@ -1087,6 +1093,7 @@ layout: two-cols
 ---
 
 # Superchallenge
+
 ## Code Fun: Secret Messages II
 
 Create a text User Interface (TUI) for your secret message application.
@@ -1114,6 +1121,7 @@ level: 2
 ---
 
 # Superchallenge
+
 ## Code Fun: Secret Messages II
 
 ### Useful resources
@@ -1128,8 +1136,6 @@ level: 2
 - Welcome - PyTermGUI::docs. (2026). Bczsalba.Com. https://ptg.bczsalba.com/
 - Welcome to Rich’s documentation! — Rich 14.1.0 documentation. (2026).
   Readthedocs.Io. https://rich.readthedocs.io/en/latest/
-
-
 
 ---
 
@@ -1158,8 +1164,6 @@ level: 2
   Nitratine.net. https://nitratine.net/blog/post/encryption-and-decryption-in-python/
 - What is asymmetric encryption? | Asymmetric vs. symmetric encryption. (2025).
   Cloudflare.com. https://www.cloudflare.com/learning/ssl/what-is-asymmetric-encryption/
-
-
 
 ---
 layout: end
